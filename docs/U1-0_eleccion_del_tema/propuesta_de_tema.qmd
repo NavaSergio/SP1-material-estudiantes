@@ -1,0 +1,165 @@
+---
+title: "Sesión de propuestas de tema"
+subtitle: "Revisión rápida + retroalimentación"
+author: 
+  - name: Sergio M. Nava Muñoz
+    id: sn
+    email: s3rgio.nava@gmail.com
+    affiliation: 
+        - id: cimat
+          name: CIMAT/INFOTEC
+          city: Aguascalientes
+          state: Ags
+format: 
+  revealjs:
+    slide-number: true
+    theme: simple
+    fontsize: 2.1em
+    logo: figs/logo-infotec.jpeg
+    css: style.css
+    chalkboard: true
+    menu: TRUE
+    transition: slide
+    background-transition: fade
+    title-slide-attributes:
+      data-background-image: /figs/DCCD.png
+      data-background-size: 100% 100%;     
+date: 2026-08-12
+---
+
+## Agenda (10:00–11:00)
+
+- Objetivo de la sesión
+- Cómo presentar tu propuesta (2–4 min)
+- Qué necesitamos para darte retroalimentación útil
+- Siguientes pasos
+
+---
+
+## Objetivo de hoy
+
+**Que tu tema quede:**
+
+- claro (problema bien definido)
+- factible (datos accesibles, alcance realista)
+- evaluable (criterios de éxito y entregables)
+
+**Resultado esperado:** salir con **sugerencias concretas** para mejorar tu propuesta.
+
+---
+
+## Formato de participación
+
+- Presentación breve por persona: **2–4 min**
+- Retroalimentación del grupo: **2–3 min**
+- Si hay muchas propuestas: priorizamos **claridad + datos + alcance**
+
+
+---
+
+## ¿Qué se espera de tu propuesta?
+
+Al menos:
+
+- **Problema** (pregunta o enunciado medible)
+- **Datos** (fuentes, acceso, variables, tamaño, periodo)
+- **Producto final** (entregable)
+- **Criterio de éxito** (cómo sabremos que funciona)
+- **Alcance** (qué sí / qué no)
+
+---
+
+## Guía para exponer (estructura sugerida)
+
+1. **Título tentativo (1 frase)**
+2. **Contexto y motivación (30–40 s)**
+3. **Planteamiento del problema (1 min)**
+4. **Datos disponibles (1 min)**
+5. **Salida esperada / entregable (30–40 s)**
+6. **Alcance y límites (20–30 s)**
+
+---
+
+## 1) Título tentativo
+
+Un título claro ayuda a enfocar:
+
+- “Predicción de ___ usando ___”
+- “Detección de ___ en ___”
+- “Análisis de factores asociados a ___”
+
+---
+
+## 2) Contexto y motivación
+
+Responde:
+
+- ¿En qué ámbito surge el problema?
+- ¿Por qué importa?
+- ¿Qué decisión o proceso mejoraría?
+
+---
+
+## 3) Planteamiento del problema
+
+Describe el problema como:
+
+- **pregunta** o **objetivo medible**
+
+Ejemplos:
+
+- “¿Podemos predecir ___?”
+- “¿Qué variables explican ___?”
+- “¿Cómo clasificar/detectar ___ con ___?”
+
+---
+
+## 4) Datos disponibles (lo más importante)
+
+Incluye:
+
+- Fuente(s) y **acceso** (públicos / permiso / ya los tengo)
+- **Unidad de análisis** (qué es un registro)
+- Variables clave (inputs) y **objetivo** (target)
+- Tamaño aproximado y periodo
+- Calidad esperada (faltantes, sesgos, duplicados)
+
+---
+
+## 5) Salida esperada / entregable
+
+¿Qué vas a entregar?
+
+- Modelo / reporte / tablero / prototipo / recomendación
+
+¿Cómo se evaluaría?
+
+- métrica (accuracy, F1, RMSE, etc.)
+- validación (train/test, cross-val, caso piloto)
+
+---
+
+## 6) Alcance y límites (para que no crezca sin control)
+
+Define:
+
+- Qué sí incluye
+- Qué no incluye
+- Supuestos (si aplica)
+- Restricciones (tiempo, cómputo, permisos, ética)
+
+---
+
+
+## Al final de tu turno…
+
+Comparte:
+
+- 1 cosa que **te preocupa** (riesgo principal)
+- 1 cosa en la que quieres **feedback específico**
+
+Ejemplos:
+
+- “¿El alcance es demasiado amplio?”
+- “¿Qué métrica usarían?”
+- “¿Qué variables buscarían primero?”

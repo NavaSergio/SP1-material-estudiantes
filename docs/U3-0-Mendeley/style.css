@@ -1,0 +1,112 @@
+/*-- scss:defaults --*/
+
+$font-size-root: 18px !default;
+
+
+
+// headings
+$presentation-heading-font: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+$presentation-heading-color: #383d3d !default;
+$presentation-heading-size: 2em !default;
+$presentation-heading-line-height: 1.1 !default;
+$presentation-heading-margin-bottom: 1.5em !default;
+$presentation-heading-font-weight: bold !default;
+$presentation-heading-text-align: center !default;
+$presentation-heading-text-transform: uppercase !default;
+
+
+
+/* Letra más pequeña para todas las slides RevealJS */
+.reveal .slides section {
+  font-size: 0.75em !important;
+}
+
+/* Escala estándar: el código acompaña el tamaño del texto de la slide */
+.reveal :not(pre) > code {
+  font-size: 1em !important;
+}
+
+.reveal pre {
+  font-size: 0.95em !important;
+}
+
+.reveal pre code,
+.reveal .sourceCode code {
+  font-size: 1em !important;
+  line-height: 1.3;
+}
+
+/* Encabezados de presentación */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+  color: #383d3d;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+.custom-small table {
+  font-size: .6em;
+}
+.custom-tiny table {
+  font-size: .5em;
+}
+.slide-background-content{
+  background-image: url("figs/dccd.png");
+  background-size: 100% 100%;
+  background-position: left;
+}
+.reveal .slide-logo {
+  display: block;
+  position: fixed;
+  top: 5px;
+  left: 12px;
+  height: 100px !important;
+  width: 100px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+.bigger {
+  font-size: 1.25em;
+}
+
+.table-caption {
+  text-align: center;
+}
+
+#tbl-mytable .table-caption {
+  text-align: center;
+}
+
+.figure-caption {
+  text-align: center;
+}
+
+table {
+  background-color: white;
+}
+
+.fixed-header-table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.fixed-header-table th {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.fixed-header-table th, .fixed-header-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.small-text {
+  font-size: 12px;
+}

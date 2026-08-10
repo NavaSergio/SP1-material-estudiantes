@@ -1,0 +1,414 @@
+---
+title: "Gestor de Referencias Mendeley"
+subtitle: "Organiza y cita tus fuentes de investigación"
+author: 
+  - name: Sergio M. Nava Muñoz
+    id: sn
+    email: s3rgio.nava@gmail.com
+    affiliation: 
+        - id: cimat
+          name: CIMAT/INFOTEC
+          city: Aguascalientes
+          state: Ags
+format: 
+  revealjs:
+    slide-number: true
+    theme: simple
+    fontsize: 2.1em
+    logo: figs/logo-infotec.jpeg
+    css: style.css
+    chalkboard: true
+    menu: TRUE
+    transition: slide
+    background-transition: fade
+    title-slide-attributes:
+      data-background-image: figs/dccd.png
+      data-background-size: 50% 50%;     
+date: 2026-02-25
+---
+
+## Objetivo de la clase
+- Conocer Mendeley como gestor de referencias bibliográficas.  
+- Aprender a instalar y configurar Mendeley Desktop y Web.  
+- Importar y organizar referencias de manera eficiente.  
+- Integrar Mendeley con Microsoft Word para generar citas y bibliografías automáticamente.  
+- Aplicar normas APA 7ª edición usando Mendeley.  
+
+---
+
+## ¿Qué es Mendeley?
+- **Gestor de referencias bibliográficas** gratuito desarrollado por Elsevier.  
+- Permite **organizar, compartir y citar** documentos académicos.  
+- Disponible en **versión de escritorio** (Desktop) y **versión web**.  
+- Se integra con procesadores de texto como **Microsoft Word** y **LibreOffice**.  
+- Facilita la colaboración mediante **grupos compartidos**.  
+- Compatible con múltiples estilos de citación: APA, MLA, Chicago, IEEE, etc.  
+
+---
+
+## Ventajas de usar Mendeley {.smaller}
+::: {.incremental}
+- **Organización automática**: Extrae metadatos de PDFs (autor, título, año, revista).  
+- **Sincronización en la nube**: Accede a tu biblioteca desde cualquier dispositivo.  
+- **Gestión de PDFs**: Almacena, lee y anota documentos en un solo lugar.  
+- **Inserción automática de citas**: Plugin para Word que genera citas y bibliografía.  
+- **Colaboración**: Comparte carpetas con colegas para trabajos en equipo.  
+- **Búsqueda rápida**: Encuentra referencias por autor, año, título o palabras clave.  
+- **Respaldo de tu biblioteca**: Evita pérdidas de información.  
+- **Compatibilidad con otros gestores**: Importa/exporta desde Zotero, EndNote, etc.  
+:::
+
+---
+
+## Instalación de Mendeley
+
+### Paso 1: Crear una cuenta
+- Visita [www.mendeley.com](https://www.mendeley.com)  
+- Haz clic en **"Sign Up"** para crear una cuenta gratuita.  
+- Puedes registrarte con tu correo institucional o personal.  
+
+### Paso 2: Descargar Mendeley Desktop
+- Desde tu cuenta, descarga **Mendeley Reference Manager** (versión más reciente).  
+- Disponible para **Windows, macOS y Linux**.  
+- Instala el programa siguiendo las instrucciones en pantalla.  
+
+---
+
+## Interfaz de Mendeley Desktop {.smaller}
+
+Al abrir Mendeley Desktop encontrarás:  
+
+- **Panel izquierdo**: Carpetas de tu biblioteca (All Documents, Recently Added, Favorites, Trash).  
+- **Panel central**: Lista de referencias con título, autores y año.  
+- **Panel derecho**: Detalles de la referencia seleccionada (metadatos, abstract, notas).  
+- **Barra superior**: Herramientas para añadir documentos, crear carpetas y sincronizar.  
+- **Visor de PDF integrado**: Permite leer y anotar documentos sin salir de Mendeley.  
+
+---
+
+## Añadir referencias a Mendeley
+
+### Método 1: Arrastrar y soltar archivos PDF
+- Descarga artículos en PDF desde bases de datos académicas.  
+- Arrastra los archivos a la ventana de Mendeley.  
+- Mendeley **extraerá automáticamente** los metadatos (autor, título, año, DOI).  
+
+### Método 2: Importar manualmente
+- Haz clic en **"File → Add Files..."** o **"Add Folder..."**.  
+- Selecciona los PDFs que deseas importar.  
+- Mendeley procesará la información bibliográfica.  
+
+---
+
+## Añadir referencias a Mendeley (continuación)
+
+### Método 3: Añadir referencias sin PDF
+- Haz clic en **"File → Add Entry Manually"**.  
+- Selecciona el tipo de documento: Journal Article, Book, Conference Paper, etc.  
+- Completa los campos: autor, título, año, revista, DOI, etc.  
+- Útil cuando solo tienes los datos bibliográficos pero no el PDF.  
+
+### Método 4: Usar el Web Importer
+- Instala la extensión **Mendeley Web Importer** en tu navegador.  
+- Al visitar una página de artículo científico, haz clic en el icono de Mendeley.  
+- La referencia se añadirá automáticamente a tu biblioteca.  
+
+---
+
+## Organización de referencias
+
+### Crear carpetas temáticas
+- En el panel izquierdo, haz clic derecho y selecciona **"Create Folder"**.  
+- Nombra la carpeta según tu proyecto: "Tesis", "Artículo 2024", "Machine Learning", etc.  
+- Arrastra referencias a estas carpetas para organizarlas.  
+- Una misma referencia puede estar en varias carpetas.  
+
+### Usar etiquetas (tags)
+- Selecciona una referencia y ve al panel derecho.  
+- En el campo **"Tags"**, añade palabras clave: "deep learning", "APA", "revisión sistemática".  
+- Las etiquetas facilitan búsquedas y agrupaciones temáticas.  
+
+---
+
+## Editar y completar metadatos {.smaller}
+
+Es común que Mendeley no extraiga correctamente todos los datos.  
+
+**Pasos para corregir:**  
+1. Selecciona la referencia en el panel central.  
+2. En el panel derecho, revisa y edita:  
+   - **Authors**: Verifica que estén correctamente escritos (Apellido, N.).  
+   - **Title**: Corrige mayúsculas y tildes.  
+   - **Year, Volume, Issue, Pages**: Completa campos faltantes.  
+   - **DOI / URL**: Añade el identificador digital si está disponible.  
+3. Haz clic fuera del campo para guardar cambios.  
+4. Sincroniza para actualizar en la nube.  
+
+::: {.callout-tip}
+## Consejo
+Revisa siempre los metadatos antes de citar, especialmente en trabajos formales.
+:::
+
+---
+
+## Sincronización con la nube
+
+- Mendeley sincroniza automáticamente tu biblioteca en la nube.  
+- **Espacio gratuito**: 2 GB para almacenar PDFs.  
+- Haz clic en **"Sync"** en la barra superior para actualizar cambios.  
+- Accede a tus referencias desde cualquier dispositivo con tu cuenta.  
+- La sincronización incluye **carpetas, etiquetas, notas y anotaciones en PDFs**.  
+
+::: {.callout-warning}
+## Importante
+Si eliminas una referencia en un dispositivo, se eliminará en todos los sincronizados.
+:::
+
+---
+
+## Integración con Microsoft Word {.smaller}
+
+### Instalación del plugin
+- Al instalar Mendeley Desktop, el **plugin para Word** se instala automáticamente.  
+- Si no aparece, ve a **"Tools → Install MS Word Plugin"** en Mendeley Desktop.  
+- Reinicia Word y verás una pestaña llamada **"References"** o **"Mendeley Cite"**.  
+
+### Uso del plugin
+1. Coloca el cursor donde deseas insertar una cita.  
+2. Haz clic en **"Insert Citation"** en la pestaña de Mendeley.  
+3. Busca la referencia por autor o título.  
+4. Selecciona el estilo de citación (APA 7th edition, por ejemplo).  
+5. La cita se insertará automáticamente en el texto.  
+
+---
+
+## Generar bibliografía automática
+
+- Al final del documento, coloca el cursor donde quieres la bibliografía.  
+- Haz clic en **"Insert Bibliography"** en la pestaña de Mendeley en Word.  
+- Mendeley generará la lista de referencias **automáticamente** según el estilo seleccionado.  
+- Si añades o eliminas citas, la bibliografía se actualiza automáticamente.  
+- Puedes cambiar el estilo de citación en cualquier momento desde el plugin.  
+
+::: {.callout-tip}
+## Recuerda
+Siempre revisa manualmente la bibliografía generada para detectar posibles errores.
+:::
+
+---
+
+## Cambiar estilo de citación
+
+1. En Word, haz clic en **"Style"** en la pestaña de Mendeley.  
+2. Busca **"American Psychological Association 7th edition"** para usar APA 7.  
+3. Puedes seleccionar otros estilos: MLA, Chicago, IEEE, Vancouver, etc.  
+4. Todas las citas y la bibliografía se actualizarán automáticamente al nuevo formato.  
+
+::: {.callout-note}
+## Nota
+Asegúrate de que los metadatos estén completos para que el estilo se aplique correctamente.
+:::
+
+---
+
+## Mendeley Web
+
+- Accede desde [www.mendeley.com](https://www.mendeley.com) con tu cuenta.  
+- Permite consultar tu biblioteca **sin instalar software**.  
+- Funciones principales:  
+  - Ver y buscar referencias.  
+  - Editar metadatos.  
+  - Crear y gestionar carpetas.  
+  - Añadir notas.  
+  - Compartir grupos.  
+- **Limitación**: No puedes leer PDFs completos en la versión web gratuita.  
+
+---
+
+## Crear grupos colaborativos {.smaller}
+
+### Grupos privados
+- Comparte referencias con colaboradores específicos.  
+- Solo los miembros invitados pueden ver el contenido.  
+- Útil para proyectos de investigación en equipo.  
+
+### Grupos públicos
+- Cualquier usuario de Mendeley puede unirse.  
+- Sirve para comunidades académicas sobre temas específicos.  
+
+**Cómo crear un grupo:**  
+1. Ve a **"View → Groups"** en Mendeley Desktop.  
+2. Haz clic en **"Create Group"**.  
+3. Elige entre privado, público o de solo invitación.  
+4. Invita a miembros por correo electrónico.  
+5. Comparte carpetas y documentos dentro del grupo.  
+
+---
+
+## Anotar y leer PDFs en Mendeley
+
+- Doble clic en una referencia con PDF para abrirlo.  
+- Herramientas de anotación:  
+  - **Subrayar**: Selecciona texto y haz clic en el icono de resaltado.  
+  - **Notas adhesivas**: Añade comentarios en el margen.  
+  - **Notas generales**: Escribe notas en el panel de detalles.  
+- Las anotaciones se sincronizan en todos tus dispositivos.  
+- Exporta tus anotaciones para revisiones rápidas.  
+
+::: {.callout-tip}
+## Consejo
+Usa diferentes colores de resaltado para categorizar ideas (métodos, resultados, conclusiones).
+:::
+
+---
+
+## Buscar referencias dentro de Mendeley
+
+### Búsqueda rápida
+- Usa la **barra de búsqueda** en la parte superior.  
+- Escribe autor, palabra clave, título o año.  
+- Mendeley buscará en toda tu biblioteca, incluyendo dentro de los PDFs.  
+
+### Filtros avanzados
+- Filtra por **autores, año, revista, tipo de documento**.  
+- Combina filtros para búsquedas más precisas.  
+- Usa **etiquetas (tags)** para agrupar referencias temáticamente.  
+
+---
+
+## Importar desde otras bases de datos
+
+Mendeley permite importar referencias desde:  
+
+- **Google Scholar**: Usa Mendeley Web Importer.  
+- **PubMed, IEEE Xplore, ScienceDirect**: Descarga archivo BibTeX o RIS e impórtalo en Mendeley.  
+- **Otros gestores** (Zotero, EndNote): Exporta en formato compatible (.bib, .ris, .xml) y luego impórtalo.  
+
+**Cómo importar:**  
+1. Ve a **"File → Import"** en Mendeley Desktop.  
+2. Selecciona el archivo descargado (.bib, .ris, .enw, etc.).  
+3. Mendeley añadirá las referencias a tu biblioteca.  
+
+---
+
+## Exportar tu biblioteca
+
+Puedes exportar referencias en diversos formatos:  
+
+- Selecciona una o varias referencias.  
+- Haz clic en **"File → Export"**.  
+- Elige el formato:  
+  - **BibTeX** (.bib): Para LaTeX.  
+  - **RIS** (.ris): Compatible con otros gestores.  
+  - **XML**: Para EndNote.  
+- Guarda el archivo exportado.  
+
+::: {.callout-note}
+## Uso común
+Exportar a BibTeX es útil si trabajas con LaTeX/Overleaf.
+:::
+
+---
+
+## Citar con Mendeley en LaTeX/Overleaf
+
+1. Exporta tu biblioteca en formato **BibTeX** (.bib).  
+2. Sube el archivo .bib a tu proyecto de Overleaf.  
+3. En tu documento .tex, añade:  
+
+```latex
+\bibliographystyle{apalike}
+\bibliography{nombre_archivo}
+```
+
+4. Usa `\cite{clave}` para citar referencias.  
+5. Compila el documento y la bibliografía se generará automáticamente.  
+
+---
+
+## Consejos para usar Mendeley eficientemente {.smaller}
+
+::: {.incremental}
+- **Organiza desde el inicio**: Crea carpetas por proyecto o tema.  
+- **Revisa metadatos al importar**: No confíes ciegamente en la extracción automática.  
+- **Usa etiquetas**: Facilita la búsqueda y agrupación temática.  
+- **Haz respaldos periódicos**: Exporta tu biblioteca en formato BibTeX o RIS.  
+- **Sincroniza constantemente**: Evita pérdida de información.  
+- **Aprovecha los grupos**: Colabora y comparte con colegas.  
+- **Anota los PDFs**: Facilita revisiones y escritura posterior.  
+- **Actualiza Mendeley**: Usa la versión más reciente para evitar bugs.  
+:::
+
+---
+
+## Limitaciones de la versión gratuita
+
+- **Espacio de almacenamiento**: 2 GB en la nube.  
+  - Solución: Almacena PDFs localmente o suscríbete a **Mendeley Premium**.  
+- **Grupos privados limitados**: Solo 3 grupos privados en la versión gratuita.  
+- **No todas las funciones están en la versión web**: Lectura completa de PDFs requiere Desktop.  
+- **Sincronización de anotaciones**: A veces presenta retrasos.  
+
+---
+
+## Mendeley Premium (opcional)
+
+Si necesitas más espacio o funciones avanzadas:  
+
+- **5 GB a 100 GB** de almacenamiento en la nube.  
+- **Grupos privados ilimitados**.  
+- **Soporte prioritario**.  
+- Costo aproximado: desde $5 USD/mes.  
+
+::: {.callout-note}
+## Nota
+Para la mayoría de estudiantes e investigadores, la versión gratuita es suficiente.
+:::
+
+---
+
+## Alternativas a Mendeley
+
+Si deseas explorar otros gestores de referencias:  
+
+- **Zotero**: Software libre, muy popular en ciencias sociales.  
+- **EndNote**: Potente pero de pago, usado en medicina e ingeniería.  
+- **JabRef**: Especializado en BibTeX, ideal para usuarios de LaTeX.  
+- **RefWorks**: Basado en web, institucional.  
+- **Citavi**: Popular en Europa, especialmente en Alemania.  
+
+---
+
+## Recursos adicionales
+
+- **Sitio oficial**: [www.mendeley.com](https://www.mendeley.com)  
+- **Guía oficial de Mendeley**: [www.mendeley.com/guides](https://www.mendeley.com/guides)  
+- **Video tutoriales**: Busca en YouTube "Mendeley tutorial español".  
+- **Foro de soporte**: [www.mendeley.com/community](https://www.mendeley.com/community)  
+- **Guía APA 7**: [apastyle.apa.org](https://apastyle.apa.org)  
+
+---
+
+## Conclusiones
+
+- Mendeley es una herramienta poderosa para **gestionar referencias bibliográficas**.  
+- Facilita la **organización, colaboración y citación** de fuentes.  
+- La integración con **Word** y **LaTeX** agiliza la escritura académica.  
+- Usar un gestor de referencias es **esencial** en la investigación moderna.  
+- Invertir tiempo en aprender Mendeley te ahorrará muchas horas en el futuro.  
+
+::: {.callout-important}
+## Recuerda
+La buena gestión de referencias es parte fundamental de la integridad académica.
+:::
+
+---
+
+## ¡Gracias!
+
+### Preguntas y comentarios
+
+**Contacto:**  
+Sergio M. Nava Muñoz  
+s3rgio.nava@gmail.com  
+CIMAT/INFOTEC  

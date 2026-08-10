@@ -1,0 +1,692 @@
+---
+title: "¿Cómo formular y analizar la pregunta de investigación?"
+author: 
+  - name: Sergio M. Nava Muñoz
+    id: sn
+    email: s3rgio.nava@gmail.com
+    affiliation: 
+        - id: cimat
+          name: CIMAT/INFOTEC
+          city: Aguascalientes
+          state: Ags
+format: 
+  revealjs:
+    slide-number: true
+    theme: simple
+    fontsize: 1.9em
+    logo: figs/logo-infotec.jpeg
+    css: style.css
+    chalkboard: true
+    menu: TRUE
+    transition: slide
+    background-transition: fade
+    title-slide-attributes:
+      data-background-image: /figs/DCCD.png
+      data-background-size: 100% 100%;     
+date: 2026-3-11
+---
+
+
+## ¿Qué es una pregunta de investigación?
+
+- Es la **interrogante central** de un estudio.
+- Sirve como **guía del proceso** de investigación.
+- Debe ser:
+  - **Clara** y comprensible.
+  - **Enfocada** y precisa.
+  - **Concisa** y directa.
+  - **Compleja**, no responde sí/no.
+  - **Discutible**, con varias respuestas posibles.
+
+---
+
+## Contextualización del problema
+
+- **Espacial**: zona, región, país, mundo.
+- **Temporal**: pasado, presente, futuro.
+- **Factores internos/externos**: sociales, económicos, políticos.
+
+---
+
+
+
+## Tipos de preguntas de investigación {.smaller .scrollable}
+
+| Tipo           | Propósito                 | Ejemplo de pregunta |
+|----------------|---------------------------|---------------------|
+| **Descriptiva**   | Caracteriza un fenómeno             | ¿Cuál es el perfil socioeconómico de los usuarios de internet en México? |
+| **Analítica**     | Examina relaciones entre partes     | ¿Qué relación existe entre el nivel educativo y el uso de redes sociales? |
+| **Comparativa**   | Compara entre grupos o contextos   | ¿En qué difiere la productividad de las PYMES en zonas urbanas frente a rurales? |
+| **Explicativa**   | Busca causas o razones             | ¿Por qué algunos estudiantes abandonan la universidad en el primer año? |
+| **Predictiva**    | Anticipa comportamientos futuros   | ¿Qué variables predicen la deserción escolar en preparatoria? |
+| **Proyectiva**    | Diseña soluciones                  | ¿Qué modelo de capacitación puede mejorar la alfabetización digital en adultos mayores? |
+| **Interactiva**   | Evalúa efectos de una intervención | ¿Qué impacto tiene un curso de programación intensivo en la empleabilidad de jóvenes? |
+| **Confirmatoria** | Verifica hipótesis                 | ¿Se confirma que el consumo de cafeína mejora el rendimiento cognitivo? |
+| **Evaluativa**    | Mide resultados de programas       | ¿Qué tan efectivo fue el programa gubernamental para reducir la obesidad infantil? |
+
+
+---
+
+## Bloom como criterio de profundidad
+
+- Usa Bloom para revisar el **nivel cognitivo** de tus preguntas.
+- Evita quedarte solo en preguntas de **recordar** o **describir**.
+- Para el planteamiento central, prioriza **aplicar** y **analizar**.
+
+| Nivel | Verbos orientadores |
+|---|---|
+| Recordar/Comprender | identificar, describir, explicar |
+| Aplicar/Analizar | aplicar, relacionar, comparar, inferir |
+| Evaluar/Crear | valorar, justificar, diseñar, proponer |
+
+
+
+---
+
+## Recomendaciones para formular la pregunta {.smaller}
+
+Según Baena
+
+- **Claridad, factibilidad y pertinencia**  
+  Pregunta precisa, que pueda responderse con los recursos disponibles y que sea relevante en el área.  
+
+- **Pregunta verdadera y abierta**  
+  Debe referirse a un fenómeno real y permitir análisis más allá de un “sí/no”.  
+
+- **Estudiar lo que existe o existió**  
+  Basarse en fenómenos actuales o pasados, no en escenarios hipotéticos sin evidencia.  
+
+- **Basarse en el funcionamiento antes que en el cambio**  
+  Comprender cómo opera el fenómeno antes de plantear cómo modificarlo.  
+
+
+---
+
+## Ejemplos {.smaller}
+
+- **Claridad**:  
+  - Vaga: *¿Qué opinan de la salud?*  
+  - Clara: *¿Cuál es el nivel de acceso a servicios médicos en zonas rurales de Jalisco?*  
+
+- **Abierta y verdadera**:  
+  - Cerrada: *¿El internet es bueno para estudiar?*  
+  - Abierta: *¿Cómo influye el uso del internet en el rendimiento académico universitario?*  
+
+- **Existente**:  
+  - Incorrecta: *¿Qué impacto tendrá la próxima pandemia en 2040?*  
+  - Correcta: *¿Qué impacto tuvo la pandemia de COVID-19 en la educación básica?*  
+
+- **Funcionamiento antes que cambio**:  
+  - Cambio: *¿Qué política reduciría la contaminación?*  
+  - Funcionamiento: *¿Cómo se generan los niveles actuales de contaminación en la ciudad?*  
+
+
+## Relación con los objetivos
+
+- La **pregunta de investigación** determina los **objetivos**.
+- Los **objetivos específicos** deben responder la pregunta.
+- No deben confundirse con actividades.
+- Deben ser:
+  - **Alcanzables**,
+  - **Medibles**, y
+  - **Observables**.
+
+---
+
+## Hilo conductor I: problema a hipotesis
+
+```{mermaid}
+flowchart TB
+  A[Problema delimitado<br/>espacio-tiempo-poblacion] --> B[Pregunta general]
+  B --> C[Preguntas especificas]
+  B --> D[Objetivo general]
+  C --> E[Objetivos especificos]
+  D --> F[Hipotesis general]
+  E --> G[Hipotesis especificas]
+```
+
+---
+
+## Hilo conductor II: hipotesis a resultados
+
+```{mermaid}
+flowchart TB
+  F[Hipotesis general] --> H[Variables o<br/>categorias]
+  G[Hipotesis especificas] --> H
+  H --> I[Indicadores]
+  I --> J[Diseno<br/>metodologico]
+  J --> K[Analisis y resultados]
+```
+
+---
+
+## Alcance metodológico de esta sesión {.scrollable}
+
+- La ruta principal de esta propuesta se basa en un enfoque **empírico-variables**.
+- Esto implica: pregunta relacional/causal, hipótesis contrastables, variables, indicadores y diseño de análisis.
+- Este esquema se aplica **de forma directa** a investigaciones empíricas (cuando se observan fenómenos con datos medibles).
+- También puede utilizarse, con ajustes, en dos modalidades adicionales:
+  - **Investigación metodológica**: el foco está en diseñar, mejorar o validar un método; la evidencia principal es consistencia lógica/formal, comparación técnica y condiciones de aplicabilidad.
+  - **Investigación de desarrollo o tecnológica**: el foco está en diseñar e implementar una solución (modelo, algoritmo o prototipo); la evidencia principal es desempeño en pruebas, benchmark o piloto.
+- Si tu proyecto es **teórico o metodológico**, adapta el esquema:
+  - Variables/indicadores -> constructos, supuestos, propiedades formales y criterios de validez.
+  - Contrastación empírica -> demostración, derivación, simulación o estudio de caso conceptual.
+- Si tu proyecto es de **desarrollo/tecnológico**, adapta el esquema:
+  - Variables -> requerimientos funcionales/no funcionales y métricas de desempeño.
+  - Hipótesis -> proposiciones de mejora verificables en pruebas, benchmark o piloto.
+
+---
+
+## Rutas metodológicas en el curso {.smaller .scrollable}
+
+| Ruta | Pregunta central | Evidencia principal | Producto esperado |
+|---|---|---|---|
+| **Empírico-variables** | ¿Qué relación/efecto existe entre X e Y? | Datos observables, indicadores, análisis estadístico/cualitativo | Hallazgos contrastados con hipótesis |
+| **Metodológica** | ¿Cómo mejorar o validar un método M? | Coherencia formal, supuestos, comparación técnica, simulación | Método refinado y condiciones de aplicación |
+| **Desarrollo/tecnológica** | ¿Cómo diseñar e implementar una solución para P? | Pruebas funcionales, benchmark, piloto, métricas de desempeño | Prototipo/modelo/algoritmo validado |
+
+**Regla práctica:**
+
+- Si mides fenómenos en población/contexto real -> ruta **empírico-variables**.
+- Si diseñas o comparas procedimientos analíticos -> ruta **metodológica**.
+- Si construyes una solución funcional y evalúas su rendimiento -> ruta **desarrollo/tecnológica**.
+
+---
+
+## Estructura sugerida para redactar objetivos {.smaller}
+
+**Plantilla breve:**
+
+> _[Verbo en infinitivo] + [conceptos centrales] + [unidad de analisis] + [contexto territorial o temporal]._
+
+### Ejemplo
+
+**Evaluar el impacto de los programas de educacion financiera en el ahorro de trabajadores del sector publico en Mexico durante 2023.**
+
+- **Verbo en infinitivo**: Evaluar
+- **Conceptos centrales**: Impacto, programas de educacion financiera, ahorro
+- **Sujeto o unidad de analisis**: Trabajadores del sector publico
+- **Contexto territorial o temporal**: Mexico, 2023
+
+---
+
+## Ejemplos de redaccion de objetivos {.smaller .scrollable}
+
+### Ejemplo descriptivo
+**Describir las estrategias de movilidad urbana utilizadas por estudiantes universitarios en Guadalajara durante 2024.**
+
+- **Verbo en infinitivo**: Describir  
+- **Conceptos centrales**: Estrategias de movilidad urbana  
+- **Sujeto o unidad de análisis**: Estudiantes universitarios  
+- **Contexto territorial o temporal**: Guadalajara, 2024  
+
+
+### Ejemplo explicativo 
+
+**Explicar la relación entre el nivel de actividad física y el rendimiento académico en estudiantes de preparatoria en Aguascalientes.**
+
+- **Verbo en infinitivo**: Explicar  
+- **Conceptos centrales**: Nivel de actividad física, rendimiento académico  
+- **Sujeto o unidad de análisis**: Estudiantes de preparatoria  
+- **Contexto territorial o temporal**: Aguascalientes  
+
+
+### Ejemplo predictivo
+**Predecir el riesgo de abandono escolar en secundaria a partir de indicadores socioeconómicos y de desempeño académico en México.**
+
+- **Verbo en infinitivo**: Predecir  
+- **Conceptos centrales**: Riesgo de abandono escolar, indicadores socioeconómicos, desempeño académico  
+- **Sujeto o unidad de análisis**: Estudiantes de secundaria  
+- **Contexto territorial o temporal**: México  
+
+---
+
+## Verbos recomendados
+
+- **Exploratorios-Descriptivos**: conocer, explorar, describir, identificar.
+- **Explicativos**: analizar, demostrar, establecer, inferir.
+- **Predictivos**: predecir, modelar.
+- **Evaluativos**: evaluar.
+
+---
+
+## Obstáculos comunes
+
+- Acceso a datos.
+- Recursos materiales.
+- Tiempos personales.
+- Costos logísticos.
+- Factores personales.
+
+---
+
+## Desglose de la pregunta general
+
+- La pregunta general es el **hilo conductor** del proyecto.
+- Desglosarla permite **abordar distintas dimensiones** del fenómeno.
+- Cada pregunta específica:
+  - Es coherente con la general.
+  - Profundiza en un aspecto.
+  - Corresponde a un objetivo específico.
+
+---
+
+## Criterios para las preguntas específicas
+
+1. **Coherencia**: vínculo con la pregunta general.
+2. **Focalización**: aborda una sola dimensión o variable.
+3. **Viabilidad**: factibles con recursos y tiempo.
+4. **No confundir con actividades**.
+
+---
+
+## Matriz de coherencia (resumen)
+
+| Componente | Pregunta orientadora |
+|---|---|
+| Pregunta específica | ¿Qué aspecto puntual del problema se quiere explicar? |
+| Objetivo específico | ¿Qué acción analítica se realizará para responderla? |
+| Hipótesis específica | ¿Cuál es la respuesta tentativa verificable? |
+| Variable/categoría | ¿Qué se observará o medirá empíricamente? |
+
+---
+
+## Ejemplo práctico 1: Salud pública
+
+**Pregunta general:**
+
+> ¿Qué factores influyen en la baja tasa de vacunación contra la influenza en adultos mayores?
+
+**Preguntas específicas:**
+
+1. ¿Cómo afecta el nivel de información sobre la vacuna en la decisión de vacunarse?
+2. ¿Qué barreras logísticas enfrentan los adultos mayores para acceder a los centros de salud?
+3. ¿Qué papel juega la percepción de riesgo frente a la influenza en la aceptación de la vacuna?
+
+---
+
+## Ejemplo práctico 2: Cambio climático y agricultura
+
+**Pregunta general:**
+
+> ¿Cómo ha afectado el cambio climático a la producción de maíz en comunidades campesinas del altiplano?
+
+**Preguntas específicas:**
+
+1. ¿Qué cambios en los patrones climáticos han percibido los productores en los últimos diez años?
+2. ¿Cómo han variado los rendimientos de maíz en relación con las variaciones de temperatura y precipitación?
+3. ¿Qué estrategias de adaptación están utilizando los agricultores ante estos cambios?
+
+---
+
+## Ejemplo práctico 3: Comunicación digital
+
+**Pregunta general:**
+
+> ¿Qué impacto tienen las redes sociales en la participación política de jóvenes universitarios?
+
+**Preguntas específicas:**
+
+1. ¿Qué tipos de contenidos políticos consumen los estudiantes en redes sociales?
+2. ¿Cómo se relaciona el uso de redes sociales con su nivel de involucramiento en acciones políticas presenciales?
+3. ¿Qué percepción tienen los jóvenes sobre la efectividad de las redes sociales como medio de expresión política?
+
+---
+
+
+## Ejemplo práctico 4: Educación
+
+**Pregunta general:**
+
+> ¿Qué factores inciden en el abandono escolar en estudiantes de secundaria en zonas rurales?
+
+**Preguntas específicas:**
+
+1. ¿Cuál es el papel de las condiciones socioeconómicas en el abandono escolar?
+2. ¿Qué relación existe entre el acceso al transporte escolar y la asistencia regular?
+3. ¿Cómo influye la percepción del valor de la educación en la decisión de continuar o no los estudios?
+
+---
+
+## Actividad en clase
+
+> 1. Escribe tu **pregunta general**. 
+> 2. Desglósala en **tres preguntas específicas**.
+> 3. Asegúrate de que:
+>   - Aborden distintas dimensiones del problema.
+>   - Sean viables y claras.
+>   - No sean actividades operativas.
+> 4. Comparte con tus compañeros y den retroalimentación.
+
+---
+
+**Pregunta general:**
+
+> ¿Cómo beneficia el programa Hoy No Circula a la disminución de la contaminación ambiental?
+
+**Preguntas específicas:**
+
+1. ¿Qué proporción de autos deja de circular cuando aplica el programa Hoy No Circula?
+2. ¿Cómo influye la responsabilidad social en el uso del automóvil?
+3. ¿Cómo es la satisfacción de los usuarios del transporte público como alternativa al uso del auto?
+
+
+
+---
+
+## Taxonomía de Bloom: Aplicación en la formulación de preguntas
+
+- La Taxonomía de Bloom permite clasificar los **niveles cognitivos** de las preguntas.
+- Utilizarla ayuda a diseñar preguntas de investigación y objetivos más **completos y rigurosos**.
+
+---
+
+## Niveles Cognitivos según Bloom {.smaller .scrollable}
+
+| Nivel        | Descripción | Verbos clave |
+|--------------|-------------|--------------|
+| **Recordar** | Evocar hechos o conceptos. | enumerar, recordar, identificar |
+| **Comprender** | Mostrar entendimiento. | explicar, resumir, clasificar |
+| **Aplicar** | Usar información en nuevas situaciones. | usar, implementar, ilustrar |
+| **Analizar** | Descomponer en partes, entender relaciones. | comparar, distinguir, inferir |
+| **Evaluar** | Emitir juicios fundamentados. | justificar, criticar, valorar |
+| **Crear** | Producir ideas o productos originales. | diseñar, planear, proponer |
+
+---
+
+## Ejemplos de preguntas de investigación según Bloom {.smaller .scrollable}
+
+- **Recordar**: ¿Cuáles son los antecedentes históricos del fenómeno que investigas?
+- **Comprender**: ¿Cómo se ha definido y comprendido el concepto principal en la literatura previa?
+- **Aplicar**: ¿Cómo puede utilizarse el marco teórico X para analizar el caso que estudias?
+- **Analizar**: ¿Qué elementos componen el problema de investigación y cómo se relacionan entre sí?
+- **Evaluar**: ¿Qué tan válidos son los enfoques metodológicos utilizados en investigaciones anteriores sobre este tema?
+- **Crear**: ¿Cómo podrías formular una nueva pregunta de investigación a partir de las brechas identificadas en los estudios existentes?
+
+
+---
+
+## Desarrollo de la pregunta general en seis niveles de Bloom {.smaller .scrollable}
+
+**Pregunta general original:**
+
+> ¿Qué impacto tienen las redes sociales en la participación política de jóvenes universitarios?
+
+
+- **Recordar**  
+
+> ¿Qué redes sociales son más utilizadas por los jóvenes universitarios?
+
+- **Comprender**  
+
+> ¿Cómo describen los estudiantes universitarios el papel de las redes sociales en su vida política?
+
+- **Aplicar**  
+
+> ¿Cómo aplicarías un cuestionario digital para conocer los hábitos de consumo de contenido político en redes sociales?
+
+- **Analizar**  
+
+> ¿Qué relación existe entre el tiempo de uso de redes sociales y el nivel de participación política presencial?
+
+- **Evaluar**  
+
+> ¿Qué tan efectivas consideran los jóvenes las redes sociales para influir en decisiones políticas reales?
+
+- **Crear**  
+
+> ¿Cómo diseñarías una campaña en redes sociales que promueva una mayor participación política estudiantil?
+
+---
+
+## Contaminación ambiental: Niveles de Bloom {.smaller .scrollable}
+
+**Pregunta general de investigación**:
+
+> ¿Cómo afecta la contaminación del aire a la salud de los habitantes de zonas urbanas?
+
+
+### Niveles de la Taxonomía de Bloom aplicados {.smaller .scrollable}
+
+- **Recordar**  
+
+> ¿Qué tipos de contaminantes atmosféricos se han registrado históricamente en zonas urbanas?
+
+- **Comprender**  
+
+> ¿Cómo explican los habitantes de zonas urbanas los efectos de la contaminación en su salud?
+
+- **Aplicar**  
+
+> ¿Cómo se podrían aplicar herramientas de monitoreo ambiental para identificar focos de contaminación?
+
+- **Analizar** 
+
+> ¿Qué relación existe entre los niveles de contaminación y la incidencia de enfermedades respiratorias?
+
+- **Evaluar**  
+
+> ¿Qué tan efectivas han sido las políticas públicas para reducir los efectos de la contaminación en la salud?
+
+- **Crear**  
+
+> ¿Cómo diseñarías un programa comunitario para mitigar los efectos de la contaminación del aire en una ciudad?
+
+---
+
+
+## Actividad didáctica
+
+> Elige una **pregunta general de investigación** y redáctala en seis niveles diferentes, uno por cada categoría de Bloom. Esto te permitirá:
+>
+> - Enriquecer el análisis del problema.
+> - Detectar áreas de oportunidad metodológica.
+> - Formular objetivos más precisos y variados.
+
+---
+
+## De la pregunta a la hipótesis
+
+A partir de la **pregunta general de investigación** se construye la **hipótesis general**, que se redacta como una afirmación que responde, de manera anticipada, a dicha pregunta.
+
+También se pueden construir **hipótesis específicas**, cada una derivada de una pregunta específica.
+
+> Es importante que las hipótesis estén **relacionadas con las preguntas y los objetivos** y que estén **en concordancia** con la **Taxonomía de Bloom**.
+
+---
+
+## ¿Cómo redactar hipótesis?
+
+- **Redactar en forma afirmativa**.
+- Establecer una **relación entre variables**.
+- Estar **sustentadas teóricamente**.
+- Ser **claras y operables**.
+- Ser **comprobables** empíricamente.
+
+---
+
+## Ejemplo: Redes sociales y participación política {.smaller .scrollable}
+
+**Pregunta general**:
+
+> ¿Qué impacto tienen las redes sociales en la participación política de jóvenes universitarios?
+
+**Hipótesis general**:
+
+> El uso frecuente de redes sociales incrementa la participación política de jóvenes universitarios.
+
+**Preguntas específicas**:
+
+1. ¿Qué tipos de contenidos políticos consumen los estudiantes en redes sociales?
+2. ¿Cómo se relaciona el uso de redes con el nivel de participación presencial?
+3. ¿Qué percepción tienen los jóvenes sobre la efectividad de las redes sociales como medio político?
+
+**Hipótesis específicas**:
+
+1. Los estudiantes que consumen contenido político en redes sociales muestran mayor interés en temas públicos.
+2. A mayor frecuencia de interacción política en redes, mayor participación en actividades presenciales.
+3. Los jóvenes perciben las redes sociales como un medio efectivo para expresar posturas políticas.
+
+---
+
+
+## Ejemplo aplicado: Contaminación ambiental y salud {.smaller .scrollable}
+
+**Pregunta general**:
+
+> ¿Cómo afecta la contaminación del aire a la salud de los habitantes de zonas urbanas?
+
+**Hipótesis general**:
+
+> La exposición constante a contaminantes atmosféricos incrementa la incidencia de enfermedades respiratorias en la población urbana.
+
+**Preguntas específicas**:
+
+1. ¿Qué contaminantes atmosféricos predominan en la zona de estudio?
+2. ¿Cuál es la relación entre los niveles de exposición a contaminantes y la frecuencia de afecciones respiratorias?
+3. ¿Qué estrategias de mitigación aplican las autoridades locales y cómo impactan en la salud poblacional?
+
+**Hipótesis específicas**:
+
+1. Las zonas urbanas con mayor densidad vehicular presentan concentraciones elevadas de dióxido de nitrógeno y material particulado.
+2. A mayor concentración de contaminantes, mayor incidencia de enfermedades respiratorias agudas en la población.
+3. Las estrategias de mitigación ambiental implementadas por autoridades locales reducen la frecuencia de problemas respiratorios.
+
+---
+
+## Ejemplo completo: Abandono escolar en secundaria {.smaller .scrollable}
+
+**Pregunta general de investigación**  
+¿Qué factores inciden en el abandono escolar en estudiantes de secundaria en zonas rurales?  
+
+**Preguntas específicas**  
+1. ¿Cuál es el papel de las condiciones socioeconómicas en la permanencia escolar?  
+2. ¿Cómo influye el acceso al transporte escolar en la asistencia regular de los estudiantes?  
+3. ¿De qué manera la percepción del valor de la educación incide en la decisión de continuar los estudios?  
+
+**Objetivo general**  
+Analizar los factores socioeconómicos, familiares y escolares que influyen en el abandono escolar en secundaria en zonas rurales.  
+
+**Objetivos específicos**  
+1. Identificar la relación entre las condiciones socioeconómicas y la permanencia escolar.  
+2. Examinar la influencia del transporte escolar en la asistencia regular.  
+3. Evaluar cómo la percepción del valor de la educación incide en la decisión de continuar los estudios.  
+
+**Hipótesis general**  
+El abandono escolar en secundaria en zonas rurales está asociado de manera significativa con condiciones socioeconómicas desfavorables, dificultades de transporte y baja valoración de la educación.  
+
+**Hipótesis específicas**  
+1. Los estudiantes de familias con menores ingresos presentan mayor probabilidad de abandonar la escuela.  
+2. La falta de acceso a transporte escolar se relaciona con una menor asistencia y mayor riesgo de abandono.  
+3. Una baja percepción del valor de la educación aumenta la probabilidad de deserción escolar.  
+
+---
+
+## Ejemplo completo: Redes sociales y participación política {.smaller .scrollable}
+
+**Pregunta general de investigación**  
+¿Qué impacto tienen las redes sociales en la participación política de jóvenes universitarios?  
+
+**Preguntas específicas**  
+1. ¿Qué tipos de contenidos políticos consumen los estudiantes en redes sociales?  
+2. ¿Cómo se relaciona el uso de redes sociales con la participación en actividades políticas presenciales?  
+3. ¿Qué percepción tienen los jóvenes sobre la efectividad de las redes sociales como medio de expresión política?  
+
+**Objetivo general**  
+Analizar el impacto del uso de redes sociales en la participación política de jóvenes universitarios.  
+
+**Objetivos específicos**  
+1. Identificar los tipos de contenidos políticos consumidos en redes sociales por estudiantes universitarios.  
+2. Examinar la relación entre la interacción política en redes y la participación en actividades presenciales.  
+3. Evaluar la percepción de los jóvenes acerca de la efectividad de las redes sociales como medio de expresión política.  
+
+**Hipótesis general**  
+El uso frecuente de redes sociales incrementa la participación política de jóvenes universitarios.  
+
+**Hipótesis específicas**  
+1. Los estudiantes que consumen más contenido político en redes sociales muestran mayor interés en temas públicos.  
+2. A mayor interacción política en redes sociales, mayor nivel de participación en actividades presenciales.  
+3. Los jóvenes perciben las redes sociales como un medio efectivo para expresar y difundir posturas políticas.  
+
+---
+
+## Ejemplo completo: Detección de transacciones fraudulentas {.smaller .scrollable}
+
+**Pregunta general de investigación**  
+¿Qué factores permiten identificar de manera temprana las transacciones financieras fraudulentas en plataformas digitales?  
+
+**Preguntas específicas**  
+1. ¿Qué variables transaccionales (monto, frecuencia, ubicación) se asocian con patrones de fraude?  
+2. ¿Cómo influyen las características del usuario (historial de compras, dispositivo, horario de acceso) en la probabilidad de fraude?  
+3. ¿Qué algoritmos de aprendizaje automático ofrecen mayor precisión en la clasificación de transacciones fraudulentas?  
+
+**Objetivo general**  
+Analizar los factores transaccionales y de usuario que inciden en la detección de transacciones financieras fraudulentas, utilizando modelos de ciencia de datos.  
+
+**Objetivos específicos**  
+1. Identificar variables clave asociadas con la ocurrencia de transacciones fraudulentas.  
+2. Evaluar la relación entre las características del usuario y la probabilidad de fraude.  
+3. Comparar el desempeño de distintos algoritmos de clasificación en la detección de fraude.  
+
+**Hipótesis general**  
+La integración de variables transaccionales y de usuario en modelos de aprendizaje automático permite mejorar significativamente la detección de fraudes financieros.  
+
+**Hipótesis específicas**  
+1. Las transacciones con montos atípicos y ubicaciones inusuales tienen mayor probabilidad de ser fraudulentas.  
+2. Los usuarios con historiales irregulares y accesos desde dispositivos no habituales presentan mayor riesgo de fraude.  
+3. Los algoritmos basados en ensambles (ej. Random Forest, Gradient Boosting) superan en precisión a los modelos lineales en la clasificación de fraudes.  
+
+---
+
+## Plantillas para investigación teórica {.smaller .scrollable}
+
+**Nota de uso en el curso:**
+
+- **Investigación metodológica**: usa principalmente las plantillas 1 y 2.
+- **Investigación de desarrollo/tecnológica**: usa la lógica de la plantilla 1, sustituyendo "método" por "solución/prototipo" y evaluando desempeño en pruebas de validación.
+
+### Plantilla 1: Propuesta de nuevo método
+
+**Pregunta general**  
+¿Bajo qué supuestos el método propuesto M mejora [criterio: consistencia, interpretabilidad, complejidad] respecto al método de referencia R?  
+
+**Objetivo general**  
+Desarrollar y fundamentar teóricamente el método M, estableciendo sus supuestos, alcances y ventajas frente a R.  
+
+**Hipótesis teórica general**  
+Si se cumplen los supuestos S, el método M presenta mejor desempeño teórico en [criterio] que R.  
+
+### Plantilla 2: Transferencia de método a otra disciplina
+
+**Pregunta general**  
+¿Qué adaptaciones conceptuales requiere el método M para aplicarse válidamente al campo C sin perder sus propiedades fundamentales?  
+
+**Objetivo general**  
+Analizar la transferibilidad del método M al campo C, identificando equivalencias conceptuales y límites de aplicación.  
+
+**Hipótesis teórica general**  
+La adaptación A del método M conserva sus propiedades fundamentales en C bajo condiciones de correspondencia conceptual K.  
+
+### Plantilla 3: Comparación de marcos teóricos
+
+**Pregunta general**  
+¿Qué marco teórico (T1 o T2) ofrece mayor poder explicativo y coherencia interna para analizar el fenómeno F?  
+
+**Objetivo general**  
+Comparar críticamente T1 y T2 mediante criterios de coherencia lógica, alcance explicativo y capacidad heurística.  
+
+**Hipótesis teórica general**  
+El marco T1 ofrece mayor capacidad explicativa para F que T2 al integrar de forma más consistente los conceptos clave del fenómeno.  
+
+---
+
+
+
+
+## Actividad didáctica
+
+> Elige tu pregunta general de investigación y redacta:
+>
+> - Una **hipótesis general** como afirmación que responde a la pregunta.
+> - Tres **hipótesis específicas**, alineadas con las preguntas específicas.
+> - Verifica que tus hipótesis estén en los **niveles "Aplicar" o "Analizar"** de la Taxonomía de Bloom.

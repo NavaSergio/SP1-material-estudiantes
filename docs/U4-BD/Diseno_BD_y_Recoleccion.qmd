@@ -1,0 +1,546 @@
+---
+title: "Diseño de bases de datos y recolección de información"
+subtitle: "Seminario de Proyecto I (MCDI) — Unidad 4"
+author: "Sergio Martín Nava Muñoz"
+date: 2025/03/25
+format:
+  revealjs:
+    theme: [default]
+    slide-number: true
+    toc: true
+    toc-depth: 1
+    code-overflow: wrap
+    css: style.css
+    incremental: false
+    footer: "MCDI | Seminario de Proyecto I | Unidad 4"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Propósito de la sesión {.smaller}
+
+- Entender los **principios básicos para organizar datos** en un proyecto de investigación.  
+- Crear un **plan para recolectar información** de manera ordenada y ética.  
+- Preparar los elementos necesarios para la **Evidencia 4A** (base de datos) y presentación final.
+
+::: callout-tip
+**¿Qué vamos a crear hoy?**  
+1) Esquema de organización de datos (¿una tabla o varias?).  
+2) Diccionario de variables con descripción y transformaciones de cada campo.  
+3) Pipeline de preparación: limpieza, imputación y agregación.  
+4) Plan de recolección de datos.  
+5) Una muestra pequeña de nuestra base de datos lista para análisis.
+:::
+
+---
+
+## Conexión con la sesión de pregunta de investigación {.smaller}
+
+- **Pregunta general** → define qué fenómeno quieres explicar y el nivel de análisis.
+- **Preguntas específicas** → delimitan dimensiones observables del problema.
+- **Objetivos e hipótesis** → indican qué relaciones debes medir o contrastar.
+- **Variables e indicadores** → se convierten en columnas de tu base de datos.
+
+::: callout-important
+En esta unidad respondemos: **"¿qué estructura de datos necesito para contestar mi pregunta de investigación con evidencia verificable?"**
+:::
+
+---
+
+## Del hilo conductor a la base para análisis {.smaller}
+
+```{mermaid}
+flowchart LR
+  A["Pregunta<br/>general"] --> B["Preguntas<br/>específicas"]
+  B --> C["Objetivos e<br/>hipótesis"]
+  C --> D["Variables o<br/>categorías"]
+  D --> E["Indicadores y<br/>reglas de medición"]
+  E --> F["Unidad de análisis<br/>fila de la tabla"]
+  F --> G["Diccionario<br/>de datos"]
+  G --> H["Dataset listo<br/>para análisis"]
+```
+
+> Si no puedes ubicar una variable en este flujo, todavía no está lista para entrar a tu base.
+
+## Pasos para organizar nuestros datos {.smaller}
+
+1. **Partir de la pregunta** → ¿Qué debo observar para responder mi pregunta general y específicas?  
+2. **Diseñar estructura** → ¿Una tabla o múltiples? ¿Qué campos necesito?  
+3. **Definir relaciones** → ¿Cómo se conectan los datos entre sí?  
+4. **Establecer reglas** → ¿Qué datos son válidos y cuáles no?  
+5. **Documentar todo** → Crear un diccionario que explique cada variable.  
+6. **Planear recolección** → ¿De dónde y cómo obtendré los datos?  
+7. **Transformar y preparar** → Imputar, agregar y derivar variables según tu pregunta de investigación.  
+8. **Verificar calidad** → ¿Cómo me aseguro de que los datos sean confiables?
+
+---
+
+## De variables a organización de datos {.smaller}
+
+- **Variable dependiente**: lo que quiero explicar o predecir.  
+- **Variables independientes**: los factores que pueden influir.  
+- **Variables derivadas**: nuevas variables que calculo a partir de las anteriores.
+
+**Ejemplo** (estudio de fraude en transacciones):  
+- Variable dependiente: `es_fraude` (sí/no).  
+- Variables independientes: `monto`, `canal`, `tienda`, `cliente`, `fecha_hora`.  
+- Variables derivadas: `hora_del_dia`, `dia_semana`, `monto_promedio_ultimo_mes`.
+
+::: columns
+::: column
+**Grupos de información**  
+- `clientes` (información personal)  
+- `tiendas` (información comercial)  
+- `transacciones` (cada compra)
+:::
+::: column
+**¿Cómo se relacionan?**  
+- Un cliente puede hacer muchas transacciones  
+- Una tienda puede recibir muchas transacciones  
+- Cada transacción pertenece a un cliente y una tienda
+:::
+:::
+
+---
+
+## ¿Una tabla o múltiples tablas? {.smaller}
+
+La respuesta depende de tu **unidad de observación** y de cómo llegaron los datos:
+
+::: columns
+::: column
+**Modelo relacional (múltiples tablas)**
+
+- Datos provenientes de sistemas diferentes
+- Hay relaciones de muchos-a-muchos
+- *Ejemplo siguiente*: clientes + tiendas + transacciones
+:::
+::: column
+**Formato plano (una sola tabla)**
+
+- Cada fila es una observación completa
+- Encuestas, sensores o registros de una sola fuente
+- Dataset ya integrado desde el origen
+- La mayoría de repositorios públicos y Kaggle
+:::
+:::
+
+::: callout-important
+**Independientemente del formato de origen**, la mayor parte del análisis estadístico requiere una sola tabla *lista para analizar*. Si partes de múltiples tablas, eventualmente las integrarás en una para el análisis.
+:::
+
+---
+
+## Esquema simple de organización
+
+```{mermaid}
+erDiagram
+  CLIENTES ||--o{ TRANSACCIONES : realiza
+  TIENDAS ||--o{ TRANSACCIONES : recibe
+  CLIENTES {
+    string id_cliente PK
+    string segmento
+    date   fecha_registro
+    string id_tienda PK
+    string categoria
+    string ciudad
+  }
+  TRANSACCIONES {
+    string id_transaccion PK
+    string id_cliente FK
+    string id_tienda FK
+    datetime fecha_hora
+    numeric monto
+    string canal
+    bool   es_fraude
+  }
+```
+> Este es un diagrama básico. Adáptalo a tu proyecto específico.
+
+---
+
+## Ejemplo práctico — Estructura en SQL
+
+```sql
+-- Tabla principal de transacciones
+CREATE TABLE transacciones (
+  id_transaccion TEXT PRIMARY KEY,
+  id_cliente TEXT NOT NULL,
+  id_tienda TEXT NOT NULL,
+  fecha_hora TIMESTAMP NOT NULL,
+  monto DECIMAL(10,2) CHECK (monto >= 0),
+  canal TEXT CHECK (canal IN ('pos','web','app','telefono')),
+  es_fraude BOOLEAN NOT NULL DEFAULT 0
+);
+
+-- Tabla de clientes
+CREATE TABLE clientes (
+  id_cliente TEXT PRIMARY KEY,
+  segmento TEXT,
+  fecha_registro DATE
+);
+
+-- Tabla de tiendas
+CREATE TABLE tiendas (
+  id_tienda TEXT PRIMARY KEY,
+  categoria TEXT,
+  ciudad TEXT
+);
+```
+> Este es solo un ejemplo. Adáptalo a tu proyecto específico.
+
+---
+
+## Conceptos clave para organizar datos {.smaller} 
+
+- **Identificadores únicos**: cada fila en una tabla debe tener un código único.  
+- **Referencias entre tablas**: usar códigos para conectar información relacionada.  
+- **Tipos de datos apropiados**: números para cantidades, texto para nombres, fechas para tiempo.  
+- **Reglas de validación**: establecer qué valores son aceptables.
+
+**Reglas básicas**  
+- Cada tabla debe tener un identificador único principal.  
+- Usar códigos simples para conectar tablas (no texto largo).  
+- Mantener los identificadores estables (no cambiarlos después).
+
+---
+
+## Diccionario de datos - ¿qué es cada variable? {.smaller .scrollable}
+
+| Tabla | Variable | Tipo | Valores permitidos | ¿Puede estar vacío? | Descripción | De dónde viene |
+|---|---|---|---|---:|---|---|
+| transacciones | id_transaccion | Texto | Código único | No | Identificador de cada compra | Sistema |
+| transacciones | monto | Número | Mayor a 0 | No | Cantidad en pesos | Terminal |
+| transacciones | fecha_hora | Fecha | Formato YYYY-MM-DD | No | Cuándo ocurrió | Sistema |
+| transacciones | es_fraude | Sí/No | Verdadero o Falso | No | ¿Es fraudulenta? | Analista |
+
+> Mantén este archivo actualizado y guárdalo como `diccionario_datos.csv`. Agrega una columna **"Transformación aplicada"** si imputas o agregas alguna variable.
+
+---
+
+## Ruta metodológica y diseño de datos {.smaller}
+
+| Elemento | Pregunta central | Resultado esperado |
+|---|---|---|
+| **Pregunta de investigación** | ¿Qué quiero responder? | Delimita el fenómeno de estudio |
+| **Unidad de análisis** | ¿Cuál es mi fila? | Define la estructura de la tabla |
+| **Variables clave** | ¿Qué observar o medir? | Lista de columnas necesarias |
+| **Fuente de datos** | ¿De dónde provienen? | Identifica proveedores y métodos |
+| **Formato de almacenamiento** | ¿Una tabla o varias? | Esquema de organización |
+| **Pipeline de preparación** | ¿Qué transformar? | Limpieza, imputación, agregación |
+
+::: callout-tip
+Antes de recolectar un solo dato, completa esta tabla. Cada fila debe tener una respuesta documentada en tu protocolo de investigación.
+:::
+
+---
+
+## ¿De dónde obtengo mis datos? {.smaller .scrollable}
+
+**¿Qué datos necesito?**
+
+- Identifica todas las variables en tu diccionario.
+- Asegúrate que cada variable tenga una fuente definida.
+- Determina la frecuencia de recolección necesaria.
+
+**Métodos de recolección**
+
+- **Fuentes directas**: encuestas que yo diseño, experimentos, observaciones.
+- **Fuentes existentes**: bases de datos públicas, APIs, archivos institucionales.
+- **Herramientas de captura**: formularios digitales, sensores, programas de descarga automática.
+
+**Planificación del muestreo**
+
+- Define claramente: ¿a quién o qué voy a estudiar?
+- ¿Cuántos casos necesito para que sea representativo?
+- ¿Hay grupos específicos que debo incluir?
+
+---
+
+## Evaluación del origen de los datos {.smaller .scrollable}
+
+Antes de analizar, responde estas 6 preguntas de control:
+
+| Dimensión | Preguntas clave |
+|---|-------|
+| **Procedencia** | ¿De dónde provienen los datos? ¿Quién los generó? ¿Son propios o de terceros? |
+| **Generación/recolección** | ¿Cómo se recolectaron? ¿Bajo qué condiciones? ¿Existe protocolo? |
+| **Estructura y alcance** | ¿Cuál es la unidad de observación? ¿Qué periodo cubren? ¿Qué cobertura geográfica/poblacional tienen? |
+| **Calidad y confiabilidad** | ¿Se validaron? ¿Hay faltantes, sesgos o errores conocidos? ¿Son consistentes entre periodos/fuentes? |
+| **Transformaciones previas** | ¿Son datos crudos o procesados? ¿Qué agregaciones/imputaciones se aplicaron? ¿Se integraron múltiples fuentes? |
+| **Restricciones y uso** | ¿Hay límites legales, éticos o de licencia? ¿El propósito original es compatible con tu proyecto? |
+
+::: callout-tip
+**Versión compacta**: Procedencia · Generación · Estructura · Calidad · Transformaciones · Restricciones.
+Documenta respuestas breves en tu `README.md` o protocolo.
+:::
+
+::: callout-important
+Si no puedes responder con evidencia documental estas 6 dimensiones, tu base aún no está lista para análisis inferencial.
+:::
+
+---
+
+## Control de calidad de los datos {.smaller .scrollable}
+
+> La evaluación del origen responde *qué preguntar* antes de recolectar; el control de calidad responde *cómo verificar* lo que ya tienes.
+
+**Prevención** (al momento de capturar)
+
+- Usar formularios que validen automáticamente los datos.
+- Crear listas de opciones cerradas cuando sea posible.
+
+**Detección de errores** (después de capturar)
+
+- Verificar que no hay duplicados donde no debería haberlos.
+- Revisar que los valores estén en rangos razonables.
+- Comprobar que las fechas sean lógicas.
+
+**Documentación**
+
+- Registrar de dónde viene cada dato y cuándo se capturó.
+- Mantener los datos originales sin modificar en una carpeta separada.
+
+---
+
+## De datos crudos a datos listos para análisis {.smaller}
+
+```{mermaid}
+flowchart LR
+  A[("Datos<br/>crudos")] --> B["Integración<br/>(unir fuentes)"]
+  B --> C["Limpieza<br/>(errores, duplicados)"]
+  C --> D["Transformación<br/>(tipos, codificación)"]
+  D --> E["Imputación<br/>(valores faltantes)"]
+  E --> F["Agregación<br/>(temporal / espacial)"]
+  F --> G[("Dataset<br/>para análisis")]
+  style A fill:#fff3cd,stroke:#856404
+  style G fill:#d1e7dd,stroke:#0f5132
+```
+
+> No todos los proyectos requieren todos los pasos ni en este orden. Documenta cada transformación que apliques.
+
+---
+
+## Agregación: resumir datos por grupos {.smaller}
+
+Cuando tienes observaciones individuales que necesitas resumir por período o región:
+
+**Agregación temporal** — de registros diarios a resumen mensual:
+
+| Fecha | Monto | &nbsp;→&nbsp; | Mes | Total | Promedio |
+|-------|-------|---|-----|-------|---------|
+| 2024-01-03 | 450 | | 2024-01 | 12 300 | 410 |
+| 2024-01-07 | 380 | | 2024-02 | 14 500 | 483 |
+| 2024-01-15 | 520 | | | | |
+
+**Agregación espacial** — de municipio a estado:
+
+| Municipio | Índice | &nbsp;→&nbsp; | Estado | Media | N |
+|-----------|--------|---|--------|-------|---|
+| Zapopan | 8.2 | | Jalisco | 7.9 | 125 |
+| Tlaquepaque | 7.6 | | | | |
+
+::: callout-tip
+La granularidad adecuada depende de tu **pregunta de investigación**. Elige el nivel que responda lo que quieres saber, no el que sea más fácil de obtener.
+:::
+
+---
+
+## Imputación: qué hacer con datos faltantes {.smaller .scrollable}
+
+```{mermaid}
+flowchart LR
+  A["¿Por qué<br/>falta el dato?"] --> B{"Tipo de<br/>ausencia"}
+  B -- MCAR --> C["Falta al azar<br/>Ej: error técnico"]
+  B -- MAR --> D["Falta según<br/>otra variable"]
+  B -- MNAR --> E["Falta por el<br/>valor mismo"]
+  C --> F["Media, mediana<br/>o moda"]
+  D --> G["Imputación<br/>por regresión"]
+  E --> H["Supuesto explícito<br/>o análisis de<br/>sensibilidad"]
+```
+
+> Identificar el mecanismo de ausencia es el primer paso antes de elegir cualquier método.
+
+---
+
+## Métodos de imputación comunes {.smaller .scrollable}
+
+| Método | Cuándo usarlo | Ventaja | Limitación |
+|--------|--------------|---------|-----------|
+| **Eliminar filas** | Pocos faltantes (<5%), MCAR | Simple | Pierde información |
+| **Media / mediana** | Numéricas, MCAR | Rápido | Subestima la varianza |
+| **Moda** | Categóricas | Fácil | Sesgo si hay dominancia |
+| **Valor anterior (fill)** | Series de tiempo | Respeta la tendencia | Solo datos ordenados |
+| **Regresión** | MAR, variables correlacionadas | Preciso | Requiere más trabajo |
+| **Imputación múltiple** | Análisis formales | Estadísticamente robusto | Complejo de implementar |
+
+::: callout-warning
+**Documenta siempre** qué método usaste y en qué variables. El método elegido debe justificarse en tu sección de metodología.
+:::
+
+---
+
+## Consideraciones éticas y de privacidad
+
+- **Minimiza la recolección**: solo recolecta los datos que realmente necesitas.  
+- **Protege la identidad**: usa códigos en lugar de nombres cuando sea posible.  
+- **Controla el acceso**: define quién puede ver qué información.  
+- **Datos sintéticos**: si necesitas compartir datos, considera generar versiones artificiales que mantengan las características importantes pero no revelen información personal.
+
+---
+
+## ¿Qué son los datos sintéticos? {.smaller}
+
+Los **datos sintéticos** son conjuntos de datos artificiales que imitan las características estadísticas de datos reales sin contener información real de personas específicas.
+
+::: columns
+::: column
+**¿Cuándo usarlos?**
+
+- Para compartir datos con colaboradores
+- Para publicar datasets de investigación
+- Para entrenar modelos sin exponer datos sensibles
+- Para crear ejemplos educativos
+:::
+::: column
+**Ventajas**
+
+- Protegen la privacidad individual
+- Mantienen patrones estadísticos útiles
+- Permiten reproducibilidad
+- Eliminan restricciones legales de uso
+:::
+:::
+
+## Ejemplo práctico: Dataset de estudiantes {.smaller .scrollable}
+
+**Datos originales** (sensibles):
+
+
+| ID | Nombre | Edad | Promedio | Ciudad |
+|----|--------|------|----------|--------|
+| 1  | María García | 22 | 8.5 | Guadalajara |
+| 2  | Juan López | 24 | 7.2 | Monterrey |
+
+
+**Datos sintéticos** (seguros para compartir):
+
+
+| ID | Edad | Promedio | Ciudad |
+|----|------|----------|--------|
+| 1  | 23 | 8.3 | Ciudad_A |
+| 2  | 25 | 7.0 | Ciudad_B |
+
+
+> Los datos sintéticos mantienen las relaciones entre edad y promedio, pero eliminan nombres reales y codifican ubicaciones.
+
+**Herramientas básicas**:
+
+- **Python**: librerías como `faker` o `synthpop`
+- **R**: paquetes como `synthpop` o `simPop`  
+- **Excel**: funciones aleatorias con distribuciones controladas
+
+---
+
+## Organización de archivos para tu proyecto
+
+```
+/datos
+  /originales       # datos tal como los obtuviste (no tocar)
+  /procesados       # datos limpios listos para análisis
+  diccionario_datos.csv
+/documentos
+  esquema_datos.png # tu diagrama de organización
+README.md          # explicación del proyecto
+```
+
+---
+
+## Herramientas recomendadas
+
+- **Excel/Google Sheets**: para empezar y datos pequeños.  
+- **SQLite**: base de datos simple, ideal para aprender.  
+- **R/Python**: para análisis más avanzados.  
+- **Google Forms**: para recolectar datos con formularios.
+
+> Elige la herramienta según el tamaño de tus datos y tu experiencia.
+
+---
+
+## Lista de verificación para la Evidencia 4A {.smaller}
+
+- [ ] **Archivo de base de datos** creado (.xlsx, .csv o base de datos simple).  
+- [ ] **Herramienta utilizada** especificada (Excel, SQLite, etc.).  
+- [ ] **Alineación metodológica explícita**: cada variable o métrica se vincula con una pregunta específica/objetivo/hipótesis.  
+- [ ] **Evaluación del origen de datos** completada (procedencia, generación, estructura, calidad, transformaciones y restricciones de uso).  
+- [ ] **Variables incluidas** listadas (ejemplo: "20 variables, incluyendo 5 numéricas y 15 categóricas, con N=100 observaciones").  
+- [ ] **Transformaciones documentadas**: imputación, agregación o derivación de variables registradas en el diccionario.  
+- [ ] **Diccionario de datos** completo y actualizado (incluye fuente y transformación por variable).  
+- [ ] **Video corto** (máximo 3 minutos) mostrando tu base de datos.
+- [ ] **Documento PDF** con enlace al video y capturas de pantalla.
+
+---
+
+## Actividad {.smaller}
+
+1) **Decide** si tu proyecto requiere una tabla o varias, y justifica la respuesta.  
+2) **Construye** una mini matriz de coherencia: pregunta específica → objetivo → hipótesis → variable/métrica.
+3) **Dibuja** tu pipeline: ¿qué pasos debes aplicar desde los datos crudos hasta el dataset listo para análisis?  
+4) **Define** los campos principales (8-10 variables clave) e indica si alguna requiere imputación, agregación o derivación.  
+5) **Aplica** el checklist de evaluación del origen de datos y registra una evidencia por cada dimensión.
+6) **Escribe** 3 posibles problemas de calidad y cómo los resolverías (duplicados, valores faltantes, valores fuera de rango).  
+7) **Describe** tu plan de recolección: fuente, granularidad temporal/espacial y frecuencia.
+
+
+---
+
+## Puntos clave para recordar 
+
+- **Planifica antes de recolectar**: diseña tu estructura de datos antes de empezar a capturar información.  
+- **Documenta todo**: mantén un diccionario actualizado de qué significa cada variable y qué transformaciones se le aplicaron.  
+- **Prepara, no solo recolecta**: casi siempre necesitarás limpiar, imputar o agregar antes de analizar.  
+- **Elige la granularidad correcta**: la unidad de análisis (fila) debe corresponder con tu pregunta de investigación.  
+- **Considera la ética**: protege la privacidad y recolecta solo lo necesario.
+
+> La calidad de tu análisis depende directamente de la calidad y preparación de tus datos.
+
+---
+
+## Recursos adicionales (1/2) {.smaller .scrollable}
+
+### **Aprendizaje de SQL y bases de datos**
+
+- **SQL Bolt** - Tutorial interactivo de SQL: <https://sqlbolt.com/>
+- **W3Schools SQL** - Tutorial básico de SQL: <https://www.w3schools.com/sql/>
+- **DB Browser for SQLite** - Herramienta visual para SQLite: <https://sqlitebrowser.org/>
+- **Kaggle Learn** - Cursos gratuitos de bases de datos: <https://www.kaggle.com/learn>
+
+### **Herramientas para recolección de datos**
+
+- **Google Forms** - Para crear formularios de captura: <https://forms.google.com/>
+- **Microsoft Forms** - Alternativa a Google Forms: <https://forms.microsoft.com/>
+- **SurveyMonkey** - Para encuestas más complejas: <https://www.surveymonkey.com/>
+
+::: callout-tip
+**Para empezar**: Comienza con SQL Bolt para aprender consultas básicas y usa Google Forms para crear tus primeros formularios de recolección.
+:::
+
+---
+
+## Recursos adicionales (2/2) {.smaller .scrollable}
+
+### **Datos sintéticos y privacidad**
+- **Faker (Python)** - Librería para generar datos sintéticos: <https://faker.readthedocs.io/>
+- **Synthpop (R)** - Paquete para datos sintéticos: <https://cran.r-project.org/package=synthpop>
+- **SDV** - Synthetic Data Vault: <https://sdv.dev/>
+- **Mostly AI** - Plataforma de datos sintéticos: <https://mostly.ai/>
+
+### **Ética y buenas prácticas**
+- **FAIR Data Principles** - Principios para datos FAIR: <https://www.go-fair.org/fair-principles/>
+- **Guía de ética en datos del MIT**: <https://ethics.fast.ai/>
+
+::: callout-note
+**Recursos avanzados**: Estos recursos son útiles cuando ya tengas experiencia básica y necesites proteger datos sensibles o seguir estándares internacionales.
+:::

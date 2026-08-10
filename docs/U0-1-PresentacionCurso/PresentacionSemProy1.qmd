@@ -1,0 +1,163 @@
+---
+title: "Presentación del curso: Seminario de Proyecto I"
+author: 
+  - name: Sergio M. Nava Muñoz
+    id: sn
+    email: s3rgio.nava@gmail.com
+    affiliation: 
+        - id: cimat
+          name: CIMAT/INFOTEC
+          city: Aguascalientes
+          state: Ags
+format: 
+  revealjs:
+    slide-number: true
+    theme: simple
+    fontsize: 2.1em
+    logo: figs/logo-infotec.jpeg
+    css: style.css
+    chalkboard: true
+    menu: TRUE
+    transition: slide
+    background-transition: fade
+    title-slide-attributes:
+      data-background-image: /figs/DCCD.png
+      data-background-size: 100% 100%;     
+date: 2026-08-05
+---
+
+# Bienvenida
+
+
+# Propósito del curso
+
+- Esta asignatura tiene como finalidad proporcionar las herramientas metodológicas necesarias para la elaboración de un protocolo de investigación.
+- Entre los componentes que se desarrollarán se encuentran:
+  - Elección y delimitación del tema
+  - Planteamiento del problema
+  - Revisión de literatura especializada
+  - Construcción del marco metodológico
+  - Diseño y documentación de una base de datos
+- Todo ello desde una perspectiva aplicada a la Ciencia de Datos
+
+## La elección del problema: condición de éxito
+
+El curso te ayudará a delimitar, justificar y diseñar el protocolo.
+Pero el avance del semestre depende, en gran medida, de elegir un problema adecuado.
+
+Entre las características deseables se encuentran:
+
+- Relevancia clara (académica, social u organizacional).
+- Pregunta investigable y acotada (no solo “aplicar un modelo”).
+- Viabilidad en tiempo, recursos y acceso a información.
+- Criterio de éxito definible (métricas y forma de validación).
+- Aporte identificable (mejora, explicación, decisión o eficiencia).
+- Riesgos controlables (no depender de permisos inciertos o de terceros).
+
+## El problema y sus datos: verificación temprana {.smaller}
+
+Un problema es viable cuando existe una base de datos accesible y documentable,
+con la que sea posible evaluar resultados de forma razonable.
+
+Aspectos mínimos a verificar:
+
+- Acceso real a datos (permisos, ética, confidencialidad y uso permitido).
+- Unidad de análisis definida (qué representa cada registro).
+- Variables clave identificadas (entrada/salida) y diccionario disponible o construible.
+- Forma de validación: etiqueta/verdad-terreno o alternativa (reglas, casos, consistencia temporal).
+- Cobertura suficiente (tamaño, periodo y variabilidad del fenómeno).
+- Calidad mínima (faltantes, duplicados, coherencia, trazabilidad de limpieza).
+- Posibilidad de reproducibilidad (pipeline y documentación de decisiones).
+
+Señales de alerta:
+
+- “Luego conseguimos los datos” o “no hay manera de validar resultados”.
+
+
+# Relevancia para la formación profesional
+
+- Permite identificar, analizar y formalizar problemas reales relacionados con el manejo de información en distintos sectores.
+- Desarrolla habilidades para estructurar proyectos sólidos y viables en contextos organizacionales donde los datos son un recurso estratégico.
+- Constituye un eje fundamental en la construcción del proyecto de tesis y en la consolidación del perfil como científico o científica de datos.
+
+
+
+# Aplicación en el ámbito laboral
+
+- Facilita la participación en proyectos que requieren justificación y documentación rigurosa basada en evidencia empírica.
+- Permite diseñar soluciones estructuradas a partir de hipótesis comprobables y bases de datos analíticamente robustas.
+- Prepara para intervenir técnica y estratégicamente en organizaciones orientadas por datos.
+
+
+
+# Fin de aprendizaje general
+
+**Elaborar un protocolo de investigación**, así como una base de datos estructurada, aplicando el método científico y los principios de la Ciencia de Datos, con el objetivo de generar insumos para el diseño e implementación de algoritmos analíticos.
+
+
+
+# Ruta formativa
+
+1. Selección del tema y problemática de investigación  
+2. Planteamiento del problema  
+3. Definición del constructo de investigación  
+4. Creación de la base de datos
+
+
+
+# Agenda y actividades académicas
+
+## Sesiones sincrónicas (videoconferencias)
+
+Miércoles, de 10:00 a 11:00 hrs (hora CDMX)
+
+- 5, 12 y 19 de agosto
+- 2, 17 y 30 de septiembre
+- 14 y 28 de octubre
+- 11 de noviembre
+
+
+---
+
+## Actividades evaluadas
+
+| Unidad | Actividad | Fecha límite | Valor |
+|--------|-----------|--------------|--------|
+| U1-2   | 1A. Tema, problema y planteamiento | 23 ago | 20 pts |
+| U2     | 2A. Fuentes y formato APA          |  06 sep | 10 pts |
+| U3     | 3A. Constructo de investigación     | 04 oct | 20 pts |
+| U4     | 4A. Diseño de base de datos         | 18 oct  | 20 pts |
+| U4     | 4B. Presentación final del protocolo | 22 nov | 30 pts |
+|        | **Total**                           |         | **100 pts** |
+
+
+
+# Recomendaciones generales
+
+
+- Leer detenidamente el documento de presentación del curso.
+- Verificar los requerimientos técnicos para el trabajo en línea.
+- Organizar el tiempo de forma anticipada para cumplir con las entregas.
+- Asistir puntualmente a las videoconferencias o revisar las grabaciones disponibles.
+- Aplicar correctamente el formato APA (7ª edición) en todas las referencias.
+- Es responsabilidad del **alumno** asegurarse de que los archivos se suban **correctamente** a la plataforma, que puedan **abrirse sin errores** y que estén en **formatos compatibles**; de lo contrario, el material **no podrá ser evaluado**.
+
+
+
+
+
+# Comunicación e interacción
+
+- El espacio de comunicación en la plataforma se utilizará para difundir información relevante del curso.
+- Las grabaciones de las sesiones estarán disponibles para consulta posterior.
+- Se recomienda revisar la plataforma periódicamente para estar al tanto de avisos y fechas clave.
+
+
+# Mensaje final
+
+> Te damos la más cordial bienvenida al curso.  
+>  
+> Este espacio marcará el inicio formal de tu proyecto de investigación de tesis.  
+>  
+> Deseamos que este proceso contribuya significativamente a tu formación académica y profesional.
+

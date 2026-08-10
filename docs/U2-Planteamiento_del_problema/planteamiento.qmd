@@ -1,0 +1,432 @@
+---
+title: "Planteamiento del Problema y Justificación"
+author: 
+  - name: Sergio M. Nava Muñoz
+    id: sn
+    email: s3rgio.nava@gmail.com
+    affiliation: 
+        - id: cimat
+          name: CIMAT/INFOTEC
+          city: Aguascalientes
+          state: Ags
+format: 
+  revealjs:
+    slide-number: true
+    theme: simple
+    fontsize: 2.1em
+    logo: figs/logo-infotec.jpeg
+    css: style.css
+    chalkboard: true
+    menu: TRUE
+    transition: slide
+    background-transition: fade
+    title-slide-attributes:
+      data-background-image: /figs/DCCD.png
+      data-background-size: 100% 100%;     
+
+date: 2026-01-28
+---
+
+
+# Introducción
+
+- Todo proyecto de investigación comienza con un problema claro y bien definido.
+- La justificación es clave para demostrar la relevancia y viabilidad de la investigación.
+- Exploraremos cómo se estructuran el planteamiento del problema y la justificación.
+
+
+---
+
+## **Diferencias entre el Planteamiento del Problema y la Justificación**  {.scrollable}
+
+| **Sección**         | **Propósito**         |
+|---------------------|-----------------------|
+| **Planteamiento del Problema** | Define **qué problema** se va a investigar y cuál es su contexto. Describe la situación actual y delimita la pregunta de investigación. |
+| **Justificación** | Explica **por qué es importante** investigar ese problema y cuáles serán los beneficios del estudio. |
+
+
+---
+
+## **¿Dónde se ubican dentro de un trabajo de investigación?**  {.smaller .scrollable}
+
+**Ejemplo de orden correcto en un proyecto de investigación:**  
+
+
+1. Introducción
+2. **Planteamiento del problema**
+3. **Justificación**
+4. Objetivos de la investigación
+5. Marco teórico
+6. Metodología
+7. Análisis de resultados
+8. Discusión
+9. Conclusión
+10. Referencias
+11. Apéndices
+12. Anexos
+
+
+# Planteamiento del Problema
+
+## ¿Qué es el Planteamiento del Problema?
+El **planteamiento del problema** es la base de toda investigación. Define el contexto, justifica su importancia y delimita el foco de estudio. Un problema de investigación es una brecha en el conocimiento o una situación que requiere ser analizada y comprendida.
+
+
+
+
+---
+
+## Elementos Clave del Planteamiento del Problema
+
+1. **Descripción del problema**: Presentar la situación actual, resaltando la relevancia del problema.  
+2. **Antecedentes**: Estudios previos, estadísticas o datos que contextualicen la problemática.  
+3. **Consecuencias**: Explicar el impacto de no abordar el problema.  
+4. **Formulación del problema**: Pregunta de investigación clara y delimitada.  
+5. **Objetivos**: Especificar qué se busca lograr con la investigación.  
+
+---
+
+## Ejemplo 1: **Salud Pública - Enfermedades Respiratorias en la CDMX** {.smaller .scrollable transition="slide"  }
+
+### **1. Descripción del Problema**  
+La **contaminación del aire en la Ciudad de México (CDMX)** es un problema de salud pública que ha sido vinculado con enfermedades respiratorias como el asma y la Enfermedad Pulmonar Obstructiva Crónica (EPOC). Estudios recientes han demostrado un incremento en el número de hospitalizaciones debido a la exposición prolongada a contaminantes como **PM2.5 y NO₂**.
+
+### **2. Antecedentes**  
+- Según la OMS, la contaminación atmosférica es responsable de más de 7 millones de muertes prematuras al año.  
+- En 2023, la CDMX registró **42 días de contingencia ambiental** debido a altos niveles de ozono.  
+- Investigaciones previas han analizado los efectos de la contaminación, pero pocos estudios han modelado su relación con la incidencia de enfermedades en tiempo real.  
+
+### **3. Consecuencias**  
+Si no se toman medidas para mitigar el problema, las tasas de enfermedades respiratorias continuarán aumentando, impactando el sistema de salud pública y reduciendo la calidad de vida de los habitantes.
+
+### **4. Formulación del Problema**  
+**¿Cuál es la relación entre los niveles de contaminación del aire y la incidencia de enfermedades respiratorias en la CDMX en los últimos cinco años?**
+
+o
+
+Este estudio analizará la relación entre los niveles de contaminación del aire y la incidencia de enfermedades respiratorias en la Ciudad de México en los últimos cinco años, con el objetivo de identificar patrones, evaluar su impacto en la salud pública y proponer estrategias de mitigación.
+
+### **5. Objetivos**  
+- Determinar los niveles de contaminación del aire en la CDMX en los últimos cinco años.  
+- Analizar la correlación entre los niveles de contaminantes y el número de hospitalizaciones por enfermedades respiratorias.  
+- Desarrollar un modelo predictivo que ayude a las autoridades a tomar decisiones basadas en datos.  
+
+---
+
+## Ejemplo 2: **Educación - Desigualdad en el Acceso a la Educación Superior** {.smaller .scrollable transition="slide"  }
+
+### **1. Descripción del Problema**  
+El acceso a la educación superior en América Latina sigue siendo desigual. Factores como la condición socioeconómica, la ubicación geográfica y la falta de recursos educativos limitan las oportunidades para jóvenes en comunidades rurales y marginadas.
+
+### **2. Antecedentes**  
+- Un informe de la UNESCO indica que **solo el 36% de los jóvenes de zonas rurales en Latinoamérica accede a la educación superior**, comparado con el 66% en zonas urbanas.  
+- Investigaciones previas han identificado que los costos de transporte y la falta de conectividad digital son barreras clave para los estudiantes rurales.  
+- A pesar de los esfuerzos gubernamentales, las tasas de abandono universitario en estas comunidades siguen siendo altas.  
+
+### **3. Consecuencias**  
+La desigualdad en la educación perpetúa la pobreza y limita el desarrollo económico de las comunidades rurales. Sin oportunidades de educación superior, los jóvenes tienen menos posibilidades de acceder a empleos bien remunerados.
+
+### **4. Formulación del Problema**  
+**¿Cuáles son los principales factores que limitan el acceso a la educación superior para estudiantes de comunidades rurales en América Latina?**
+
+o
+
+Este estudio investigará los principales factores que limitan el acceso a la educación superior para estudiantes de comunidades rurales en América Latina, identificando barreras económicas, sociales y tecnológicas que afectan su ingreso y permanencia en instituciones educativas.
+
+### **5. Objetivos**  
+- Identificar las principales barreras económicas, sociales y tecnológicas que afectan el acceso a la educación superior en zonas rurales.  
+- Evaluar la efectividad de programas gubernamentales y becas en la reducción de la brecha educativa.  
+- Proponer estrategias para mejorar la equidad en el acceso a la educación superior.  
+
+---
+
+## Ejemplo 3: **Cambio Climático - Impacto del Calentamiento Global en la Biodiversidad Marina** {.smaller .scrollable transition="slide"  }
+
+### **1. Descripción del Problema**  
+El **calentamiento global** está afectando los ecosistemas marinos a nivel global. Se ha observado una reducción en la biodiversidad de arrecifes de coral, una migración anómala de especies marinas y una disminución en la productividad de los océanos.
+
+### **2. Antecedentes**  
+- Según la NOAA, la temperatura de los océanos ha aumentado en promedio **1.5°C en los últimos 50 años**.  
+- Un estudio publicado en *Nature* advierte que más del **60% de las especies marinas han cambiado su patrón de migración debido al cambio climático**.  
+- Las barreras de coral en Australia han perdido **más del 50% de su cobertura** en las últimas tres décadas.  
+
+### **3. Consecuencias**  
+Si esta tendencia continúa, se perderán ecosistemas clave que sustentan la pesca y la seguridad alimentaria. Además, la disminución en la biodiversidad podría desencadenar colapsos ecológicos en diversas regiones del mundo.
+
+### **4. Formulación del Problema**  
+**¿Cómo está afectando el aumento de la temperatura del océano a la biodiversidad marina en las zonas tropicales?**
+
+o
+
+Este estudio analizará el impacto del aumento de la temperatura del océano en la biodiversidad marina en las zonas tropicales, identificando los cambios en la distribución de especies, la pérdida de ecosistemas y las posibles estrategias de adaptación para mitigar sus efectos.
+
+### **5. Objetivos**  
+- Evaluar los cambios en la distribución de especies marinas debido al calentamiento del océano.  
+- Identificar las especies más vulnerables a estos cambios.  
+- Analizar posibles estrategias de conservación para mitigar el impacto del calentamiento global en la biodiversidad marina.  
+
+---
+
+## Ejemplo 4: **Ciencias de la Computación - Seguridad en el Uso de Inteligencia Artificial en la Ciberseguridad** {.smaller .scrollable transition="slide"  }
+
+### **1. Descripción del Problema**  
+La **inteligencia artificial (IA)** está revolucionando la ciberseguridad, permitiendo detectar ataques cibernéticos en tiempo real. Sin embargo, también se han identificado vulnerabilidades que pueden ser explotadas por ciberdelincuentes.
+
+### **2. Antecedentes**  
+- El 80% de los ataques cibernéticos en 2023 involucraron algún tipo de IA, según *Cybersecurity Ventures*.  
+- Investigaciones recientes han demostrado que los modelos de IA pueden ser engañados con técnicas de *adversarial attacks*.  
+- A pesar de los avances en ciberseguridad, no existen estándares unificados para el uso seguro de IA en la detección de amenazas.  
+
+### **3. Consecuencias**  
+Si no se abordan estas vulnerabilidades, las herramientas de seguridad basadas en IA podrían ser utilizadas para facilitar ataques en lugar de prevenirlos.
+
+### **4. Formulación del Problema**  
+**¿Cuáles son las principales vulnerabilidades de los sistemas de ciberseguridad basados en inteligencia artificial y cómo pueden mitigarse?**
+
+o
+
+Este estudio investigará las principales vulnerabilidades de los sistemas de ciberseguridad basados en inteligencia artificial, analizando los riesgos asociados y explorando estrategias de mitigación para fortalecer la protección contra amenazas cibernéticas
+
+### **5. Objetivos**  
+- Identificar las principales amenazas que enfrentan los modelos de IA en ciberseguridad.  
+- Analizar estrategias para fortalecer la seguridad en el uso de IA.  
+- Proponer un marco de estándares para el desarrollo seguro de modelos de IA en ciberseguridad.  
+
+---
+
+## Ejemplo 5: **Investigación Aplicada con Innovación Metodológica - Detección de Fraudes Financieros mediante Aprendizaje Federado** {.smaller .scrollable transition="slide"  }
+
+### **1. Descripción del Problema**  
+El **fraude financiero** representa una amenaza creciente para las instituciones bancarias y los usuarios, con pérdidas globales que superan los **$32 mil millones de dólares anuales**. Los métodos tradicionales de detección presentan limitaciones significativas: altas tasas de falsos positivos, incapacidad para adaptarse a patrones emergentes de fraude, y restricciones en el uso compartido de datos entre instituciones debido a regulaciones de privacidad. Este proyecto propone una **innovación metodológica** basada en **aprendizaje federado**, una técnica que permite entrenar modelos de machine learning de forma colaborativa sin centralizar datos sensibles, preservando la privacidad del usuario mientras se mejora la detección de fraudes.
+
+### **2. Antecedentes**  
+- Según un informe de la Asociación de Examinadores de Fraude Certificados (ACFE), las organizaciones pierden **aproximadamente el 5% de sus ingresos anuales** debido a fraudes.  
+- El 78% de las instituciones financieras reportan un incremento en intentos de fraude desde la pandemia de COVID-19.  
+- Los modelos centralizados de detección requieren compartir datos sensibles, lo cual viola regulaciones como **GDPR y la Ley de Protección de Datos Personales**.  
+- Las técnicas actuales de machine learning no pueden aprovechar datos distribuidos en múltiples instituciones sin comprometer la privacidad del usuario.  
+- **Investigaciones recientes en aprendizaje federado** han demostrado su efectividad en aplicaciones médicas y de telecomunicaciones, pero su aplicación en el sector financiero para detección de fraudes está poco explorada.  
+- Los métodos tradicionales requieren centralización de datos, lo cual es incompatible con las regulaciones actuales de privacidad.
+
+### **3. Consecuencias**  
+Si no se desarrollan métodos más efectivos que preserven la privacidad, las instituciones financieras seguirán enfrentando pérdidas económicas significativas, erosión de la confianza del cliente y sanciones regulatorias. Además, los delincuentes continúan adaptando sus estrategias más rápidamente que los sistemas de detección actuales.
+
+### **4. Formulación del Problema**  
+**¿Cómo puede el aprendizaje federado mejorar la detección de fraudes financieros sin comprometer la privacidad de los datos de los usuarios y permitiendo la colaboración entre múltiples instituciones bancarias?**
+
+o
+
+Este estudio desarrollará e implementará un sistema de detección de fraudes financieros basado en aprendizaje federado que permita a múltiples instituciones bancarias colaborar en el entrenamiento de modelos de machine learning sin compartir datos sensibles, evaluando su efectividad comparada con métodos tradicionales y su cumplimiento con regulaciones de privacidad.
+
+### **5. Objetivos**  
+- Diseñar e implementar una arquitectura de **aprendizaje federado con privacidad diferencial** para la detección de transacciones fraudulentas, específicamente adaptada para datos financieros desbalanceados.  
+- Desarrollar un **algoritmo de agregación ponderada adaptativa** que optimice las contribuciones de cada institución basándose en la calidad y representatividad de sus datos.  
+- Evaluar el rendimiento del modelo federado comparándolo con enfoques centralizados y distribuidos tradicionales en términos de precisión, recall y tasa de falsos positivos.  
+- Analizar el cumplimiento del sistema propuesto con regulaciones internacionales de protección de datos (GDPR, CCPA, LFPDPPP).  
+- Desarrollar un protocolo de colaboración inter-institucional que permita el entrenamiento colaborativo mientras se mantiene la seguridad y confidencialidad de los datos.
+
+
+
+# Conclusión  
+
+- El **planteamiento del problema** debe ser claro, relevante y justificable.  
+- La **problemática debe basarse en datos y antecedentes** para demostrar su importancia.  
+- La **pregunta de investigación** debe ser específica y responder a un problema real.  
+- Los **objetivos** guían la investigación y delimitan su alcance.  
+
+
+
+# **Formas de Justificación en la Investigación**  
+
+## **Definición**  
+La **justificación de una investigación** es un elemento fundamental en la elaboración de proyectos de estudio, ya que permite explicar **por qué y para qué** se realiza el trabajo. Su propósito es demostrar la **relevancia, pertinencia y viabilidad** del estudio, estableciendo los beneficios que se derivarán de sus resultados.
+
+---
+
+## **¿Por qué es importante la Justificación?**  
+- Define la **importancia y utilidad** del estudio.  
+- Permite **orientar la investigación** y su aplicabilidad.  
+- Facilita el acceso a **financiamiento y apoyo institucional**.  
+- Responde a preguntas clave:  
+  - **¿Por qué es importante este estudio?**  
+  - **¿Qué beneficios traerá?**  
+  - **¿Cómo contribuye a la generación de conocimiento?**  
+
+
+
+# **Tipos de Justificación en la Investigación**  {.smaller .scrollable transition="slide"  }
+
+
+
+1. **Falta de conocimiento**: Se argumenta la ausencia de estudios previos.
+2. **Importancia del tema**: Se enfatiza la relevancia del fenómeno investigado.
+3. **Aportes de los hallazgos**: Se destacan las posibles aplicaciones o implicaciones del estudio.
+4. **Vacío metodológico**: Se justifica la investigación por el uso de nuevos enfoques o técnicas.
+5. **Solución de un problema**: Se busca resolver una cuestión práctica o teórica.
+6. **Corroboración de una teoría**: Se valida empíricamente un marco teórico existente.
+7. **Justificación basada en criterios científicos**: Se argumenta con base en criterios como la **conveniencia, relevancia social, implicaciones prácticas y valor teórico**.
+
+---
+
+## **1. Justificación por Falta de Conocimiento**  
+Se fundamenta en la ausencia de estudios previos o en el conocimiento limitado sobre un tema.  
+
+**Ejemplo:**  
+*"No existen estudios detallados sobre el impacto del teletrabajo en la salud mental en Latinoamérica, por lo que esta investigación llenará ese vacío."*  
+
+**Importancia:**  
+- Contribuye a generar **nuevo conocimiento**.  
+- Identifica **vacíos teóricos** en la literatura académica.  
+
+---
+
+## **2. Justificación por Importancia del Tema**  
+Argumenta que el estudio es relevante por su impacto en la sociedad, el medio ambiente o la economía.  
+
+**Ejemplo:**  
+*"El cambio climático es una de las principales amenazas para la biodiversidad, por lo que este estudio analizará cómo afecta la migración de especies marinas."*  
+
+**Importancia:**  
+- Relacionado con **problemas actuales** de gran impacto.  
+- Puede influir en **decisiones políticas y sociales**.  
+
+---
+
+## **3. Justificación por Aportes de los Hallazgos**  
+Explica cómo los resultados pueden **aplicarse** en el mundo real.  
+
+**Ejemplo:**  
+*"El desarrollo de materiales biodegradables podría reducir la contaminación plástica en un 60%."*  
+
+**Importancia:**  
+- Favorece la **innovación y el desarrollo tecnológico**.  
+- Impacta sectores como la **salud, la educación y la tecnología**.  
+
+---
+
+## **4. Justificación por Vacío Metodológico**  
+Se basa en la necesidad de desarrollar o mejorar métodos de investigación.  
+
+**Ejemplo:**  
+*"Los modelos actuales de predicción de terremotos no consideran la actividad volcánica. Este estudio propondrá un nuevo enfoque combinado."*  
+
+**Importancia:**  
+- Introduce **nuevas técnicas y enfoques** en la investigación.  
+- Mejora la **precisión y fiabilidad** de estudios previos.  
+
+---
+
+## **5. Justificación por Solución de un Problema**  
+Se enfoca en la resolución de una **problemática concreta** en la sociedad o en la ciencia.  
+
+**Ejemplo:**  
+*"La escasez de agua en zonas áridas es un problema crítico. Este estudio evaluará tecnologías de recolección de agua de lluvia para comunidades vulnerables."*  
+
+**Importancia:**  
+- Contribuye a resolver **problemas urgentes**.  
+- Mejora la **calidad de vida** de poblaciones afectadas.  
+
+---
+
+## **6. Justificación por Corroboración de una Teoría**  
+Se basa en la necesidad de validar o refutar una teoría existente.  
+
+**Ejemplo:**  
+*"Se analizará si los principios de la teoría de redes sociales pueden aplicarse a la difusión de noticias falsas en plataformas digitales."*  
+
+**Importancia:**  
+- Aporta **evidencia empírica** para teorías existentes.  
+- Puede fortalecer o refutar **modelos científicos** previos.  
+
+---
+
+## **7. Justificación por Criterios Científicos**   {.scrollable transition="slide"  }
+Combina diferentes aspectos de la justificación en un marco estructurado:
+
+| **Criterio**       | **Pregunta clave**                                      |
+|--------------------|-------------------------------------------------------|
+| **Conveniencia**  | ¿Para qué sirve el estudio?                            |
+| **Relevancia**    | ¿Quiénes se beneficiarán y cómo?                       |
+| **Aplicabilidad** | ¿Resuelve un problema real?                            |
+| **Valor teórico** | ¿Contribuye a la generación de conocimiento?           |
+
+**Ejemplo:**  
+*"El uso de modelos de inteligencia artificial para predecir la contaminación del aire en la CDMX ayudará a implementar alertas tempranas y mejorar políticas ambientales."*  
+
+**Importancia:**  
+- Evalúa la investigación desde **múltiples dimensiones**.  
+- Justifica tanto **aplicaciones prácticas** como **contribuciones teóricas**.  
+
+
+# **Conclusión**  
+
+## **Importancia de una buena Justificación**  
+- Un proyecto sin una **justificación clara** difícilmente obtendrá apoyo académico o financiamiento.  
+- La justificación debe **estar basada en evidencia y conectar con problemas reales**.  
+
+## **Preguntas para validar la justificación**  
+Antes de finalizar, asegúrate de responder estas preguntas:  
+
+- ¿Este estudio es necesario?  
+- ¿Aporta algo nuevo?  
+- ¿Cómo se beneficiarán las personas o instituciones con los resultados?  
+- ¿Qué impacto tendrá en la disciplina o en la sociedad?  
+
+**Una investigación bien justificada tiene mayores probabilidades de éxito y relevancia.**   
+
+
+
+# Ejemplo de Justificación  por Criterios Científicos
+
+## **Predicción de la Contaminación del Aire en la CDMX Usando Modelos de Aprendizaje Automático**
+
+### **1. Conveniencia** (*¿Para qué sirve?*)  
+La **Ciudad de México (CDMX)** es una de las urbes más contaminadas de América Latina. La exposición prolongada a contaminantes como el **PM2.5, PM10, ozono (O₃) y dióxido de nitrógeno (NO₂)** afecta la salud pública y el medio ambiente. Este proyecto busca desarrollar un modelo de aprendizaje automático para **predecir los niveles de contaminación en la CDMX**, permitiendo alertar a la población y optimizar estrategias de mitigación.  
+
+---
+
+### **2. Relevancia Social** (*¿Quiénes se beneficiarán y cómo?*)  
+El proyecto impactará a distintos sectores de la sociedad en la CDMX:  
+- **Gobierno de la CDMX y SEMARNAT**: Mejorará la toma de decisiones para implementar **contingencias ambientales y restricciones vehiculares**.  
+- **Población en riesgo (niños, adultos mayores y personas con enfermedades respiratorias)**: Podrá **anticiparse** a episodios de contaminación alta y ajustar sus actividades.  
+- **Sector salud**: Mejorará la planificación hospitalaria y la prevención de enfermedades respiratorias.  
+- **Investigadores y académicos**: Dispondrán de una metodología basada en datos para evaluar políticas ambientales.  
+
+---
+
+### **3. Implicaciones Prácticas** (*¿Resuelve un problema real?*)  
+Actualmente, la **CDMX enfrenta frecuentes contingencias ambientales**, afectando la movilidad, la salud y la economía. Este modelo ayudará a **predecir la calidad del aire con días de anticipación**, proporcionando información clave para la **implementación de restricciones vehiculares, cierres de industrias contaminantes y alertas de salud pública**.  
+
+---
+
+### **4. Valor Teórico** (*¿Aporta nuevos conocimientos?*)  
+- Se analizarán múltiples **factores meteorológicos y contaminantes** con técnicas avanzadas de Machine Learning.  
+- Se compararán modelos como **Redes Neuronales, XGBoost y LSTM** para identificar el más efectivo en la predicción de la contaminación.  
+- Se contribuirá al **desarrollo de modelos predictivos urbanos** que puedan aplicarse a otras ciudades con problemas similares.  
+
+
+
+# Más Ejemplos por Categoría
+
+---
+
+### Justificación basada en falta de conocimiento
+- **Ejemplo**: "No hay estudios previos sobre los efectos del cambio climático en la biodiversidad de ecosistemas urbanos en América Latina."
+
+### Justificación basada en la importancia del tema
+- **Ejemplo**: "El uso de inteligencia artificial en la educación puede transformar los métodos de enseñanza, por lo que es necesario evaluar su impacto en el aprendizaje."
+
+### Justificación basada en los aportes de los hallazgos
+- **Ejemplo**: "La implementación de sistemas de captura de carbono en industrias altamente contaminantes podría reducir en un 50% las emisiones de CO₂ en los próximos diez años, contribuyendo a la mitigación del cambio climático."
+
+---
+
+### Justificación basada en un vacío metodológico
+- **Ejemplo**: "Las herramientas actuales de diagnóstico de enfermedades neurodegenerativas no permiten detectar etapas tempranas de deterioro cognitivo. Este estudio propone un nuevo enfoque basado en inteligencia artificial para mejorar la precisión en la detección precoz del Alzheimer."
+
+### Justificación basada en la solución de un problema
+- **Ejemplo**: "La eficiencia en el transporte público sigue siendo un reto en ciudades en crecimiento; este estudio busca diseñar una estrategia de optimización de rutas."
+
+### Justificación basada en la corroboración de una teoría
+- **Ejemplo**: "Se busca validar la hipótesis de que la nanotecnología puede mejorar la eficiencia de las células solares en un 30%."
+
+# ¿Preguntas o dudas?

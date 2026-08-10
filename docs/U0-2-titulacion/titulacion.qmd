@@ -1,0 +1,174 @@
+---
+title: "Formas de Titulación en la MCDI"
+author: 
+  - name: Sergio M. Nava Muñoz
+    id: sn
+    email: s3rgio.nava@gmail.com
+    affiliation: 
+        - id: cimat
+          name: CIMAT/INFOTEC
+          city: Aguascalientes
+          state: Ags
+format: 
+  revealjs:
+    slide-number: true
+    theme: simple
+    fontsize: 2.1em
+    logo: figs/logo-infotec.jpeg
+    css: style.css
+    chalkboard: true
+    menu: TRUE
+    transition: slide
+    background-transition: fade
+    title-slide-attributes:
+      data-background-image: /figs/DCCD.png
+      data-background-size: 100% 100%;     
+date: 2026-08-05
+---
+
+
+
+## Requisitos Generales de Titulación
+
+- Haber completado el 100% de los créditos del plan de estudios.
+- No contar con adeudos:
+    - asignaturas
+    - servicios escolares
+    - material de biblioteca
+- Entregar el Producto Académico de la modalidad elegida.
+- Obtener el voto aprobatorio del Comité Dictaminador.
+- Cumplir con los requisitos administrativos, incluyendo la entrega de documentos y pago de trámites.
+
+::: footer
+[Reglamento de Posgrados 2024 - INFOTEC](https://www.infotec.mx/work/models/Infotec/Resource/22/39/images/Reglamento_Posgrados_2024_.pdf)
+:::
+
+---
+
+## Modalidades de Titulación
+
+La MCDI ofrece seis modalidades de titulación:
+
+1. **Excelencia Académica (EA)**
+2. **Desarrollo Tecnológico (DT)**
+3. **Publicación Arbitrada (PA)**
+4. **Proyecto Técnico (PT)**
+5. **Tesis (TE)**
+6. **Diplomado (DP)**
+
+---
+
+## Modalidad: Excelencia Académica (EA)
+
+- Se otorga a estudiantes con promedio mínimo de **9.5** y sin antecedentes de reprobación.
+- Requiere la entrega de un **artículo de divulgación** (3,000 a 6,000 palabras).
+- El artículo debe incluir como coautores a los investigadores asesores.
+- Debe ser aprobado por un comité de expertos.
+
+**Plantilla:**  
+[Overleaf - Excelencia Académica](https://www.overleaf.com/read/kmzbvcfqqbbx#7808ca)
+
+---
+
+## Modalidad: Desarrollo Tecnológico (DT)
+
+- Consiste en el desarrollo de una **solución tecnológica** (software, librerías, prototipos).
+- Se debe entregar el código junto con documentación técnica:
+  - Manual de instalación
+  - Manual de usuario
+  - Descripción de la arquitectura
+  - Casos de uso
+- Evaluado por asesores y revisores.
+
+**Plantilla:**  
+[Overleaf - Desarrollo Tecnológico](https://www.overleaf.com/read/djjxyjyzdpjf#0a8471)
+
+---
+
+## Modalidad: Publicación Arbitrada (PA)
+
+- Para estudiantes con una publicación en una revista arbitrada, capítulo de libro o libro.
+- Requiere evidencias del proceso de arbitraje.
+- Se debe ser **primer autor** y mostrar afiliación a INFOTEC.
+- Evaluado por un comité exprofeso.
+
+---
+
+## Modalidad: Proyecto Técnico (PT)
+
+- Para proyectos con impacto en el sector productivo, de servicios o científico.
+- El entregable es un **reporte técnico** (15,000 - 30,000 palabras).
+- Requiere aprobación del Comité Dictaminador.
+
+**Plantilla:**  
+[Overleaf - Proyecto Técnico](https://www.overleaf.com/read/kbcxppzhvdqg#019045)
+
+---
+
+## Modalidad: Tesis (TE)
+
+- Trabajo de investigación original con impacto en el conocimiento científico.
+- Supervisado por un investigador de INFOTEC.
+- Evaluado por un **Comité de Tesis** de tres investigadores.
+- Incluye una **defensa pública**.
+
+**Plantilla:**  
+[Overleaf - Tesis](https://www.overleaf.com/read/tvqtfqydbznp#783876)
+
+---
+
+## Modalidad: Diplomado (DP)
+
+- Disponible solo para estudiantes que adeuden únicamente asignaturas vinculadas con el trabajo terminal.
+- Solo los diplomados de INFOTEC autorizados son válidos.
+- Requiere la entrega de un producto académico definido por la Coordinación Académica.
+- El producto académico deberá tener el voto aprobatorio tanto del Comité Dictaminador como de la  Biblioteca
+
+---
+
+## Preguntas Frecuentes
+
+- **¿Cuánto tiempo tengo para titularme?**  
+  6 meses después de concluir el plan de estudios, con opción a prórroga.
+
+- **¿Puedo cambiar mi modalidad de titulación?**  
+  Sí, una vez al año, cumpliendo con los requisitos de la nueva modalidad.
+
+- **¿Cómo solicito una prórroga?**  
+  Mediante un escrito justificado a la Gerencia de Capital Humano.
+
+---
+
+
+
+
+## Comparación de Opciones de Titulación  {.smaller .scrollable transition="slide"  }
+
+| Modalidad | Momento de Elección | Requisitos | Entregable | Aplicación | Tiempo |
+|-----------|---------------------|------------|------------|------------|---------|
+| **EA** | Post-egreso (20 días) | Promedio ≥ 9.5 | Artículo de divulgación | Académica | 1-3 meses |
+| **DT** | Segundo semestre | Desarrollo tecnológico | Código y documentación | Industria/Tecnología | 3-6 meses |
+| **PA** | Post-egreso | Artículo publicado o aceptado | Publicación arbitrada | Académica | Variable |
+| **PT** | Segundo semestre | Proyecto técnico relevante | Reporte técnico | Industria/Servicios | 3-6 meses |
+| **TE** | Segundo semestre | Investigación original | Tesis y defensa pública | Académica | 6-12 meses |
+| **DP** | Post-egreso | Diplomado INFOTEC aprobado | Producto académico | Educación/Especialización | Variable |
+
+---
+
+## Contacto
+
+- **Servicios Escolares:** 
+  - Lic. Graciela Cortés Martínez (unidaddeposgrados@infotec.mx)
+- **Coordinación MCDI:** 
+  - (coordinacionmcdi@infotec.mx )
+- **Biblioteca:** 
+  - Mtra. Julieta Alcibar Hermosillo (julieta.alcibar@infotec.mx)
+
+
+::: footer
+Para mayor información consulte el [Reglamento de Posgrados 2024 de INFOTEC](https://www.infotec.mx/work/models/Infotec/Resource/22/39/images/Reglamento_Posgrados_2024_.pdf)
+:::
+
+---
+
+## ¡Gracias!

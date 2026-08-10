@@ -1,0 +1,90 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  color: #1f2937;
+  background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  margin: 0.6rem 0 0.7rem;
+}
+
+.intro {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: #475569;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.card li + li {
+  margin-top: 0.45rem;
+}
+
+.card a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}

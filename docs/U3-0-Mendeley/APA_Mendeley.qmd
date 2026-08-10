@@ -1,0 +1,322 @@
+---
+title: "Norma APA 7a edicion"
+subtitle: "Citas y Referencias en Investigacion"
+author: 
+  - name: Sergio M. Nava Munoz
+    id: sn
+    email: s3rgio.nava@gmail.com
+    affiliation: 
+        - id: cimat
+          name: CIMAT/INFOTEC
+          city: Aguascalientes
+          state: Ags
+format: 
+  revealjs:
+    slide-number: true
+    theme: simple
+    fontsize: 2.1em
+    logo: figs/logo-infotec.jpeg
+    css: style.css
+    chalkboard: true
+    menu: TRUE
+    transition: slide
+    background-transition: fade
+    title-slide-attributes:
+      data-background-image: figs/DCCD.png
+      data-background-size: 50% 50%;     
+date: 2026-02-11
+---
+
+
+## Objetivo de la clase
+- Conocer las reglas bÃ¡sicas de citaciÃ³n y referencias segÃºn APA 7Âª ediciÃ³n.  
+- Diferenciar entre los distintos tipos de citas (narrativas, parentÃ©ticas, cortas y en bloque).  
+- Identificar cuÃ¡ndo y cÃ³mo usar cada tipo de cita.  
+- Elaborar referencias completas en formato APA 7Âª ediciÃ³n.  
+
+---
+
+## Importancia de APA
+- EstÃ¡ndar internacional para la comunicaciÃ³n cientÃ­fica.  
+- Promueve la uniformidad, claridad y Ã©tica en la investigaciÃ³n.  
+- Reconoce las aportaciones de otros autores.  
+- Requisito en la elaboraciÃ³n de protocolos y tesis.  
+
+---
+
+## Cita parafraseada narrativa {.smaller}
+**Â¿En quÃ© consiste?**  
+Se usa cuando quieres destacar al **autor** como parte de la redacciÃ³n.  
+
+- El apellido aparece dentro del texto, seguido del aÃ±o entre parÃ©ntesis.  
+- Da visibilidad al autor como sujeto activo de la idea.  
+
+::: {.smaller}
+**Ejemplo 1** GÃ³mez Bastar (2012) explica que la investigaciÃ³n inicia con la delimitaciÃ³n clara del problema y la revisiÃ³n de informaciÃ³n previa.  
+
+**Ejemplo 2** Lerma GonzÃ¡lez (2009) seÃ±ala que el planteamiento del problema constituye la base para formular hipÃ³tesis viables.  
+
+**Ejemplo 3** Nava-MuÃ±oz et al. (2023) destacan que las competencias en procesamiento de lenguaje natural requieren herramientas estadÃ­sticas para diferenciar con claridad el desempeÃ±o de los sistemas.  
+:::
+
+
+---
+
+## Cita parafraseada parentÃ©tica {.smaller}
+**Â¿En quÃ© consiste?**  
+Se emplea cuando lo importante es la **idea**, no el autor.  
+
+- Autor y aÃ±o aparecen entre parÃ©ntesis al final de la frase.  
+- Mantiene el foco en el contenido, minimizando la presencia del autor.  
+
+::: {.smaller}
+**Ejemplo 1** La investigaciÃ³n cientÃ­fica es un proceso sistemÃ¡tico que busca generar nuevo conocimiento (GÃ³mez Bastar, 2012).  
+
+**Ejemplo 2** El planteamiento del problema representa el punto de partida metodolÃ³gico en todo estudio (Lerma GonzÃ¡lez, 2009).  
+
+**Ejemplo 3** Las competencias colaborativas en NLP se han convertido en un referente para establecer nuevos benchmarks (Nava-MuÃ±oz, Graff, & Escalante, 2023).  
+:::
+
+---
+
+## Cita textual corta narrativa {.smaller}
+**Â¿En quÃ© consiste?**  
+Se utiliza para reproducir textualmente **menos de 40 palabras**, dando protagonismo al autor.  
+
+- Se integran entre comillas dentro del texto.  
+- El autor aparece en la narrativa, seguido del aÃ±o.  
+- Resalta una frase exacta manteniendo continuidad en tu redacciÃ³n.  
+
+::: {.smaller}
+**Ejemplo 1** GÃ³mez Bastar (2012) afirma que â€œla investigaciÃ³n es un proceso sustentado en el mÃ©todo cientÃ­ficoâ€ (p. 8).  
+
+**Ejemplo 2** SegÃºn Lerma GonzÃ¡lez (2009), â€œel planteamiento inicial orienta todo el desarrollo posterior del proyectoâ€ (p. 30).  
+
+**Ejemplo 3** Nava-MuÃ±oz et al. (2023) mencionan que â€œcollaborative competitions have gained popularity in the scientific and technological fieldsâ€ (p. 1).  
+:::
+
+---
+
+## Cita textual corta entre parÃ©ntesis {.smaller}
+**Â¿En quÃ© consiste?**  
+Es similar a la anterior, pero se coloca todo (autor, aÃ±o y pÃ¡gina) entre parÃ©ntesis al final.  
+
+- Menos de 40 palabras, entre comillas.  
+- Datos de la fuente dentro del parÃ©ntesis.  
+- Se usa como apoyo, sin resaltar directamente al autor.  
+
+::: {.smaller}
+**Ejemplo 1** Se reconoce que la investigaciÃ³n es â€œun proceso racional y sistemÃ¡tico para alcanzar conocimientoâ€ (GÃ³mez Bastar, 2012, p. 9).  
+
+**Ejemplo 2** El planteamiento es â€œla etapa inicial de la investigaciÃ³n, donde se precisa el objeto de estudioâ€ (Lerma GonzÃ¡lez, 2009, p. 31).  
+
+**Ejemplo 3** En las competencias, â€œstatistical tools are often used for this purposeâ€ (Nava-MuÃ±oz et al., 2023, p. 1).  
+:::
+
+---
+
+## Cita textual en bloque narrativa {.smaller}
+**Â¿En quÃ© consiste?**  
+Se usa cuando la cita tiene **40 palabras o mÃ¡s** y quieres presentar al autor al inicio.  
+
+- Texto citado en un pÃ¡rrafo independiente, con sangrÃ­a y sin comillas.  
+- Autor y aÃ±o en la narrativa; pÃ¡gina al final.  
+- Da protagonismo al autor, presentando fielmente un fragmento largo.  
+
+::: {.smaller}
+**Ejemplo 1** GÃ³mez Bastar (2012) explica:  
+
+> La investigaciÃ³n cientÃ­fica se fundamenta en el mÃ©todo cientÃ­fico; por lo tanto, la investigaciÃ³n es una actividad que tiene como objetivo alcanzar y crear conocimientos, y se caracteriza por ser racional, metÃ³dica, reflexiva, constante, ordenada, controlada y crÃ­tica. (p. 9)  
+:::
+
+---
+
+
+## Cita textual en bloque narrativa (continuaciÃ³n) {.smaller}
+::: {.smaller}
+**Ejemplo 2** SegÃºn Lerma GonzÃ¡lez (2009):  
+
+> El planteamiento del problema constituye la guÃ­a principal de la investigaciÃ³n, pues define quÃ© se estudiarÃ¡, cuÃ¡les son sus lÃ­mites y de quÃ© manera se abordarÃ¡. Sin un planteamiento claro, el proceso corre el riesgo de perder coherencia metodolÃ³gica. (p. 31)  
+
+**Ejemplo 3** Nava-MuÃ±oz et al. (2023) seÃ±alan:  
+
+> An essential challenge for organizers arises when comparing algorithmsâ€™ performance, assessing multiple participants, and ranking them. Statistical tools are often used for this purpose; however, traditional statistical methods often fail to capture decisive differences between systemsâ€™ performance. (p. 1)  
+:::
+
+---
+
+
+## Cita textual en bloque entre parÃ©ntesis {.smaller}
+**Â¿En quÃ© consiste?**  
+TambiÃ©n para **40 palabras o mÃ¡s**, pero sin introducir al autor en la narrativa.  
+
+- Texto en bloque con sangrÃ­a, sin comillas.  
+- Autor, aÃ±o y pÃ¡gina se colocan al final entre parÃ©ntesis.  
+- Cita un pasaje extenso, manteniendo el foco en la idea mÃ¡s que en el autor. 
+
+::: {.smaller}
+**Ejemplo 1**  
+
+> La investigaciÃ³n es la actividad sistemÃ¡tica que busca dar soluciÃ³n a problemas educativos, sociales y cientÃ­ficos, utilizando herramientas que garanticen objetividad y rigor. (GÃ³mez Bastar, 2012, p. 10)  
+:::
+
+---
+
+## Cita textual en bloque entre parÃ©ntesis (continuaciÃ³n) {.smaller}
+::: {.smaller}
+**Ejemplo 2**  
+
+> El planteamiento de un problema implica establecer sus antecedentes, describir sus elementos y formularlo en una pregunta precisa. (Lerma GonzÃ¡lez, 2009, p. 32)  
+
+**Ejemplo 3**  
+
+> Collaborative competitions involve defining tasks, selecting evaluation scores, and devising result verification methods. In the standard scenario, participants receive a training set and they are expected to provide a solution for a held-out dataset kept by organizers. (Nava-MuÃ±oz et al., 2023, p. 1)  
+:::
+
+---
+
+## CÃ³mo referenciar distintas fuentes (APA 7Âª ed.) {.smaller}
+
+- **Libro**:  
+  Apellido, N. (AÃ±o). *TÃ­tulo en cursivas*. Editorial.  
+
+- **ArtÃ­culo cientÃ­fico**:  
+  Apellido, N., & Apellido, M. (AÃ±o). TÃ­tulo del artÃ­culo. *Nombre de la revista en cursivas, volumen*(nÃºmero), ppâ€“pp. https://doi.org/...  
+
+- **Tesis**:  
+  Apellido, N. (AÃ±o). *TÃ­tulo de la tesis* [Tesis de maestrÃ­a o doctoral, InstituciÃ³n]. URL  
+
+- **PÃ¡gina web / documento digital**:  
+  OrganizaciÃ³n. (AÃ±o). *TÃ­tulo del documento*. URL  
+
+- **Informe o reporte**:  
+  OrganizaciÃ³n. (AÃ±o). *TÃ­tulo del reporte* (No. de informe si aplica). Editorial o instituciÃ³n.  
+
+- **Fuente audiovisual (ej. YouTube, Podcast, PelÃ­cula)**:  
+  Autor/Usuario. (AÃ±o, dÃ­a de mes). *TÃ­tulo del video/podcast/pelÃ­cula* [Formato]. Plataforma. URL  
+
+---
+
+## CÃ³mo referenciar distintas fuentes (APA 7Âª ed.) Ejemplos  {.smaller}
+
+- **Libro**  
+  Ejemplo:  
+  GÃ³mez Bastar, S. (2012). *MetodologÃ­a de la investigaciÃ³n*. Red Tercer Milenio.  
+
+- **ArtÃ­culo cientÃ­fico**  
+  Ejemplo:  
+  Nava-MuÃ±oz, S., Graff, M., & Escalante, H. J. (2023). Analysis of systemsâ€™ performance in natural language processing competitions. *Pattern Recognition Letters, 173*, 33â€“45. https://doi.org/10.1016/j.patrec.2023.05.018  
+
+- **Tesis**  
+  Ejemplo:  
+  SÃ¡nchez VelÃ¡zquez, S. (2022). *ImputaciÃ³n de valores faltantes en imÃ¡genes* [Tesis de maestrÃ­a, Centro de InvestigaciÃ³n en MatemÃ¡ticas]. Repositorio CIMAT. https://repositorio.cimat.mx/handle/1234/567  
+
+--- 
+
+##  CÃ³mo referenciar distintas fuentes (APA 7Âª ed.) Ejemplos (continuaciÃ³n) {.smaller}
+
+- **PÃ¡gina web / documento digital**  
+  Ejemplo:  
+  American Psychological Association. (2020). *APA style introduction*. https://apastyle.apa.org/style-grammar-guidelines  
+
+- **Informe o reporte**  
+  Ejemplo:  
+  Instituto Nacional de EstadÃ­stica y GeografÃ­a. (2023). *Encuesta nacional sobre disponibilidad y uso de tecnologÃ­as de la informaciÃ³n en los hogares (ENDUTIH) 2022*. INEGI.  
+
+- **Fuente audiovisual (ej. YouTube, Podcast, PelÃ­cula)**  
+  Ejemplo:  
+  Universidad Nacional AutÃ³noma de MÃ©xico. (2021, 15 de marzo). *CÃ³mo citar con normas APA 7Âª ediciÃ³n* [Video]. YouTube. https://www.youtube.com/watch?v=abcd1234  
+
+---
+
+## Referencias completas (APA 7Âª ediciÃ³n)
+- GÃ³mez Bastar, S. (2012). *MetodologÃ­a de la investigaciÃ³n*. Red Tercer Milenio. ISBN 978-607-733-149-0.  
+- Lerma GonzÃ¡lez, H. D. (2009). *MetodologÃ­a de la investigaciÃ³n* (4Âª ed.). Ecoe Ediciones.  
+- Nava-MuÃ±oz, S., Graff, M., & Escalante, H. J. (2023). Analysis of systemsâ€™ performance in natural language processing competitions. *Pattern Recognition Letters*. Elsevier.  
+
+---
+
+## Actividad prÃ¡ctica
+Selecciona **3 fuentes acadÃ©micas** relevantes para tu proyecto de investigaciÃ³n.  
+Con cada fuente realiza los siguientes ejercicios en formato APA 7Âª ediciÃ³n:  
+
+1. Cita parafraseada narrativa  
+2. Cita parafraseada parentÃ©tica  
+3. Cita textual corta narrativa  
+4. Cita textual corta entre parÃ©ntesis  
+5. Cita textual en bloque narrativa  
+6. Cita textual en bloque entre parÃ©ntesis  
+7. Referencia completa en formato APA 7  
+
+---
+
+## Conclusiones
+- La citaciÃ³n correcta evita el plagio y respalda la argumentaciÃ³n.  
+- APA 7 simplifica el manejo de fuentes digitales y mÃºltiples autores.  
+- El uso adecuado de citas es parte fundamental del protocolo de investigaciÃ³n.  
+
+
+
+
+---
+## Uso de Mendeley en Overleaf y Quarto
+
+- **Mendeley** permite gestionar tus referencias y exportarlas en formato `.bib` (BibTeX).
+- En **Overleaf** basta con subir `mendeley.bib` a tu proyecto.
+- En **Quarto** puedes citar con `@id` y generar la bibliografÃ­a automÃ¡ticamente.
+
+---
+
+## Paquetes para LaTeX (APA 7Âª ediciÃ³n)
+
+```latex
+\usepackage{csquotes}
+\usepackage[style=apa,backend=biber]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{mendeley.bib}
+```
+
+---
+
+## Ejemplos de citas en LaTeX
+
+- Narrativa:  
+```latex
+\textcite{Batista2003AnLearning}
+```
+ðŸ‘‰ *Baesens (2014)*
+
+- ParentÃ©tica:  
+```latex
+\parencite{Madley-Dowd2019TheImputation}
+```
+ðŸ‘‰ *(MatÃ©, 2014)*
+
+---
+
+## Ejemplo de cita textual en bloque
+
+```latex
+\begin{quote}
+â€œEl fenÃ³meno del Big Data no solo es una cuestiÃ³n tÃ©cnica...â€ 
+\parencite[p.~5]{Batista2003AnLearning}.
+\end{quote}
+```
+
+---
+
+## Ejemplo en Quarto
+
+- Narrativa:  
+```markdown
+@Batista2003AnLearning muestra que la analÃ­tica es esencial.
+```
+
+- ParentÃ©tica:  
+```markdown
+El anÃ¡lisis de datos es un nuevo paradigma [@Madley-Dowd2019TheImputation].
+```
+
+---
+
+# Referencias
