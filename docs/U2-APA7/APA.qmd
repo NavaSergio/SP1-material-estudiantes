@@ -24,7 +24,7 @@ format:
     title-slide-attributes:
       data-background-image: figs/DCCD.png
       data-background-size: 50% 50%;     
-date: 2026-02-11
+date: 2026-09-01
 ---
 
 
@@ -192,6 +192,19 @@ También para **40 palabras o más**, pero sin introducir al autor en la narrati
 
 ---
 
+## Tipo de cita según el énfasis y la extensión {.smaller}
+
+El tipo de cita depende de qué se desea destacar y de si se parafrasea o se reproduce literalmente la fuente.
+
+| **Énfasis de la cita** | **Paráfrasis** | **Cita textual corta (<40 palabras)** | **Cita textual en bloque (40 palabras o más)** |
+|---|---|---|---|
+| **Se resalta al autor** | **Paráfrasis narrativa**: el autor forma parte de la redacción. | **Cita textual corta narrativa**: el autor forma parte de la redacción. | **Cita textual en bloque narrativa**: el autor forma parte de la redacción y el texto aparece en bloque. |
+| **Se resalta la idea** | **Paráfrasis parentética**: autor y año aparecen al final, entre paréntesis. | **Cita textual corta parentética**: autor, año y página aparecen al final, entre paréntesis. | **Cita textual en bloque parentética**: el fragmento aparece en bloque y la referencia se coloca al final. |
+
+**Nota:** el límite de 40 palabras solo aplica a las citas textuales. Las paráfrasis no reproducen literalmente la fuente y, por ello, no se clasifican por extensión.
+
+---
+
 ## Cómo referenciar distintas fuentes (APA 7ª ed.) {.smaller}
 
 - **Libro**:  
@@ -246,11 +259,102 @@ También para **40 palabras o más**, pero sin introducir al autor en la narrati
 
 ---
 
+## Del planteamiento sin APA al planteamiento con APA {.smaller}
+
+La información de un planteamiento debe respaldarse con citas cuando proviene de otra fuente.
+
+**Versión sin cita APA**  
+El planteamiento del problema define qué se estudiará, cuáles son sus límites y cómo se abordará.
+
+**Versión con cita narrativa**  
+Lerma González (2009) señala que el planteamiento del problema define qué se estudiará, cuáles son sus límites y cómo se abordará.
+
+**Versión con cita parentética**  
+El planteamiento del problema define qué se estudiará, cuáles son sus límites y cómo se abordará (Lerma González, 2009).
+
+---
+
+## Ejemplo integrado: afirmación y fuente {.smaller}
+
+**Sin cita**  
+La investigación científica es un proceso sistemático que busca generar conocimiento.
+
+**Con cita APA**  
+La investigación científica es un proceso sistemático que busca generar conocimiento (Gómez Bastar, 2012).
+
+**Referencia correspondiente**  
+Gómez Bastar, S. (2012). *Metodología de la investigación*. Red Tercer Milenio.
+
+La cita dentro del texto permite identificar la fuente; la referencia completa permite localizarla.
+
+---
+
+## Ejemplo completo sin citas APA {.smaller .scrollable}
+
+### **Salud Pública - Enfermedades Respiratorias en la Ciudad de México (CDMX)**
+
+**Descripción del problema**  
+
+La contaminación del aire en la Ciudad de México constituye un problema de salud pública. La exposición a partículas finas y otros contaminantes puede afectar la salud de la población.
+
+**Antecedentes**  
+
+En los últimos años se han registrado episodios de mala calidad del aire y un interés creciente por analizar su relación con las enfermedades respiratorias.
+
+**Consecuencias**  
+
+Si no se estudia el problema, pueden aumentar las enfermedades respiratorias y las presiones sobre los servicios de salud.
+
+**Pregunta de investigación**  
+
+¿Cuál es la relación entre los niveles de contaminación del aire y la incidencia de enfermedades respiratorias en la Ciudad de México durante los últimos cinco años?
+
+**Objetivos**  
+
+- Determinar los niveles de contaminación del aire durante los últimos cinco años.
+- Analizar su relación con las hospitalizaciones por enfermedades respiratorias.
+- Proponer estrategias de mitigación basadas en los resultados.
+
+Esta versión presenta la estructura del problema, pero no identifica las fuentes de sus afirmaciones.
+
+---
+
+## Ejemplo completo con citas APA {.smaller .scrollable}
+
+### **Salud Pública - Enfermedades Respiratorias en la Ciudad de México (CDMX)**
+
+**Descripción del problema**  
+
+La contaminación del aire en la Ciudad de México constituye un problema de salud pública. La exposición a partículas finas y otros contaminantes puede afectar la salud de la población (World Health Organization [WHO], 2021).
+
+**Antecedentes** 
+
+Las guías internacionales de calidad del aire consideran contaminantes como las partículas finas, el ozono y el dióxido de nitrógeno por sus posibles efectos en la salud (WHO, 2021).
+
+**Consecuencias**  
+
+Si no se estudia el problema, pueden aumentar las enfermedades respiratorias y las presiones sobre los servicios de salud.
+
+**Pregunta de investigación**  
+
+¿Cuál es la relación entre los niveles de contaminación del aire y la incidencia de enfermedades respiratorias en la Ciudad de México durante los últimos cinco años?
+
+**Objetivos**  
+
+- Determinar los niveles de contaminación del aire durante los últimos cinco años.
+- Analizar su relación con las hospitalizaciones por enfermedades respiratorias.
+- Proponer estrategias de mitigación basadas en los resultados.
+
+La versión con APA conserva la misma estructura, pero permite identificar qué afirmaciones están respaldadas por una fuente.
+
+---
+
 ## Referencias completas (APA 7ª edición)
 - Gómez Bastar, S. (2012). *Metodología de la investigación*. Red Tercer Milenio. ISBN 978-607-733-149-0.  
 - Lerma González, H. D. (2009). *Metodología de la investigación* (4ª ed.). Ecoe Ediciones.  
 - Nava-Muñoz, S., Graff, M., & Escalante, H. J. (2023). Analysis of systems' performance in natural language processing competitions. *Pattern Recognition Letters*. Elsevier.  
 - Nava Muñoz, S. M. (2024). *Analysis of Systems' Performance in Supervised Learning Challenges* [Tesis de Doctorado, INFOTEC Centro de Investigación e Innovación en Tecnologías de la Información y Comunicación]. Repositorio Institucional de INFOTEC. https://infotec.repositorioinstitucional.mx/jspui/handle/1027/738
+- World Health Organization. (2021). *WHO global air quality guidelines: Particulate matter (PM2.5 and PM10), ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide*. https://www.who.int/publications/i/item/9789240034228
 
 
 ---
