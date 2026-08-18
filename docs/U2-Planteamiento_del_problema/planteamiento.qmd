@@ -24,7 +24,7 @@ format:
       data-background-image: /figs/DCCD.png
       data-background-size: 100% 100%;     
 
-date: 2026-01-28
+date: 2026-08-19
 ---
 
 
@@ -86,13 +86,13 @@ El **planteamiento del problema** es la base de toda investigación. Define el c
 
 ---
 
-## Ejemplo 1: **Salud Pública - Enfermedades Respiratorias en la CDMX** {.smaller .scrollable transition="slide"  }
+## Ejemplo 1: **Salud Pública - Enfermedades Respiratorias en la Ciudad de México (CDMX)** {.smaller .scrollable transition="slide"  }
 
 ### **1. Descripción del Problema**  
-La **contaminación del aire en la Ciudad de México (CDMX)** es un problema de salud pública que ha sido vinculado con enfermedades respiratorias como el asma y la Enfermedad Pulmonar Obstructiva Crónica (EPOC). Estudios recientes han demostrado un incremento en el número de hospitalizaciones debido a la exposición prolongada a contaminantes como **PM2.5 y NO₂**.
+La **contaminación del aire en la Ciudad de México (CDMX)** es un problema de salud pública que ha sido vinculado con enfermedades respiratorias como el asma y la Enfermedad Pulmonar Obstructiva Crónica (EPOC). Estudios recientes han demostrado un incremento en el número de hospitalizaciones debido a la exposición prolongada a contaminantes como **las partículas finas (PM2.5) y el dióxido de nitrógeno (NO₂)**.
 
 ### **2. Antecedentes**  
-- Según la OMS, la contaminación atmosférica es responsable de más de 7 millones de muertes prematuras al año.  
+- Según la Organización Mundial de la Salud (OMS), la contaminación atmosférica es responsable de más de 7 millones de muertes prematuras al año.  
 - En 2023, la CDMX registró **42 días de contingencia ambiental** debido a altos niveles de ozono.  
 - Investigaciones previas han analizado los efectos de la contaminación, pero pocos estudios han modelado su relación con la incidencia de enfermedades en tiempo real.  
 
@@ -119,7 +119,7 @@ Este estudio analizará la relación entre los niveles de contaminación del air
 El acceso a la educación superior en América Latina sigue siendo desigual. Factores como la condición socioeconómica, la ubicación geográfica y la falta de recursos educativos limitan las oportunidades para jóvenes en comunidades rurales y marginadas.
 
 ### **2. Antecedentes**  
-- Un informe de la UNESCO indica que **solo el 36% de los jóvenes de zonas rurales en Latinoamérica accede a la educación superior**, comparado con el 66% en zonas urbanas.  
+- Un informe de la Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura (UNESCO) indica que **solo el 36% de los jóvenes de zonas rurales en Latinoamérica accede a la educación superior**, comparado con el 66% en zonas urbanas.  
 - Investigaciones previas han identificado que los costos de transporte y la falta de conectividad digital son barreras clave para los estudiantes rurales.  
 - A pesar de los esfuerzos gubernamentales, las tasas de abandono universitario en estas comunidades siguen siendo altas.  
 
@@ -146,7 +146,7 @@ Este estudio investigará los principales factores que limitan el acceso a la ed
 El **calentamiento global** está afectando los ecosistemas marinos a nivel global. Se ha observado una reducción en la biodiversidad de arrecifes de coral, una migración anómala de especies marinas y una disminución en la productividad de los océanos.
 
 ### **2. Antecedentes**  
-- Según la NOAA, la temperatura de los océanos ha aumentado en promedio **1.5°C en los últimos 50 años**.  
+- Según la Administración Nacional Oceánica y Atmosférica de Estados Unidos (NOAA), la temperatura de los océanos ha aumentado en promedio **1.5°C en los últimos 50 años**.
 - Un estudio publicado en *Nature* advierte que más del **60% de las especies marinas han cambiado su patrón de migración debido al cambio climático**.  
 - Las barreras de coral en Australia han perdido **más del 50% de su cobertura** en las últimas tres décadas.  
 
@@ -201,8 +201,8 @@ El **fraude financiero** representa una amenaza creciente para las instituciones
 
 ### **2. Antecedentes**  
 - Según un informe de la Asociación de Examinadores de Fraude Certificados (ACFE), las organizaciones pierden **aproximadamente el 5% de sus ingresos anuales** debido a fraudes.  
-- El 78% de las instituciones financieras reportan un incremento en intentos de fraude desde la pandemia de COVID-19.  
-- Los modelos centralizados de detección requieren compartir datos sensibles, lo cual viola regulaciones como **GDPR y la Ley de Protección de Datos Personales**.  
+- El 78% de las instituciones financieras reportan un incremento en intentos de fraude desde la pandemia de la enfermedad por coronavirus de 2019 (COVID-19).  
+- Los modelos centralizados de detección requieren compartir datos sensibles, lo cual puede incumplir regulaciones como el Reglamento General de Protección de Datos (GDPR) y la Ley de Protección de Datos Personales.  
 - Las técnicas actuales de machine learning no pueden aprovechar datos distribuidos en múltiples instituciones sin comprometer la privacidad del usuario.  
 - **Investigaciones recientes en aprendizaje federado** han demostrado su efectividad en aplicaciones médicas y de telecomunicaciones, pero su aplicación en el sector financiero para detección de fraudes está poco explorada.  
 - Los métodos tradicionales requieren centralización de datos, lo cual es incompatible con las regulaciones actuales de privacidad.
@@ -221,7 +221,7 @@ Este estudio desarrollará e implementará un sistema de detección de fraudes f
 - Diseñar e implementar una arquitectura de **aprendizaje federado con privacidad diferencial** para la detección de transacciones fraudulentas, específicamente adaptada para datos financieros desbalanceados.  
 - Desarrollar un **algoritmo de agregación ponderada adaptativa** que optimice las contribuciones de cada institución basándose en la calidad y representatividad de sus datos.  
 - Evaluar el rendimiento del modelo federado comparándolo con enfoques centralizados y distribuidos tradicionales en términos de precisión, recall y tasa de falsos positivos.  
-- Analizar el cumplimiento del sistema propuesto con regulaciones internacionales de protección de datos (GDPR, CCPA, LFPDPPP).  
+- Analizar el cumplimiento del sistema propuesto con regulaciones internacionales de protección de datos: el Reglamento General de Protección de Datos (GDPR), la Ley de Privacidad del Consumidor de California (CCPA) y la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).
 - Desarrollar un protocolo de colaboración inter-institucional que permita el entrenamiento colaborativo mientras se mantiene la seguridad y confidencialidad de los datos.
 
 
@@ -377,16 +377,16 @@ Antes de finalizar, asegúrate de responder estas preguntas:
 
 # Ejemplo de Justificación  por Criterios Científicos
 
-## **Predicción de la Contaminación del Aire en la CDMX Usando Modelos de Aprendizaje Automático**
+## **Predicción de la Contaminación del Aire en la Ciudad de México (CDMX) Usando Modelos de Aprendizaje Automático**
 
 ### **1. Conveniencia** (*¿Para qué sirve?*)  
-La **Ciudad de México (CDMX)** es una de las urbes más contaminadas de América Latina. La exposición prolongada a contaminantes como el **PM2.5, PM10, ozono (O₃) y dióxido de nitrógeno (NO₂)** afecta la salud pública y el medio ambiente. Este proyecto busca desarrollar un modelo de aprendizaje automático para **predecir los niveles de contaminación en la CDMX**, permitiendo alertar a la población y optimizar estrategias de mitigación.  
+La **Ciudad de México (CDMX)** es una de las urbes más contaminadas de América Latina. La exposición prolongada a contaminantes como las **partículas finas (PM2.5), las partículas inhalables (PM10), el ozono (O₃) y el dióxido de nitrógeno (NO₂)** afecta la salud pública y el medio ambiente. Este proyecto busca desarrollar un modelo de aprendizaje automático para **predecir los niveles de contaminación en la CDMX**, permitiendo alertar a la población y optimizar estrategias de mitigación.  
 
 ---
 
 ### **2. Relevancia Social** (*¿Quiénes se beneficiarán y cómo?*)  
 El proyecto impactará a distintos sectores de la sociedad en la CDMX:  
-- **Gobierno de la CDMX y SEMARNAT**: Mejorará la toma de decisiones para implementar **contingencias ambientales y restricciones vehiculares**.  
+- **Gobierno de la CDMX y la Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)**: Mejorará la toma de decisiones para implementar **contingencias ambientales y restricciones vehiculares**.  
 - **Población en riesgo (niños, adultos mayores y personas con enfermedades respiratorias)**: Podrá **anticiparse** a episodios de contaminación alta y ajustar sus actividades.  
 - **Sector salud**: Mejorará la planificación hospitalaria y la prevención de enfermedades respiratorias.  
 - **Investigadores y académicos**: Dispondrán de una metodología basada en datos para evaluar políticas ambientales.  
@@ -400,7 +400,7 @@ Actualmente, la **CDMX enfrenta frecuentes contingencias ambientales**, afectand
 
 ### **4. Valor Teórico** (*¿Aporta nuevos conocimientos?*)  
 - Se analizarán múltiples **factores meteorológicos y contaminantes** con técnicas avanzadas de Machine Learning.  
-- Se compararán modelos como **Redes Neuronales, XGBoost y LSTM** para identificar el más efectivo en la predicción de la contaminación.  
+- Se compararán modelos como **redes neuronales, Extreme Gradient Boosting (XGBoost) y memoria de largo y corto plazo (LSTM)** para identificar el más efectivo en la predicción de la contaminación.  
 - Se contribuirá al **desarrollo de modelos predictivos urbanos** que puedan aplicarse a otras ciudades con problemas similares.  
 
 
