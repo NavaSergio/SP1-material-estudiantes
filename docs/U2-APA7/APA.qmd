@@ -24,7 +24,7 @@ format:
     title-slide-attributes:
       data-background-image: figs/DCCD.png
       data-background-size: 50% 50%;     
-date: 2026-09-01
+date: 2026-09-02
 ---
 
 
