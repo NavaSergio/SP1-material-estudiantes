@@ -21,9 +21,9 @@ format:
     transition: slide
     background-transition: fade
     title-slide-attributes:
-      data-background-image: /figs/DCCD.png
+      data-background-image: figs/DCCD.png
       data-background-size: 100% 100%;     
-date: 2026-3-11
+date: 2026-9-30
 ---
 
 
@@ -141,8 +141,8 @@ flowchart TB
   B --> C[Preguntas especificas]
   B --> D[Objetivo general]
   C --> E[Objetivos especificos]
-  D --> F[Hipotesis general]
-  E --> G[Hipotesis especificas]
+  D --> F[Hipótesis general]
+  E --> G[Hipótesis especificas]
 ```
 
 ---
@@ -154,8 +154,8 @@ flowchart TB
   F[Hipotesis general] --> H[Variables o<br/>categorias]
   G[Hipotesis especificas] --> H
   H --> I[Indicadores]
-  I --> J[Diseno<br/>metodologico]
-  J --> K[Analisis y resultados]
+  I --> J[Diseño<br/>metodológico]
+  J --> K[Análisis y resultados]
 ```
 
 ---
@@ -298,6 +298,7 @@ flowchart TB
 > ¿Qué factores influyen en la baja tasa de vacunación contra la influenza en adultos mayores?
 
 **Preguntas específicas:**
+
 
 1. ¿Cómo afecta el nivel de información sobre la vacuna en la decisión de vacunarse?
 2. ¿Qué barreras logísticas enfrentan los adultos mayores para acceder a los centros de salud?
@@ -637,50 +638,6 @@ La integración de variables transaccionales y de usuario en modelos de aprendiz
 3. Los algoritmos basados en ensambles (ej. Random Forest, Gradient Boosting) superan en precisión a los modelos lineales en la clasificación de fraudes.  
 
 ---
-
-## Plantillas para investigación teórica {.smaller .scrollable}
-
-**Nota de uso en el curso:**
-
-- **Investigación metodológica**: usa principalmente las plantillas 1 y 2.
-- **Investigación de desarrollo/tecnológica**: usa la lógica de la plantilla 1, sustituyendo "método" por "solución/prototipo" y evaluando desempeño en pruebas de validación.
-
-### Plantilla 1: Propuesta de nuevo método
-
-**Pregunta general**  
-¿Bajo qué supuestos el método propuesto M mejora [criterio: consistencia, interpretabilidad, complejidad] respecto al método de referencia R?  
-
-**Objetivo general**  
-Desarrollar y fundamentar teóricamente el método M, estableciendo sus supuestos, alcances y ventajas frente a R.  
-
-**Hipótesis teórica general**  
-Si se cumplen los supuestos S, el método M presenta mejor desempeño teórico en [criterio] que R.  
-
-### Plantilla 2: Transferencia de método a otra disciplina
-
-**Pregunta general**  
-¿Qué adaptaciones conceptuales requiere el método M para aplicarse válidamente al campo C sin perder sus propiedades fundamentales?  
-
-**Objetivo general**  
-Analizar la transferibilidad del método M al campo C, identificando equivalencias conceptuales y límites de aplicación.  
-
-**Hipótesis teórica general**  
-La adaptación A del método M conserva sus propiedades fundamentales en C bajo condiciones de correspondencia conceptual K.  
-
-### Plantilla 3: Comparación de marcos teóricos
-
-**Pregunta general**  
-¿Qué marco teórico (T1 o T2) ofrece mayor poder explicativo y coherencia interna para analizar el fenómeno F?  
-
-**Objetivo general**  
-Comparar críticamente T1 y T2 mediante criterios de coherencia lógica, alcance explicativo y capacidad heurística.  
-
-**Hipótesis teórica general**  
-El marco T1 ofrece mayor capacidad explicativa para F que T2 al integrar de forma más consistente los conceptos clave del fenómeno.  
-
----
-
-
 
 
 ## Actividad didáctica
