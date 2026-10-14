@@ -10,7 +10,7 @@ author:
           name: CIMAT/INFOTEC
           city: Aguascalientes
           state: Ags
-date: 2026-10-13
+date: 2026-10-14
 bibliography: referencias.bib
 csl: apa.csl
 format:
