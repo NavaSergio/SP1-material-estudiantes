@@ -391,7 +391,7 @@ Los **datos sintéticos** son registros artificiales que buscan conservar patron
 | S01 | 23 | 8.1 | Occidente |
 | S02 | 25 | 7.4 | Noreste |
 
-> Solo dos filas: es una ilustración (un modelo real usa cientos o miles). Con datos reales y medidas: [notebook 01](https://navasergio.github.io/SP1-material-estudiantes/docs/U4-BD/material/01_privacidad_y_datos_sinteticos.html).
+> Solo dos filas: es una ilustración (un modelo real usa cientos o miles). Con datos reales y medidas: [notebook 01](https://navasergio.github.io/SP1-material-estudiantes/U4-BD/material/01_privacidad_y_datos_sinteticos.html).
 
 ---
 
@@ -412,7 +412,7 @@ README.md          # explicación del proyecto
 - **Versionado**: usa Git, o al menos nombres con fecha o versión (`datos_v2_2025-03-25.csv`), y respalda tus datos originales.
 - **Nombres consistentes**: sin espacios ni acentos en archivos y columnas (`fecha_hora`, no `Fecha y Hora`).
 
-**Ejemplos completos** de estructura, diccionario y README: notebooks [02](https://navasergio.github.io/SP1-material-estudiantes/docs/U4-BD/material/02_ejemplo_calidad_aire.html) y [03](https://navasergio.github.io/SP1-material-estudiantes/docs/U4-BD/material/03_ejemplo_indicadores_banco_mundial.html).
+**Ejemplos completos** de estructura, diccionario y README: notebooks [02](https://navasergio.github.io/SP1-material-estudiantes/U4-BD/material/02_ejemplo_calidad_aire.html) y [03](https://navasergio.github.io/SP1-material-estudiantes/U4-BD/material/03_ejemplo_indicadores_banco_mundial.html).
 
 ---
 
@@ -463,9 +463,9 @@ Material **opcional** para consultar después de la sesión (Python, con datos r
 
 | Notebook | Qué muestra | Enlaces |
 |---|---|---|
-| **01. Privacidad y datos sintéticos** | Seudonimización, enmascaramiento (k-anonimato) y datos sintéticos, con medidas de utilidad y de privacidad | [Leer](https://navasergio.github.io/SP1-material-estudiantes/docs/U4-BD/material/01_privacidad_y_datos_sinteticos.html) · [Colab](https://colab.research.google.com/github/NavaSergio/SP1-material-estudiantes/blob/main/docs/U4-BD/material/01_privacidad_y_datos_sinteticos.ipynb) |
-| **02. Calidad del aire** | Ejemplo de punta a punta: tabla plana, valores centinela, faltantes, imputación, agregación temporal, diccionario y README | [Leer](https://navasergio.github.io/SP1-material-estudiantes/docs/U4-BD/material/02_ejemplo_calidad_aire.html) · [Colab](https://colab.research.google.com/github/NavaSergio/SP1-material-estudiantes/blob/main/docs/U4-BD/material/02_ejemplo_calidad_aire.ipynb) |
-| **03. Indicadores del Banco Mundial** | Ejemplo de punta a punta: varias fuentes, modelo relacional en SQLite, una tabla de análisis, agregación espacial | [Leer](https://navasergio.github.io/SP1-material-estudiantes/docs/U4-BD/material/03_ejemplo_indicadores_banco_mundial.html) · [Colab](https://colab.research.google.com/github/NavaSergio/SP1-material-estudiantes/blob/main/docs/U4-BD/material/03_ejemplo_indicadores_banco_mundial.ipynb) |
+| **01. Privacidad y datos sintéticos** | Seudonimización, enmascaramiento (k-anonimato) y datos sintéticos, con medidas de utilidad y de privacidad | [Leer](https://navasergio.github.io/SP1-material-estudiantes/U4-BD/material/01_privacidad_y_datos_sinteticos.html) · [Colab](https://colab.research.google.com/github/NavaSergio/SP1-material-estudiantes/blob/main/docs/U4-BD/material/01_privacidad_y_datos_sinteticos.ipynb) |
+| **02. Calidad del aire** | Ejemplo de punta a punta: tabla plana, valores centinela, faltantes, imputación, agregación temporal, diccionario y README | [Leer](https://navasergio.github.io/SP1-material-estudiantes/U4-BD/material/02_ejemplo_calidad_aire.html) · [Colab](https://colab.research.google.com/github/NavaSergio/SP1-material-estudiantes/blob/main/docs/U4-BD/material/02_ejemplo_calidad_aire.ipynb) |
+| **03. Indicadores del Banco Mundial** | Ejemplo de punta a punta: varias fuentes, modelo relacional en SQLite, una tabla de análisis, agregación espacial | [Leer](https://navasergio.github.io/SP1-material-estudiantes/U4-BD/material/03_ejemplo_indicadores_banco_mundial.html) · [Colab](https://colab.research.google.com/github/NavaSergio/SP1-material-estudiantes/blob/main/docs/U4-BD/material/03_ejemplo_indicadores_banco_mundial.ipynb) |
 
 ::: callout-note
 Los dos ejemplos de punta a punta terminan con lo que se considera **buena práctica** (diccionario, README, transformaciones documentadas). Son modelos de razonamiento y documentación, **no plantillas para copiar**: tu proyecto tendrá otra pregunta y otras decisiones.
