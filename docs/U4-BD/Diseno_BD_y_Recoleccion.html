@@ -6,8 +6,8 @@
 <script src="Diseno_BD_y_Recoleccion_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="Diseno_BD_y_Recoleccion_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="Diseno_BD_y_Recoleccion_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="Diseno_BD_y_Recoleccion_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.27">
+<link href="Diseno_BD_y_Recoleccion_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Sergio Martín Nava Muñoz">
   <meta name="dcterms.date" content="2025-03-25">
@@ -18,10 +18,16 @@
   <link rel="stylesheet" href="Diseno_BD_y_Recoleccion_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="Diseno_BD_y_Recoleccion_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -116,7 +122,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="Diseno_BD_y_Recoleccion_files/libs/revealjs/dist/theme/quarto-5f66212b01f094180b8d10b5b9960144.css">
+  <link rel="stylesheet" href="Diseno_BD_y_Recoleccion_files/libs/revealjs/dist/theme/quarto-e7615ae3f47a09451c723600273e2044.css">
   <link rel="stylesheet" href="style.css">
   <link href="Diseno_BD_y_Recoleccion_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="Diseno_BD_y_Recoleccion_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -224,7 +230,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Sergio Martín Nava Muñoz 
+Sergio Martín Nava Muñoz
 </div>
 </div>
 </div>
@@ -234,11 +240,9 @@ Sergio Martín Nava Muñoz
 <section id="propósito-de-la-sesión" class="slide level2 smaller">
 <h2>Propósito de la sesión</h2>
 <ul>
-<li>Entender los <strong>principios básicos para organizar datos</strong> en un proyecto de investigación.<br>
-</li>
-<li>Crear un <strong>plan para recolectar información</strong> de manera ordenada y ética.<br>
-</li>
-<li>Preparar los elementos necesarios para la <strong>Evidencia 4A</strong> (base de datos) y presentación final.</li>
+<li>Entender los <strong>principios básicos para organizar datos</strong> en un proyecto de investigación.</li>
+<li>Saber cómo <strong>planear una recolección de información</strong> ordenada y ética.</li>
+<li>Conocer las <strong>buenas prácticas</strong> para construir la base de datos de tu proyecto, para que puedas aplicarlas después de la sesión.</li>
 </ul>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -249,40 +253,20 @@ Sergio Martín Nava Muñoz
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>¿Qué vamos a crear hoy?</strong><br>
-1) Esquema de organización de datos (¿una tabla o varias?).<br>
-2) Diccionario de variables con descripción y transformaciones de cada campo.<br>
-3) Pipeline de preparación: limpieza, imputación y agregación.<br>
-4) Plan de recolección de datos.<br>
-5) Una muestra pequeña de nuestra base de datos lista para análisis.</p>
+<p><strong>Lo que construirás después de la sesión</strong> (trabajo individual):</p>
+<ol type="1">
+<li>Esquema de organización de datos (una tabla o varias).</li>
+<li>Diccionario de variables con descripción y transformaciones de cada campo.</li>
+<li>Pipeline de preparación: limpieza, imputación y agregación.</li>
+<li>Plan de recolección de datos.</li>
+<li>Una muestra pequeña de tu base de datos lista para análisis.</li>
+</ol>
 </div>
 </div>
 </div>
 </section>
-<section id="conexión-con-la-sesión-de-pregunta-de-investigación" class="slide level2 smaller">
-<h2>Conexión con la sesión de pregunta de investigación</h2>
-<ul>
-<li><strong>Pregunta general</strong> → define qué fenómeno quieres explicar y el nivel de análisis.</li>
-<li><strong>Preguntas específicas</strong> → delimitan dimensiones observables del problema.</li>
-<li><strong>Objetivos e hipótesis</strong> → indican qué relaciones debes medir o contrastar.</li>
-<li><strong>Variables e indicadores</strong> → se convierten en columnas de tu base de datos.</li>
-</ul>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p>En esta unidad respondemos: <strong>“¿qué estructura de datos necesito para contestar mi pregunta de investigación con evidencia verificable?”</strong></p>
-</div>
-</div>
-</div>
-</section>
-<section id="del-hilo-conductor-a-la-base-para-análisis" class="slide level2 smaller">
-<h2>Del hilo conductor a la base para análisis</h2>
+<section id="de-la-pregunta-a-la-base-para-análisis" class="slide level2 smaller">
+<h2>De la pregunta a la base para análisis</h2>
 <div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -302,18 +286,29 @@ Sergio Martín Nava Muñoz
 </div>
 </div>
 </div>
-<blockquote>
-<p>Si no puedes ubicar una variable en este flujo, todavía no está lista para entrar a tu base.</p>
-</blockquote>
+<p>Las <strong>variables e indicadores</strong> de tu pregunta se convierten en las columnas de tu base. Si no puedes ubicar una variable en este flujo, todavía no está lista para entrar a ella.</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>En esta unidad respondemos: <strong>“¿qué estructura de datos necesito para contestar mi pregunta de investigación con evidencia verificable?”</strong></p>
+</div>
+</div>
+</div>
 </section>
 <section id="pasos-para-organizar-nuestros-datos" class="slide level2 smaller">
 <h2>Pasos para organizar nuestros datos</h2>
 <ol type="1">
 <li><strong>Partir de la pregunta</strong> → ¿Qué debo observar para responder mi pregunta general y específicas?<br>
 </li>
-<li><strong>Diseñar estructura</strong> → ¿Una tabla o múltiples? ¿Qué campos necesito?<br>
+<li><strong>Diseñar estructura</strong> → ¿Una tabla (el punto de partida) o varias? ¿Qué campos necesito?<br>
 </li>
-<li><strong>Definir relaciones</strong> → ¿Cómo se conectan los datos entre sí?<br>
+<li><strong>Definir relaciones</strong> (si usas varias tablas) → ¿Cómo se conectan los datos entre sí?<br>
 </li>
 <li><strong>Establecer reglas</strong> → ¿Qué datos son válidos y cuáles no?<br>
 </li>
@@ -329,47 +324,115 @@ Sergio Martín Nava Muñoz
 <section id="de-variables-a-organización-de-datos" class="slide level2 smaller">
 <h2>De variables a organización de datos</h2>
 <ul>
-<li><strong>Variable dependiente</strong>: lo que quiero explicar o predecir.<br>
-</li>
-<li><strong>Variables independientes</strong>: los factores que pueden influir.<br>
-</li>
+<li><strong>Variable dependiente</strong>: lo que quiero explicar o predecir.</li>
+<li><strong>Variables independientes</strong>: los factores que pueden influir.</li>
 <li><strong>Variables derivadas</strong>: nuevas variables que calculo a partir de las anteriores.</li>
 </ul>
-<p><strong>Ejemplo</strong> (estudio de fraude en transacciones):<br>
-- Variable dependiente: <code>es_fraude</code> (sí/no).<br>
-- Variables independientes: <code>monto</code>, <code>canal</code>, <code>tienda</code>, <code>cliente</code>, <code>fecha_hora</code>.<br>
-- Variables derivadas: <code>hora_del_dia</code>, <code>dia_semana</code>, <code>monto_promedio_ultimo_mes</code>.</p>
-<div class="columns">
-<div class="column">
-<p><strong>Grupos de información</strong><br>
-- <code>clientes</code> (información personal)<br>
-- <code>tiendas</code> (información comercial)<br>
-- <code>transacciones</code> (cada compra)</p>
-</div><div class="column">
-<p><strong>¿Cómo se relacionan?</strong><br>
-- Un cliente puede hacer muchas transacciones<br>
-- Una tienda puede recibir muchas transacciones<br>
-- Cada transacción pertenece a un cliente y una tienda</p>
-</div></div>
+<p><strong>Ejemplo</strong> (estudio de fraude en transacciones):</p>
+<ul>
+<li>Variable dependiente: <code>es_fraude</code> (sí/no).</li>
+<li>Variables independientes: <code>monto</code>, <code>canal</code>, <code>tienda</code>, <code>cliente</code>, <code>fecha_hora</code>.</li>
+<li>Variables derivadas: <code>hora_del_dia</code>, <code>dia_semana</code>, <code>monto_promedio_ultimo_mes</code>.</li>
+</ul>
+<p><strong>Unidad de análisis</strong> (qué es una fila): una <strong>transacción</strong>.</p>
+</section>
+<section id="primera-estructura-una-sola-tabla" class="slide level2 smaller">
+<h2>Primera estructura: una sola tabla</h2>
+<p>Punto de partida: <strong>una fila por transacción</strong>, con todo lo que sabemos de ella. Así llegan muchos datasets (Kaggle, encuestas, sensores).</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>id_transaccion</th>
+<th>fecha_hora</th>
+<th style="text-align: right;">monto</th>
+<th>canal</th>
+<th>id_cliente</th>
+<th>segmento_cliente</th>
+<th>id_tienda</th>
+<th>ciudad_tienda</th>
+<th style="text-align: right;">es_fraude</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T001</td>
+<td>2024-03-02 14:35</td>
+<td style="text-align: right;">450.00</td>
+<td>pos</td>
+<td>C017</td>
+<td>joven</td>
+<td>S03</td>
+<td>Guadalajara</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td>T002</td>
+<td>2024-03-02 18:02</td>
+<td style="text-align: right;">1980.00</td>
+<td>web</td>
+<td>C017</td>
+<td>joven</td>
+<td>S12</td>
+<td>Monterrey</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td>T003</td>
+<td>2024-03-03 09:15</td>
+<td style="text-align: right;">230.50</td>
+<td>app</td>
+<td>C102</td>
+<td>adulto</td>
+<td>S03</td>
+<td>Guadalajara</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Observa que <code>segmento_cliente</code> y <code>ciudad_tienda</code> <strong>se repiten</strong> en cada transacción del mismo cliente o de la misma tienda. ¿Es un problema? Depende; es justo la pregunta de la siguiente diapositiva.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="una-tabla-o-múltiples-tablas" class="slide level2 smaller">
 <h2>¿Una tabla o múltiples tablas?</h2>
-<p>La respuesta depende de tu <strong>unidad de observación</strong> y de cómo llegaron los datos:</p>
+<p>La respuesta depende de tu <strong>unidad de observación</strong> y de cómo llegaron los datos. <strong>Empieza con una sola tabla</strong> y divídela solo si hay una razón:</p>
 <div class="columns">
 <div class="column">
-<p><strong>Modelo relacional (múltiples tablas)</strong></p>
-<ul>
-<li>Datos provenientes de sistemas diferentes</li>
-<li>Hay relaciones de muchos-a-muchos</li>
-<li><em>Ejemplo siguiente</em>: clientes + tiendas + transacciones</li>
-</ul>
-</div><div class="column">
 <p><strong>Formato plano (una sola tabla)</strong></p>
 <ul>
 <li>Cada fila es una observación completa</li>
 <li>Encuestas, sensores o registros de una sola fuente</li>
 <li>Dataset ya integrado desde el origen</li>
 <li>La mayoría de repositorios públicos y Kaggle</li>
+</ul>
+</div><div class="column">
+<p><strong>Modelo relacional (múltiples tablas)</strong>: cuando una tabla ya no basta</p>
+<ul>
+<li>Datos de fuentes diferentes</li>
+<li>Información que <strong>se repite</strong> en muchas filas (el cliente o la tienda de cada transacción)</li>
+<li>Relaciones de muchos-a-muchos</li>
+<li>Quieres que la base <strong>valide</strong> que cada transacción apunta a un cliente y una tienda que existen</li>
 </ul>
 </div></div>
 <div class="callout callout-important callout-titled callout-style-default">
@@ -381,13 +444,121 @@ Sergio Martín Nava Muñoz
 <p><strong>Important</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Independientemente del formato de origen</strong>, la mayor parte del análisis estadístico requiere una sola tabla <em>lista para analizar</em>. Si partes de múltiples tablas, eventualmente las integrarás en una para el análisis.</p>
+<p><strong>Aun si partes de varias tablas</strong>, el análisis estadístico requiere una sola tabla <em>lista para analizar</em>: la integrarás antes de analizar.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="esquema-simple-de-organización" class="slide level2">
-<h2>Esquema simple de organización</h2>
+<section id="conceptos-clave-para-organizar-datos" class="slide level2 smaller">
+<h2>Conceptos clave para organizar datos</h2>
+<ul>
+<li><strong>Identificador único</strong>: cada fila debe poder distinguirse de las demás con un código (p.&nbsp;ej., <code>id_transaccion</code>).</li>
+<li><strong>Tipos de datos y reglas de validación</strong>: números para cantidades, texto para nombres, fechas para tiempo; define qué valores son aceptables.</li>
+<li><strong>Identificadores estables, unidades y zona horaria</strong>: no cambies los códigos después y registra unidades (pesos, kg, %) y zona horaria en el diccionario.</li>
+</ul>
+<p><strong>Tipo de dato ≠ escala de medición</strong> (la escala determina qué análisis tienen sentido)</p>
+<ul>
+<li><strong>Nominal</strong>: categorías sin orden (<code>canal</code>: web, app).</li>
+<li><strong>Ordinal</strong>: categorías con orden (satisfacción: baja, media, alta).</li>
+<li><strong>Intervalo / razón</strong>: cantidades numéricas; solo en la razón el cero significa “ausencia” (<code>monto</code>).</li>
+</ul>
+</section>
+<section id="diccionario-de-datos" class="slide level2 smaller scrollable">
+<h2>Diccionario de datos</h2>
+<p>Tabla plana <code>transacciones</code> (algunas variables):</p>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Tipo</th>
+<th>Valores permitidos</th>
+<th style="text-align: right;">¿Vacío?</th>
+<th>Descripción</th>
+<th>Fuente</th>
+<th>Transformación aplicada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>id_transaccion</td>
+<td>Texto</td>
+<td>Código único</td>
+<td style="text-align: right;">No</td>
+<td>Identificador de la compra</td>
+<td>Sistema</td>
+<td>Ninguna</td>
+</tr>
+<tr class="even">
+<td>fecha_hora</td>
+<td>Fecha-hora</td>
+<td><code>YYYY-MM-DD HH:MM:SS</code></td>
+<td style="text-align: right;">No</td>
+<td>Cuándo ocurrió</td>
+<td>Sistema</td>
+<td>Unificado a un solo formato</td>
+</tr>
+<tr class="odd">
+<td>monto</td>
+<td>Número</td>
+<td>Mayor a 0 (MXN)</td>
+<td style="text-align: right;">No</td>
+<td>Cantidad en pesos</td>
+<td>Terminal</td>
+<td>USD convertidos a MXN</td>
+</tr>
+<tr class="even">
+<td>canal</td>
+<td>Categórica</td>
+<td>pos, web, app, telefono</td>
+<td style="text-align: right;">Sí</td>
+<td>Medio de la compra</td>
+<td>Terminal</td>
+<td>Etiquetas homologadas</td>
+</tr>
+<tr class="odd">
+<td>segmento_cliente</td>
+<td>Categórica</td>
+<td>joven, adulto, mayor</td>
+<td style="text-align: right;">Sí</td>
+<td>Grupo de edad del cliente</td>
+<td>Sistema de clientes</td>
+<td>Etiquetas homologadas</td>
+</tr>
+<tr class="even">
+<td>es_fraude</td>
+<td>Sí/No</td>
+<td>0 o 1</td>
+<td style="text-align: right;">No</td>
+<td>¿Es fraudulenta?</td>
+<td>Analista</td>
+<td>Ninguna</td>
+</tr>
+<tr class="odd">
+<td>hora_del_dia</td>
+<td>Entero</td>
+<td>0 a 23</td>
+<td style="text-align: right;">No</td>
+<td>Hora de la compra</td>
+<td><em>Derivada</em></td>
+<td>Extraída de <code>fecha_hora</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Guárdalo como <code>diccionario_datos.csv</code> y registra cada transformación que apliques.</p>
+</blockquote>
+</section>
+<section id="cuando-una-tabla-no-basta" class="slide level2 smaller">
+<h2>Cuando una tabla no basta</h2>
 <div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -400,6 +571,8 @@ Sergio Martín Nava Muñoz
     string id_cliente PK
     string segmento
     date   fecha_registro
+  }
+  TIENDAS {
     string id_tienda PK
     string categoria
     string ciudad
@@ -420,182 +593,8 @@ Sergio Martín Nava Muñoz
 </div>
 </div>
 <blockquote>
-<p>Este es un diagrama básico. Adáptalo a tu proyecto específico.</p>
+<p><strong>PK</strong> (llave primaria): código único de cada fila. <strong>FK</strong> (llave foránea): apunta a la PK de otra tabla. Al separar <code>clientes</code> y <code>tiendas</code>, sus datos ya no se repiten.</p>
 </blockquote>
-</section>
-<section id="ejemplo-práctico-estructura-en-sql" class="slide level2">
-<h2>Ejemplo práctico — Estructura en SQL</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href=""></a><span class="co">-- Tabla principal de transacciones</span></span>
-<span id="cb1-2"><a href=""></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> transacciones (</span>
-<span id="cb1-3"><a href=""></a>  id_transaccion TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
-<span id="cb1-4"><a href=""></a>  id_cliente TEXT <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
-<span id="cb1-5"><a href=""></a>  id_tienda TEXT <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
-<span id="cb1-6"><a href=""></a>  fecha_hora <span class="dt">TIMESTAMP</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
-<span id="cb1-7"><a href=""></a>  monto <span class="dt">DECIMAL</span>(<span class="dv">10</span>,<span class="dv">2</span>) <span class="kw">CHECK</span> (monto <span class="op">&gt;=</span> <span class="dv">0</span>),</span>
-<span id="cb1-8"><a href=""></a>  canal TEXT <span class="kw">CHECK</span> (canal <span class="kw">IN</span> (<span class="st">'pos'</span>,<span class="st">'web'</span>,<span class="st">'app'</span>,<span class="st">'telefono'</span>)),</span>
-<span id="cb1-9"><a href=""></a>  es_fraude <span class="dt">BOOLEAN</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">DEFAULT</span> <span class="dv">0</span></span>
-<span id="cb1-10"><a href=""></a>);</span>
-<span id="cb1-11"><a href=""></a></span>
-<span id="cb1-12"><a href=""></a><span class="co">-- Tabla de clientes</span></span>
-<span id="cb1-13"><a href=""></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> clientes (</span>
-<span id="cb1-14"><a href=""></a>  id_cliente TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
-<span id="cb1-15"><a href=""></a>  segmento TEXT,</span>
-<span id="cb1-16"><a href=""></a>  fecha_registro <span class="dt">DATE</span></span>
-<span id="cb1-17"><a href=""></a>);</span>
-<span id="cb1-18"><a href=""></a></span>
-<span id="cb1-19"><a href=""></a><span class="co">-- Tabla de tiendas</span></span>
-<span id="cb1-20"><a href=""></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> tiendas (</span>
-<span id="cb1-21"><a href=""></a>  id_tienda TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
-<span id="cb1-22"><a href=""></a>  categoria TEXT,</span>
-<span id="cb1-23"><a href=""></a>  ciudad TEXT</span>
-<span id="cb1-24"><a href=""></a>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<blockquote>
-<p>Este es solo un ejemplo. Adáptalo a tu proyecto específico.</p>
-</blockquote>
-</section>
-<section id="conceptos-clave-para-organizar-datos" class="slide level2 smaller">
-<h2>Conceptos clave para organizar datos</h2>
-<ul>
-<li><strong>Identificadores únicos</strong>: cada fila en una tabla debe tener un código único.<br>
-</li>
-<li><strong>Referencias entre tablas</strong>: usar códigos para conectar información relacionada.<br>
-</li>
-<li><strong>Tipos de datos apropiados</strong>: números para cantidades, texto para nombres, fechas para tiempo.<br>
-</li>
-<li><strong>Reglas de validación</strong>: establecer qué valores son aceptables.</li>
-</ul>
-<p><strong>Reglas básicas</strong><br>
-- Cada tabla debe tener un identificador único principal.<br>
-- Usar códigos simples para conectar tablas (no texto largo).<br>
-- Mantener los identificadores estables (no cambiarlos después).</p>
-</section>
-<section id="diccionario-de-datos---qué-es-cada-variable" class="slide level2 smaller scrollable">
-<h2>Diccionario de datos - ¿qué es cada variable?</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 13%">
-<col style="width: 18%">
-<col style="width: 13%">
-<col style="width: 13%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Tabla</th>
-<th>Variable</th>
-<th>Tipo</th>
-<th>Valores permitidos</th>
-<th style="text-align: right;">¿Puede estar vacío?</th>
-<th>Descripción</th>
-<th>De dónde viene</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>transacciones</td>
-<td>id_transaccion</td>
-<td>Texto</td>
-<td>Código único</td>
-<td style="text-align: right;">No</td>
-<td>Identificador de cada compra</td>
-<td>Sistema</td>
-</tr>
-<tr class="even">
-<td>transacciones</td>
-<td>monto</td>
-<td>Número</td>
-<td>Mayor a 0</td>
-<td style="text-align: right;">No</td>
-<td>Cantidad en pesos</td>
-<td>Terminal</td>
-</tr>
-<tr class="odd">
-<td>transacciones</td>
-<td>fecha_hora</td>
-<td>Fecha</td>
-<td>Formato YYYY-MM-DD</td>
-<td style="text-align: right;">No</td>
-<td>Cuándo ocurrió</td>
-<td>Sistema</td>
-</tr>
-<tr class="even">
-<td>transacciones</td>
-<td>es_fraude</td>
-<td>Sí/No</td>
-<td>Verdadero o Falso</td>
-<td style="text-align: right;">No</td>
-<td>¿Es fraudulenta?</td>
-<td>Analista</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Mantén este archivo actualizado y guárdalo como <code>diccionario_datos.csv</code>. Agrega una columna <strong>“Transformación aplicada”</strong> si imputas o agregas alguna variable.</p>
-</blockquote>
-</section>
-<section id="ruta-metodológica-y-diseño-de-datos" class="slide level2 smaller">
-<h2>Ruta metodológica y diseño de datos</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Elemento</th>
-<th>Pregunta central</th>
-<th>Resultado esperado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Pregunta de investigación</strong></td>
-<td>¿Qué quiero responder?</td>
-<td>Delimita el fenómeno de estudio</td>
-</tr>
-<tr class="even">
-<td><strong>Unidad de análisis</strong></td>
-<td>¿Cuál es mi fila?</td>
-<td>Define la estructura de la tabla</td>
-</tr>
-<tr class="odd">
-<td><strong>Variables clave</strong></td>
-<td>¿Qué observar o medir?</td>
-<td>Lista de columnas necesarias</td>
-</tr>
-<tr class="even">
-<td><strong>Fuente de datos</strong></td>
-<td>¿De dónde provienen?</td>
-<td>Identifica proveedores y métodos</td>
-</tr>
-<tr class="odd">
-<td><strong>Formato de almacenamiento</strong></td>
-<td>¿Una tabla o varias?</td>
-<td>Esquema de organización</td>
-</tr>
-<tr class="even">
-<td><strong>Pipeline de preparación</strong></td>
-<td>¿Qué transformar?</td>
-<td>Limpieza, imputación, agregación</td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>Antes de recolectar un solo dato, completa esta tabla. Cada fila debe tener una respuesta documentada en tu protocolo de investigación.</p>
-</div>
-</div>
-</div>
 </section>
 <section id="de-dónde-obtengo-mis-datos" class="slide level2 smaller scrollable">
 <h2>¿De dónde obtengo mis datos?</h2>
@@ -611,12 +610,53 @@ Sergio Martín Nava Muñoz
 <li><strong>Fuentes existentes</strong>: bases de datos públicas, APIs, archivos institucionales.</li>
 <li><strong>Herramientas de captura</strong>: formularios digitales, sensores, programas de descarga automática.</li>
 </ul>
-<p><strong>Planificación del muestreo</strong></p>
+</section>
+<section id="muestreo-a-quién-y-cuántos-casos" class="slide level2 smaller">
+<h2>Muestreo: ¿a quién y cuántos casos?</h2>
 <ul>
-<li>Define claramente: ¿a quién o qué voy a estudiar?</li>
-<li>¿Cuántos casos necesito para que sea representativo?</li>
-<li>¿Hay grupos específicos que debo incluir?</li>
+<li><strong>Población</strong>: ¿a quién quiero generalizar? <strong>Marco muestral</strong>: ¿de qué lista puedo seleccionar realmente?</li>
+<li>Una muestra es <em>representativa</em> si reproduce las características de la población relevantes para tu pregunta.</li>
 </ul>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Técnica</th>
+<th>Cuándo usarla</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Probabilístico</strong> (cada unidad tiene probabilidad conocida)</td>
+<td>Aleatorio simple, sistemático, estratificado, por conglomerados</td>
+<td>Si quieres <strong>inferir</strong> a la población y cuantificar el error</td>
+</tr>
+<tr class="even">
+<td><strong>No probabilístico</strong></td>
+<td>Por conveniencia, por cuotas, bola de nieve</td>
+<td>Estudios exploratorios o poblaciones de difícil acceso; <strong>sin</strong> inferencia estadística formal</td>
+</tr>
+</tbody>
+</table>
+<p><strong>¿Cuántos casos?</strong> Depende de la <strong>variabilidad</strong> y la <strong>precisión</strong> deseada; en pruebas de hipótesis, del <strong>tamaño del efecto</strong> y la <strong>potencia</strong>; en modelos predictivos, del <strong>desbalance de clases</strong> (p.&nbsp;ej., pocos fraudes entre muchas transacciones).</p>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>Si tu base ya existe (Kaggle, repositorios públicos), no elegiste la muestra: <strong>documenta cómo se obtuvo</strong> y qué población representa realmente.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="evaluación-del-origen-de-los-datos" class="slide level2 smaller scrollable">
 <h2>Evaluación del origen de los datos</h2>
@@ -691,21 +731,17 @@ Sergio Martín Nava Muñoz
 <blockquote>
 <p>La evaluación del origen responde <em>qué preguntar</em> antes de recolectar; el control de calidad responde <em>cómo verificar</em> lo que ya tienes.</p>
 </blockquote>
-<p><strong>Prevención</strong> (al momento de capturar)</p>
-<ul>
-<li>Usar formularios que validen automáticamente los datos.</li>
-<li>Crear listas de opciones cerradas cuando sea posible.</li>
-</ul>
+<p><strong>Prevención</strong> (al capturar): formularios que validen automáticamente y listas de opciones cerradas.</p>
 <p><strong>Detección de errores</strong> (después de capturar)</p>
 <ul>
-<li>Verificar que no hay duplicados donde no debería haberlos.</li>
-<li>Revisar que los valores estén en rangos razonables.</li>
-<li>Comprobar que las fechas sean lógicas.</li>
+<li>Duplicados donde no deberían existir.</li>
+<li>Valores fuera de rango y <strong>atípicos</strong> (<em>outliers</em>): investígalos antes de eliminarlos (¡el fraude es un atípico!).</li>
+<li>Fechas lógicas; unidades, zonas horarias y categorías (<code>web</code> / <code>Web</code>) consistentes.</li>
 </ul>
 <p><strong>Documentación</strong></p>
 <ul>
-<li>Registrar de dónde viene cada dato y cuándo se capturó.</li>
-<li>Mantener los datos originales sin modificar en una carpeta separada.</li>
+<li>Registra el origen y la fecha de captura de cada dato.</li>
+<li>Originales intactos en una carpeta aparte; correcciones con <strong>scripts</strong>, no a mano.</li>
 </ul>
 </section>
 <section id="de-datos-crudos-a-datos-listos-para-análisis" class="slide level2 smaller">
@@ -736,8 +772,8 @@ Sergio Martín Nava Muñoz
 </section>
 <section id="agregación-resumir-datos-por-grupos" class="slide level2 smaller">
 <h2>Agregación: resumir datos por grupos</h2>
-<p>Cuando tienes observaciones individuales que necesitas resumir por período o región:</p>
-<p><strong>Agregación temporal</strong> — de registros diarios a resumen mensual:</p>
+<div style="font-size: 0.8em">
+<p><strong>Temporal</strong> — de registros diarios a resumen mensual:</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -747,6 +783,7 @@ Sergio Martín Nava Muñoz
 <th>Mes</th>
 <th>Total</th>
 <th>Promedio</th>
+<th>N</th>
 </tr>
 </thead>
 <tbody>
@@ -755,16 +792,18 @@ Sergio Martín Nava Muñoz
 <td>450</td>
 <td></td>
 <td>2024-01</td>
-<td>12 300</td>
-<td>410</td>
+<td>1 350</td>
+<td>450</td>
+<td>3</td>
 </tr>
 <tr class="even">
 <td>2024-01-07</td>
 <td>380</td>
 <td></td>
 <td>2024-02</td>
-<td>14 500</td>
-<td>483</td>
+<td>1 000</td>
+<td>500</td>
+<td>2</td>
 </tr>
 <tr class="odd">
 <td>2024-01-15</td>
@@ -773,33 +812,73 @@ Sergio Martín Nava Muñoz
 <td></td>
 <td></td>
 <td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2024-02-02</td>
+<td>600</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2024-02-10</td>
+<td>400</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Agregación espacial</strong> — de municipio a estado:</p>
+<p><strong>Espacial</strong> — de municipio a región (datos ilustrativos):</p>
 <table class="caption-top">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 17%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 17%">
+<col style="width: 15%">
+<col style="width: 13%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Municipio</th>
 <th>Índice</th>
+<th>Habitantes (miles)</th>
 <th>&nbsp;→&nbsp;</th>
-<th>Estado</th>
-<th>Media</th>
-<th>N</th>
+<th>Región</th>
+<th>Media simple</th>
+<th>Media ponderada</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Zapopan</td>
 <td>8.2</td>
+<td>1 500</td>
 <td></td>
-<td>Jalisco</td>
-<td>7.9</td>
-<td>125</td>
+<td>Zona metropolitana</td>
+<td>7.67</td>
+<td>7.85</td>
 </tr>
 <tr class="even">
 <td>Tlaquepaque</td>
 <td>7.6</td>
+<td>700</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Tonalá</td>
+<td>7.2</td>
+<td>550</td>
 <td></td>
 <td></td>
 <td></td>
@@ -807,59 +886,34 @@ Sergio Martín Nava Muñoz
 </tr>
 </tbody>
 </table>
-<div class="callout callout-tip callout-titled callout-style-default">
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Tip</strong></p>
+<p><strong>Warning</strong></p>
 </div>
 <div class="callout-content">
-<p>La granularidad adecuada depende de tu <strong>pregunta de investigación</strong>. Elige el nivel que responda lo que quieres saber, no el que sea más fácil de obtener.</p>
+<p><strong>Tiene un costo:</strong> es <strong>irreversible</strong> (conserva la base desagregada); <strong>promediar promedios</strong> ignora el tamaño de los grupos (7.67 vs.&nbsp;7.85); y el <strong>nivel de agregación puede cambiar las conclusiones</strong>. Elige la granularidad que responda tu pregunta.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="imputación-qué-hacer-con-datos-faltantes" class="slide level2 smaller scrollable">
-<h2>Imputación: qué hacer con datos faltantes</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  A["¿Por qué&lt;br/&gt;falta el dato?"] --&gt; B{"Tipo de&lt;br/&gt;ausencia"}
-  B -- MCAR --&gt; C["Falta al azar&lt;br/&gt;Ej: error técnico"]
-  B -- MAR --&gt; D["Falta según&lt;br/&gt;otra variable"]
-  B -- MNAR --&gt; E["Falta por el&lt;br/&gt;valor mismo"]
-  C --&gt; F["Media, mediana&lt;br/&gt;o moda"]
-  D --&gt; G["Imputación&lt;br/&gt;por regresión"]
-  E --&gt; H["Supuesto explícito&lt;br/&gt;o análisis de&lt;br/&gt;sensibilidad"]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<blockquote>
-<p>Identificar el mecanismo de ausencia es el primer paso antes de elegir cualquier método <span class="citation" data-cites="Rubin1976 LittleRubin2002">(<a href="#/referencias" role="doc-biblioref" onclick="">Little &amp; Rubin, 2002</a>; <a href="#/referencias" role="doc-biblioref" onclick="">Rubin, 1976</a>)</span>.</p>
-</blockquote>
-</section>
-<section id="métodos-de-imputación-comunes" class="slide level2 smaller scrollable">
-<h2>Métodos de imputación comunes</h2>
+<section id="imputación-datos-faltantes" class="slide level2 smaller">
+<h2>Imputación: datos faltantes</h2>
+<p>Identifica primero <strong>por qué falta el dato</strong> <span class="citation" data-cites="LittleRubin2002 Rubin1976">(<a href="#/referencias" role="doc-biblioref" onclick="">Little &amp; Rubin, 2002</a>; <a href="#/referencias" role="doc-biblioref" onclick="">Rubin, 1976</a>)</span>: <strong>MCAR</strong> (al azar, p.&nbsp;ej. error técnico), <strong>MAR</strong> (depende de otra variable observada) o <strong>MNAR</strong> (depende del valor mismo: modela la ausencia y haz análisis de sensibilidad). Los datos no distinguen MAR de MNAR: hace falta conocimiento del dominio.</p>
 <table class="caption-top">
 <colgroup>
-<col style="width: 19%">
+<col style="width: 24%">
+<col style="width: 42%">
 <col style="width: 33%">
-<col style="width: 21%">
-<col style="width: 26%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Método</th>
 <th>Cuándo usarlo</th>
-<th>Ventaja</th>
 <th>Limitación</th>
 </tr>
 </thead>
@@ -867,38 +921,27 @@ Sergio Martín Nava Muñoz
 <tr class="odd">
 <td><strong>Eliminar filas</strong></td>
 <td>Pocos faltantes (&lt;5%), MCAR</td>
-<td>Simple</td>
-<td>Pierde información</td>
+<td>Pierde información; sesga si no es MCAR</td>
 </tr>
 <tr class="even">
-<td><strong>Media / mediana</strong></td>
-<td>Numéricas, MCAR</td>
-<td>Rápido</td>
-<td>Subestima la varianza</td>
+<td><strong>Media / mediana / moda</strong></td>
+<td>Exploración rápida</td>
+<td>Subestima la varianza y distorsiona correlaciones</td>
 </tr>
 <tr class="odd">
-<td><strong>Moda</strong></td>
-<td>Categóricas</td>
-<td>Fácil</td>
-<td>Sesgo si hay dominancia</td>
-</tr>
-<tr class="even">
 <td><strong>Valor anterior (fill)</strong></td>
-<td>Series de tiempo</td>
-<td>Respeta la tendencia</td>
-<td>Solo datos ordenados</td>
+<td>Series de tiempo, huecos cortos</td>
+<td>Sesga con huecos largos o tendencia</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Regresión</strong></td>
 <td>MAR, variables correlacionadas</td>
-<td>Preciso</td>
-<td>Requiere más trabajo</td>
+<td>Subestima la incertidumbre</td>
 </tr>
-<tr class="even">
-<td><strong>Imputación múltiple</strong></td>
-<td>Análisis formales</td>
-<td>Estadísticamente robusto</td>
-<td>Complejo de implementar</td>
+<tr class="odd">
+<td><strong>Imputación múltiple</strong> <span class="citation" data-cites="vanBuuren2018 Sterne2009 vanBuurenMice2011 Schafer2002">(<a href="#/referencias" role="doc-biblioref" onclick="">Schafer &amp; Graham, 2002</a>; <a href="#/referencias" role="doc-biblioref" onclick="">Sterne et al., 2009</a>; <a href="#/referencias" role="doc-biblioref" onclick=""><span class="nocase">van Buuren</span>, 2018</a>; <a href="#/referencias" role="doc-biblioref" onclick=""><span class="nocase">van Buuren &amp; Groothuis-Oudshoorn</span>, 2011</a>)</span></td>
+<td>MAR; análisis inferencial</td>
+<td>Más compleja de implementar y reportar</td>
 </tr>
 </tbody>
 </table>
@@ -911,51 +954,77 @@ Sergio Martín Nava Muñoz
 <p><strong>Warning</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Documenta siempre</strong> qué método usaste y en qué variables. El método elegido debe justificarse en tu sección de metodología.</p>
+<p><strong>Documenta</strong> método y variables. <strong>Si tu proyecto es predictivo (ML)</strong>, calcula la imputación solo con el conjunto de entrenamiento y aplícala al de prueba: imputar antes de dividir filtra información (<em>data leakage</em>).</p>
 </div>
 </div>
 </div>
-<blockquote>
-<p>Para imputación múltiple se recomienda consultar <span class="citation" data-cites="vanBuuren2018">Buuren (<a href="#/referencias" role="doc-biblioref" onclick="">2018</a>)</span> (disponible en línea), <span class="citation" data-cites="Sterne2009">Sterne et al. (<a href="#/referencias" role="doc-biblioref" onclick="">2009</a>)</span> y la implementación en R de <span class="citation" data-cites="vanBuurenMice2011">Buuren &amp; Groothuis-Oudshoorn (<a href="#/referencias" role="doc-biblioref" onclick="">2011</a>)</span>. <span class="citation" data-cites="Schafer2002">Schafer &amp; Graham (<a href="#/referencias" role="doc-biblioref" onclick="">2002</a>)</span> ofrece una revisión metodológica accesible.</p>
-</blockquote>
 </section>
-<section id="consideraciones-éticas-y-de-privacidad" class="slide level2">
+<section id="consideraciones-éticas-y-de-privacidad" class="slide level2 smaller">
 <h2>Consideraciones éticas y de privacidad</h2>
 <ul>
-<li><strong>Minimiza la recolección</strong>: solo recolecta los datos que realmente necesitas.<br>
-</li>
-<li><strong>Protege la identidad</strong>: usa códigos en lugar de nombres cuando sea posible.<br>
-</li>
-<li><strong>Controla el acceso</strong>: define quién puede ver qué información.<br>
-</li>
-<li><strong>Datos sintéticos</strong>: si necesitas compartir datos, considera generar versiones artificiales que mantengan las características importantes pero no revelen información personal.</li>
+<li><strong>Minimiza la recolección</strong>: solo recolecta lo que realmente necesitas.</li>
+<li><strong>Seudonimizar no es anonimizar</strong>: con códigos en vez de nombres, aún se puede reidentificar a alguien combinando edad, ciudad y ocupación.</li>
+<li><strong>Personas participantes</strong>: consentimiento informado y, cuando aplique, revisión de un comité de ética.</li>
+<li><strong>Controla el acceso</strong> y revisa <strong>licencias y términos de uso</strong> de datos de terceros.</li>
+<li><strong>Para compartir datos</strong>: enmascara, generaliza o usa datos sintéticos.</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Marco legal en México</strong>: particulares → Ley Federal de Protección de Datos Personales en Posesión de los Particulares (nueva ley, DOF 20/03/2025); entes públicos → ley general para sujetos obligados. Verifica la versión vigente y las políticas de tu institución.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="tres-técnicas-para-proteger-la-privacidad" class="slide level2 smaller">
+<h2>Tres técnicas para proteger la privacidad</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Técnica</th>
+<th>Qué hace</th>
+<th>Riesgo que queda</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Seudonimización</strong></td>
+<td>Reemplaza identificadores directos (nombre, CURP) por un código</td>
+<td>Si existe la tabla de equivalencias o hay cuasi-identificadores, se puede reidentificar</td>
+</tr>
+<tr class="even">
+<td><strong>Enmascaramiento / generalización</strong></td>
+<td>Agrupa o distorsiona valores (rangos de edad, región en vez de ciudad, ruido)</td>
+<td>Reduce el riesgo, no lo elimina; se pierde precisión</td>
+</tr>
+<tr class="odd">
+<td><strong>Datos sintéticos</strong></td>
+<td>Se <strong>generan</strong> registros nuevos con un modelo (o reglas) ajustado a los datos reales</td>
+<td>Pueden filtrar información si el modelo memoriza registros reales; hay que evaluarlo</td>
+</tr>
+</tbody>
+</table>
+<p>Los <strong>datos sintéticos</strong> son registros artificiales que buscan conservar patrones estadísticos de los datos reales sin que ninguna fila corresponda a una persona real.</p>
+<p><strong>Herramientas básicas</strong></p>
+<ul>
+<li><strong>Python</strong>: <code>Faker</code> genera datos <em>falsos</em> aleatorios (útil para pruebas y demos, <strong>no</strong> preserva relaciones entre variables); <code>SDV</code> modela los datos reales para generar sintéticos.</li>
+<li><strong>R</strong>: <code>synthpop</code> y <code>simPop</code>.</li>
 </ul>
 </section>
-<section id="qué-son-los-datos-sintéticos" class="slide level2 smaller">
-<h2>¿Qué son los datos sintéticos?</h2>
-<p>Los <strong>datos sintéticos</strong> son conjuntos de datos artificiales que imitan las características estadísticas de datos reales sin contener información real de personas específicas.</p>
-<div class="columns">
-<div class="column">
-<p><strong>¿Cuándo usarlos?</strong></p>
-<ul>
-<li>Para compartir datos con colaboradores</li>
-<li>Para publicar datasets de investigación</li>
-<li>Para entrenar modelos sin exponer datos sensibles</li>
-<li>Para crear ejemplos educativos</li>
-</ul>
-</div><div class="column">
-<p><strong>Ventajas</strong></p>
-<ul>
-<li>Protegen la privacidad individual</li>
-<li>Mantienen patrones estadísticos útiles</li>
-<li>Permiten reproducibilidad</li>
-<li>Eliminan restricciones legales de uso</li>
-</ul>
-</div></div>
-</section>
-<section id="ejemplo-práctico-dataset-de-estudiantes" class="slide level2 smaller scrollable">
-<h2>Ejemplo práctico: Dataset de estudiantes</h2>
-<p><strong>Datos originales</strong> (sensibles):</p>
+<section id="del-dato-sensible-al-compartible" class="slide level2 smaller">
+<h2>Del dato sensible al compartible</h2>
+<p><strong>Originales</strong> (sensibles; datos ilustrativos):</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -983,69 +1052,79 @@ Sergio Martín Nava Muñoz
 </tr>
 </tbody>
 </table>
-<p><strong>Datos sintéticos</strong> (seguros para compartir):</p>
+<p><strong>Seudonimizados y enmascarados</strong> (cada fila sigue siendo una persona real):</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th>ID</th>
 <th>Edad</th>
 <th>Promedio</th>
-<th>Ciudad</th>
+<th>Región</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td>23</td>
-<td>8.3</td>
-<td>Ciudad_A</td>
+<td>E01</td>
+<td>20–24</td>
+<td>8.5</td>
+<td>Occidente</td>
 </tr>
 <tr class="even">
-<td>2</td>
+<td>E02</td>
+<td>20–24</td>
+<td>7.2</td>
+<td>Noreste</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sintéticos</strong> (generados por un modelo; no corresponden a ninguna persona):</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Edad</th>
+<th>Promedio</th>
+<th>Región</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>S01</td>
+<td>23</td>
+<td>8.1</td>
+<td>Occidente</td>
+</tr>
+<tr class="even">
+<td>S02</td>
 <td>25</td>
-<td>7.0</td>
-<td>Ciudad_B</td>
+<td>7.4</td>
+<td>Noreste</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>Los datos sintéticos mantienen las relaciones entre edad y promedio, pero eliminan nombres reales y codifican ubicaciones.</p>
+<p>Solo dos filas: es una ilustración (un modelo real usa cientos o miles). Con datos reales y medidas: <a href="https://navasergio.github.io/SP1-material-estudiantes/docs/U4-BD/material/01_privacidad_y_datos_sinteticos.html">notebook 01</a>.</p>
 </blockquote>
-<p><strong>Herramientas básicas</strong>:</p>
-<ul>
-<li><strong>Python</strong>: librerías como <code>faker</code> o <code>synthpop</code></li>
-<li><strong>R</strong>: paquetes como <code>synthpop</code> o <code>simPop</code><br>
-</li>
-<li><strong>Excel</strong>: funciones aleatorias con distribuciones controladas</li>
-</ul>
 </section>
-<section id="organización-de-archivos-para-tu-proyecto" class="slide level2">
+<section id="organización-de-archivos-para-tu-proyecto" class="slide level2 smaller">
 <h2>Organización de archivos para tu proyecto</h2>
 <pre><code>/datos
   /originales       # datos tal como los obtuviste (no tocar)
   /procesados       # datos limpios listos para análisis
   diccionario_datos.csv
+/scripts            # código que transforma originales → procesados
 /documentos
   esquema_datos.png # tu diagrama de organización
 README.md          # explicación del proyecto</code></pre>
-</section>
-<section id="herramientas-recomendadas" class="slide level2">
-<h2>Herramientas recomendadas</h2>
 <ul>
-<li><strong>Excel/Google Sheets</strong>: para empezar y datos pequeños.<br>
-</li>
-<li><strong>SQLite</strong>: base de datos simple, ideal para aprender.<br>
-</li>
-<li><strong>R/Python</strong>: para análisis más avanzados.<br>
-</li>
-<li><strong>Google Forms</strong>: para recolectar datos con formularios.</li>
+<li><strong>Reproducibilidad</strong>: los datos procesados deben poder regenerarse ejecutando tus scripts sobre los originales.</li>
+<li><strong>Versionado</strong>: usa Git, o al menos nombres con fecha o versión (<code>datos_v2_2025-03-25.csv</code>), y respalda tus datos originales.</li>
+<li><strong>Nombres consistentes</strong>: sin espacios ni acentos en archivos y columnas (<code>fecha_hora</code>, no <code>Fecha y Hora</code>).</li>
 </ul>
-<blockquote>
-<p>Elige la herramienta según el tamaño de tus datos y tu experiencia.</p>
-</blockquote>
+<p><strong>Ejemplos completos</strong> de estructura, diccionario y README: notebooks <a href="https://navasergio.github.io/SP1-material-estudiantes/docs/U4-BD/material/02_ejemplo_calidad_aire.html">02</a> y <a href="https://navasergio.github.io/SP1-material-estudiantes/docs/U4-BD/material/03_ejemplo_indicadores_banco_mundial.html">03</a>.</p>
 </section>
-<section id="lista-de-verificación-para-la-evidencia-4a" class="slide level2 smaller">
-<h2>Lista de verificación para la Evidencia 4A</h2>
+<section id="lista-de-buenas-prácticas" class="slide level2 smaller">
+<h2>Lista de buenas prácticas</h2>
 <ul class="task-list">
 <li><label><input type="checkbox"><strong>Archivo de base de datos</strong> creado (.xlsx, .csv o base de datos simple).<br>
 </label></li>
@@ -1061,27 +1140,11 @@ README.md          # explicación del proyecto</code></pre>
 </label></li>
 <li><label><input type="checkbox"><strong>Diccionario de datos</strong> completo y actualizado (incluye fuente y transformación por variable).<br>
 </label></li>
-<li><label><input type="checkbox"><strong>Video corto</strong> (máximo 3 minutos) mostrando tu base de datos.</label></li>
-<li><label><input type="checkbox"><strong>Documento PDF</strong> con enlace al video y capturas de pantalla.</label></li>
+<li><label><input type="checkbox"><strong>Video corto</strong> (máximo 3 minutos) mostrando tu base de datos (Evidencia 4A).</label></li>
+<li><label><input type="checkbox"><strong>Documento PDF</strong> con enlace al video y capturas de pantalla (Evidencia 4A).</label></li>
 </ul>
 </section>
-<section id="actividad" class="slide level2 smaller">
-<h2>Actividad</h2>
-<ol type="1">
-<li><strong>Decide</strong> si tu proyecto requiere una tabla o varias, y justifica la respuesta.<br>
-</li>
-<li><strong>Construye</strong> una mini matriz de coherencia: pregunta específica → objetivo → hipótesis → variable/métrica.</li>
-<li><strong>Dibuja</strong> tu pipeline: ¿qué pasos debes aplicar desde los datos crudos hasta el dataset listo para análisis?<br>
-</li>
-<li><strong>Define</strong> los campos principales (8-10 variables clave) e indica si alguna requiere imputación, agregación o derivación.<br>
-</li>
-<li><strong>Aplica</strong> el checklist de evaluación del origen de datos y registra una evidencia por cada dimensión.</li>
-<li><strong>Escribe</strong> 3 posibles problemas de calidad y cómo los resolverías (duplicados, valores faltantes, valores fuera de rango).<br>
-</li>
-<li><strong>Describe</strong> tu plan de recolección: fuente, granularidad temporal/espacial y frecuencia.</li>
-</ol>
-</section>
-<section id="puntos-clave-para-recordar" class="slide level2">
+<section id="puntos-clave-para-recordar" class="slide level2 smaller">
 <h2>Puntos clave para recordar</h2>
 <ul>
 <li><strong>Planifica antes de recolectar</strong>: diseña tu estructura de datos antes de empezar a capturar información.<br>
@@ -1089,6 +1152,8 @@ README.md          # explicación del proyecto</code></pre>
 <li><strong>Documenta todo</strong>: mantén un diccionario actualizado de qué significa cada variable y qué transformaciones se le aplicaron.<br>
 </li>
 <li><strong>Prepara, no solo recolecta</strong>: casi siempre necesitarás limpiar, imputar o agregar antes de analizar.<br>
+</li>
+<li><strong>Empieza con una sola tabla</strong>: divídela solo si hay datos repetidos, varias fuentes o relaciones muchos-a-muchos.<br>
 </li>
 <li><strong>Elige la granularidad correcta</strong>: la unidad de análisis (fila) debe corresponder con tu pregunta de investigación.<br>
 </li>
@@ -1098,15 +1163,65 @@ README.md          # explicación del proyecto</code></pre>
 <p>La calidad de tu análisis depende directamente de la calidad y preparación de tus datos.</p>
 </blockquote>
 </section>
+<section id="actividad-posterior-a-la-sesión" class="slide level2 smaller">
+<h2>Actividad posterior a la sesión</h2>
+<p><strong>Trabajo individual</strong> para aplicar lo visto a tu proyecto (no se hace durante la sesión). Consulta los notebooks del material adicional como modelo.</p>
+<ol type="1">
+<li><strong>Decide</strong> si tu proyecto parte de una tabla o requiere varias, y justifica la respuesta.</li>
+<li><strong>Construye</strong> una mini matriz de coherencia: pregunta específica → objetivo → hipótesis → variable/métrica.</li>
+<li><strong>Dibuja</strong> tu pipeline: ¿qué pasos debes aplicar desde los datos crudos hasta el dataset listo para análisis?</li>
+<li><strong>Define</strong> los campos principales (8-10 variables clave) e indica si alguna requiere imputación, agregación o derivación.</li>
+<li><strong>Aplica</strong> el checklist de evaluación del origen de datos y registra una evidencia por cada dimensión.</li>
+<li><strong>Escribe</strong> 3 posibles problemas de calidad y cómo los resolverías (duplicados, valores faltantes, valores fuera de rango).</li>
+<li><strong>Describe</strong> tu plan de recolección: fuente, granularidad temporal/espacial y frecuencia.</li>
+</ol>
+</section>
+<section id="material-adicional-notebooks" class="slide level2 smaller">
+<h2>Material adicional: notebooks</h2>
+<p>Material <strong>opcional</strong> para consultar después de la sesión (Python, con datos reales; ejecutables en Google Colab).</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Notebook</th>
+<th>Qué muestra</th>
+<th>Enlaces</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>01. Privacidad y datos sintéticos</strong></td>
+<td>Seudonimización, enmascaramiento (k-anonimato) y datos sintéticos, con medidas de utilidad y de privacidad</td>
+<td><a href="https://navasergio.github.io/SP1-material-estudiantes/docs/U4-BD/material/01_privacidad_y_datos_sinteticos.html">Leer</a> · <a href="https://colab.research.google.com/github/NavaSergio/SP1-material-estudiantes/blob/main/docs/U4-BD/material/01_privacidad_y_datos_sinteticos.ipynb">Colab</a></td>
+</tr>
+<tr class="even">
+<td><strong>02. Calidad del aire</strong></td>
+<td>Ejemplo de punta a punta: tabla plana, valores centinela, faltantes, imputación, agregación temporal, diccionario y README</td>
+<td><a href="https://navasergio.github.io/SP1-material-estudiantes/docs/U4-BD/material/02_ejemplo_calidad_aire.html">Leer</a> · <a href="https://colab.research.google.com/github/NavaSergio/SP1-material-estudiantes/blob/main/docs/U4-BD/material/02_ejemplo_calidad_aire.ipynb">Colab</a></td>
+</tr>
+<tr class="odd">
+<td><strong>03. Indicadores del Banco Mundial</strong></td>
+<td>Ejemplo de punta a punta: varias fuentes, modelo relacional en SQLite, una tabla de análisis, agregación espacial</td>
+<td><a href="https://navasergio.github.io/SP1-material-estudiantes/docs/U4-BD/material/03_ejemplo_indicadores_banco_mundial.html">Leer</a> · <a href="https://colab.research.google.com/github/NavaSergio/SP1-material-estudiantes/blob/main/docs/U4-BD/material/03_ejemplo_indicadores_banco_mundial.ipynb">Colab</a></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Los dos ejemplos de punta a punta terminan con lo que se considera <strong>buena práctica</strong> (diccionario, README, transformaciones documentadas). Son modelos de razonamiento y documentación, <strong>no plantillas para copiar</strong>: tu proyecto tendrá otra pregunta y otras decisiones.</p>
+</div>
+</div>
+</div>
+</section>
 <section id="referencias" class="slide level2 smaller scrollable">
 <h2>Referencias</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-vanBuuren2018" class="csl-entry" role="listitem">
-Buuren, S. van. (2018). <em>Flexible imputation of missing data</em> (2nd ed.). CRC Press / Chapman &amp; Hall. <a href="https://stefvanbuuren.name/fimd/">https://stefvanbuuren.name/fimd/</a>
-</div>
-<div id="ref-vanBuurenMice2011" class="csl-entry" role="listitem">
-Buuren, S. van, &amp; Groothuis-Oudshoorn, K. (2011). Mice: Multivariate imputation by chained equations in <span>R</span>. <em>Journal of Statistical Software</em>, <em>45</em>(3), 1–67. <a href="https://doi.org/10.18637/jss.v045.i03">https://doi.org/10.18637/jss.v045.i03</a>
-</div>
 <div id="ref-LittleRubin2002" class="csl-entry" role="listitem">
 Little, R. J. A., &amp; Rubin, D. B. (2002). <em>Statistical analysis with missing data</em> (2nd ed.). John Wiley &amp; Sons.
 </div>
@@ -1118,6 +1233,12 @@ Schafer, J. L., &amp; Graham, J. W. (2002). Missing data: Our view of the state 
 </div>
 <div id="ref-Sterne2009" class="csl-entry" role="listitem">
 Sterne, J. A. C., White, I. R., Carlin, J. B., Spratt, M., Royston, P., Kenward, M. G., Wood, A. M., &amp; Carpenter, J. R. (2009). Multiple imputation for missing data in epidemiological and clinical research: Potential and pitfalls. <em>BMJ</em>, <em>338</em>, b2393. <a href="https://doi.org/10.1136/bmj.b2393">https://doi.org/10.1136/bmj.b2393</a>
+</div>
+<div id="ref-vanBuuren2018" class="csl-entry" role="listitem">
+<span class="nocase">van Buuren, S.</span> (2018). <em>Flexible imputation of missing data</em> (2nd ed.). CRC Press / Chapman &amp; Hall. <a href="https://stefvanbuuren.name/fimd/">https://stefvanbuuren.name/fimd/</a>
+</div>
+<div id="ref-vanBuurenMice2011" class="csl-entry" role="listitem">
+<span class="nocase">van Buuren, S., &amp; Groothuis-Oudshoorn, K.</span> (2011). Mice: Multivariate imputation by chained equations in <span>R</span>. <em>Journal of Statistical Software</em>, <em>45</em>(3), 1–67. <a href="https://doi.org/10.18637/jss.v045.i03">https://doi.org/10.18637/jss.v045.i03</a>
 </div>
 </div>
 </section>
@@ -1154,15 +1275,15 @@ Sterne, J. A. C., White, I. R., Carlin, J. B., Spratt, M., Royston, P., Kenward,
 <h2>Recursos adicionales (2/2)</h2>
 <h3 id="datos-sintéticos-y-privacidad"><strong>Datos sintéticos y privacidad</strong></h3>
 <ul>
-<li><strong>Faker (Python)</strong> - Librería para generar datos sintéticos: <a href="https://faker.readthedocs.io/" class="uri">https://faker.readthedocs.io/</a></li>
+<li><strong>Faker (Python)</strong> - Genera datos falsos aleatorios (pruebas y demos): <a href="https://faker.readthedocs.io/" class="uri">https://faker.readthedocs.io/</a></li>
 <li><strong>Synthpop (R)</strong> - Paquete para datos sintéticos: <a href="https://cran.r-project.org/package=synthpop" class="uri">https://cran.r-project.org/package=synthpop</a></li>
 <li><strong>SDV</strong> - Synthetic Data Vault: <a href="https://sdv.dev/" class="uri">https://sdv.dev/</a></li>
-<li><strong>Mostly AI</strong> - Plataforma de datos sintéticos: <a href="https://mostly.ai/" class="uri">https://mostly.ai/</a></li>
+<li><strong>Mostly AI</strong> - Plataforma comercial de datos sintéticos: <a href="https://mostly.ai/" class="uri">https://mostly.ai/</a></li>
 </ul>
 <h3 id="ética-y-buenas-prácticas"><strong>Ética y buenas prácticas</strong></h3>
 <ul>
 <li><strong>FAIR Data Principles</strong> - Principios para datos FAIR: <a href="https://www.go-fair.org/fair-principles/" class="uri">https://www.go-fair.org/fair-principles/</a></li>
-<li><strong>Guía de ética en datos del MIT</strong>: <a href="https://ethics.fast.ai/" class="uri">https://ethics.fast.ai/</a></li>
+<li><strong>Practical Data Ethics</strong> - Curso de ética de datos de fast.ai (impartido originalmente en el Data Institute de la Universidad de San Francisco): <a href="https://ethics.fast.ai/" class="uri">https://ethics.fast.ai/</a></li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -1177,6 +1298,166 @@ Sterne, J. A. C., White, I. R., Carlin, J. B., Spratt, M., Royston, P., Kenward,
 </div>
 </div>
 </div>
+</section>
+<section id="apéndice-diapositivas-de-consulta" class="slide level2 smaller">
+<h2>Apéndice: diapositivas de consulta</h2>
+<p>Estas diapositivas <strong>no se presentan en la sesión</strong>; quedan como material de apoyo:</p>
+<ul>
+<li>Ejemplo práctico: estructura en SQL</li>
+<li>Ruta metodológica y diseño de datos</li>
+<li>Cita tus datos</li>
+<li>Datos sintéticos: usos y cuidados</li>
+<li>Herramientas recomendadas</li>
+</ul>
+</section>
+<section id="ejemplo-práctico-estructura-en-sql" class="slide level2 smaller">
+<h2>Ejemplo práctico — Estructura en SQL</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="" aria-label="1"></a><span class="co">-- Primero las tablas que serán referenciadas</span></span>
+<span id="cb2-2"><a href="" aria-label="2"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> clientes (</span>
+<span id="cb2-3"><a href="" aria-label="3"></a>  id_cliente TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb2-4"><a href="" aria-label="4"></a>  segmento TEXT,</span>
+<span id="cb2-5"><a href="" aria-label="5"></a>  fecha_registro <span class="dt">DATE</span></span>
+<span id="cb2-6"><a href="" aria-label="6"></a>);</span>
+<span id="cb2-7"><a href="" aria-label="7"></a></span>
+<span id="cb2-8"><a href="" aria-label="8"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> tiendas (</span>
+<span id="cb2-9"><a href="" aria-label="9"></a>  id_tienda TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb2-10"><a href="" aria-label="10"></a>  categoria TEXT,</span>
+<span id="cb2-11"><a href="" aria-label="11"></a>  ciudad TEXT</span>
+<span id="cb2-12"><a href="" aria-label="12"></a>);</span>
+<span id="cb2-13"><a href="" aria-label="13"></a></span>
+<span id="cb2-14"><a href="" aria-label="14"></a><span class="co">-- Tabla principal: cada fila es una transacción</span></span>
+<span id="cb2-15"><a href="" aria-label="15"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> transacciones (</span>
+<span id="cb2-16"><a href="" aria-label="16"></a>  id_transaccion TEXT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb2-17"><a href="" aria-label="17"></a>  id_cliente TEXT <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">REFERENCES</span> clientes(id_cliente),</span>
+<span id="cb2-18"><a href="" aria-label="18"></a>  id_tienda TEXT <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">REFERENCES</span> tiendas(id_tienda),</span>
+<span id="cb2-19"><a href="" aria-label="19"></a>  fecha_hora <span class="dt">TIMESTAMP</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb2-20"><a href="" aria-label="20"></a>  monto <span class="dt">DECIMAL</span>(<span class="dv">10</span>,<span class="dv">2</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">CHECK</span> (monto <span class="op">&gt;</span> <span class="dv">0</span>),</span>
+<span id="cb2-21"><a href="" aria-label="21"></a>  canal TEXT <span class="kw">CHECK</span> (canal <span class="kw">IN</span> (<span class="st">'pos'</span>,<span class="st">'web'</span>,<span class="st">'app'</span>,<span class="st">'telefono'</span>)),</span>
+<span id="cb2-22"><a href="" aria-label="22"></a>  es_fraude <span class="dt">BOOLEAN</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">DEFAULT</span> <span class="dv">0</span></span>
+<span id="cb2-23"><a href="" aria-label="23"></a>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<blockquote>
+<p><code>REFERENCES</code> declara la llave foránea: la base rechaza transacciones de clientes o tiendas que no existen (en SQLite: <code>PRAGMA foreign_keys = ON;</code>). Solo un ejemplo; adáptalo a tu proyecto.</p>
+</blockquote>
+</section>
+<section id="ruta-metodológica-y-diseño-de-datos" class="slide level2 smaller">
+<h2>Ruta metodológica y diseño de datos</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Elemento</th>
+<th>Pregunta central</th>
+<th>Resultado esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Pregunta de investigación</strong></td>
+<td>¿Qué quiero responder?</td>
+<td>Delimita el fenómeno de estudio</td>
+</tr>
+<tr class="even">
+<td><strong>Unidad de análisis</strong></td>
+<td>¿Cuál es mi fila?</td>
+<td>Define la estructura de la tabla</td>
+</tr>
+<tr class="odd">
+<td><strong>Variables clave</strong></td>
+<td>¿Qué observar o medir?</td>
+<td>Lista de columnas necesarias</td>
+</tr>
+<tr class="even">
+<td><strong>Fuente de datos</strong></td>
+<td>¿De dónde provienen?</td>
+<td>Identifica proveedores y métodos</td>
+</tr>
+<tr class="odd">
+<td><strong>Formato de almacenamiento</strong></td>
+<td>¿Una tabla o varias?</td>
+<td>Esquema de organización</td>
+</tr>
+<tr class="even">
+<td><strong>Pipeline de preparación</strong></td>
+<td>¿Qué transformar?</td>
+<td>Limpieza, imputación, agregación</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Antes de recolectar un solo dato, completa esta tabla. Cada fila debe tener una respuesta documentada en tu protocolo de investigación.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="cita-tus-datos" class="slide level2 smaller">
+<h2>Cita tus datos</h2>
+<p>Los conjuntos de datos se citan como cualquier otra fuente (APA 7, Unidad 2) y se registran en tu gestor de referencias (Mendeley, Unidad 3).</p>
+<p><strong>Formato</strong></p>
+<p>Autor o institución. (Año). <em>Título del conjunto de datos</em> (versión) [Conjunto de datos]. Editorial. URL o DOI</p>
+<p><strong>Ejemplo</strong></p>
+<p>INEGI. (2021). <em>Censo de Población y Vivienda 2020</em> [Conjunto de datos]. <a href="https://www.inegi.org.mx/programas/ccpv/2020/" class="uri">https://www.inegi.org.mx/programas/ccpv/2020/</a></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Guarda la cita (y la fecha de descarga) también en tu <code>README.md</code> y en el diccionario de datos.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="datos-sintéticos-usos-y-cuidados" class="slide level2 smaller">
+<h2>Datos sintéticos: usos y cuidados</h2>
+<div class="columns">
+<div class="column">
+<p><strong>¿Cuándo usarlos?</strong></p>
+<ul>
+<li>Compartir datos con colaboradores o publicarlos</li>
+<li>Desarrollar y probar código o modelos sin exponer datos sensibles</li>
+<li>Crear ejemplos educativos</li>
+</ul>
+</div><div class="column">
+<p><strong>Cuidados</strong></p>
+<ul>
+<li>Compara <strong>utilidad</strong>: ¿se conservan distribuciones y relaciones clave frente a los datos reales?</li>
+<li>Evalúa <strong>privacidad</strong>: ¿hay filas casi idénticas a registros reales o casos raros reproducidos?</li>
+<li>No son automáticamente libres de restricciones legales ni de licencia: consulta con quien custodia los datos originales</li>
+</ul>
+</div></div>
+</section>
+<section id="herramientas-recomendadas" class="slide level2">
+<h2>Herramientas recomendadas</h2>
+<ul>
+<li><strong>Excel/Google Sheets</strong>: para empezar y datos pequeños.<br>
+</li>
+<li><strong>SQLite</strong>: base de datos simple, ideal para aprender.<br>
+</li>
+<li><strong>R/Python</strong>: para análisis más avanzados.<br>
+</li>
+<li><strong>Google Forms</strong>: para recolectar datos con formularios.</li>
+</ul>
+<blockquote>
+<p>Elige la herramienta según el tamaño de tus datos y tu experiencia.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
 
 </section>
     </div>

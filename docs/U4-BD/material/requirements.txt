@@ -1,0 +1,9 @@
+# Dependencias de los notebooks de la Unidad 4 (material adicional).
+# Los rangos son una guía: solo se probó con las versiones de requirements-probado.txt.
+# SDV (notebook 01) requiere pandas < 3.
+pandas>=2.2,<3
+numpy>=1.26
+scikit-learn>=1.4
+matplotlib>=3.8
+sdv>=1.30,<2        # solo para 01_privacidad_y_datos_sinteticos.ipynb
+jupyter             # o JupyterLab / VS Code, para abrir los notebooks
