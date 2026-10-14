@@ -15,7 +15,17 @@ Los ejemplos de punta a punta (02, 03 y 04) terminan con lo que se considera **b
 
 **En Google Colab** (sin instalar nada): abre cada notebook con el botón *Abrir en Colab* de su primera celda. El notebook 01 instala SDV por sí mismo.
 
-**En tu computadora:**
+**En tu computadora con conda** (recomendado):
+
+```bash
+conda env create -f environment.yml     # o: mamba env create -f environment.yml
+conda activate sp1-u4
+jupyter notebook
+```
+
+El archivo [`environment.yml`](environment.yml) crea el ambiente `sp1-u4` con Python 3.12 y todo lo necesario. SDV (notebook 01) se instala con `pip` dentro del ambiente porque la versión de conda-forge es muy antigua.
+
+**En tu computadora con `venv`:**
 
 ```bash
 python -m venv .venv

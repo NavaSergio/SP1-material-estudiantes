@@ -1,0 +1,24 @@
+# Ambiente de conda para los notebooks de la Unidad 4 (material adicional).
+#
+#   conda env create -f environment.yml      (o: mamba env create -f environment.yml)
+#   conda activate sp1-u4
+#   jupyter notebook
+#
+# Versiones con las que se ejecutaron y verificaron los notebooks: ver requirements-probado.txt (Python 3.12).
+# SDV (solo para el notebook 01) se instala con pip porque la versión de conda-forge es muy antigua;
+# SDV exige pandas < 3.
+name: sp1-u4
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pandas>=2.2,<3
+  - numpy>=1.26
+  - scikit-learn>=1.4
+  - matplotlib>=3.8
+  - jupyter
+  - nbconvert
+  - ipykernel
+  - pip:
+      - sdv>=1.30,<2
