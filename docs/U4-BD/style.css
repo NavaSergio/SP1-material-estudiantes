@@ -31,8 +31,8 @@ $presentation-heading-text-transform: uppercase !default;
   right: unset !important;
   top: 5px;
   left: 12px;
-  height: 100px !important;
-  width: 100x !important;
+  height: 50px !important;
+  width: auto !important;
   max-width: unset !important;
   max-height: unset !important;
 }

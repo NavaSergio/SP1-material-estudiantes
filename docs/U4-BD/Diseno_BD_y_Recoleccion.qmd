@@ -1,14 +1,23 @@
 ---
 title: "Diseño de bases de datos y recolección de información"
 subtitle: "Seminario de Proyecto I (MCDI) — Unidad 4"
-author: "Sergio Martín Nava Muñoz"
-date: 2025/03/25
+author: 
+  - name: Sergio M. Nava Muñoz
+    id: sn
+    email: s3rgio.nava@gmail.com
+    affiliation: 
+        - id: cimat
+          name: CIMAT/INFOTEC
+          city: Aguascalientes
+          state: Ags
+date: 2026-10-13
 bibliography: referencias.bib
 csl: apa.csl
 format:
   revealjs:
     theme: [default]
     slide-number: true
+    logo: figs/logo-infotec.jpeg
     toc: true
     toc-depth: 1
     code-overflow: wrap
