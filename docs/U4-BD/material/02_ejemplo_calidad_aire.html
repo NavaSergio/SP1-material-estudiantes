@@ -7816,8 +7816,8 @@ a.anchor-link {
 <tbody>
 <tr>
 <td>1</td>
-<td>Pregunta, variables y unidad de análisis</td>
-<td>Del hilo conductor a la base para análisis</td>
+<td>Pregunta, objetivos, hipótesis, variables y unidad de análisis</td>
+<td>De la pregunta a la base para análisis</td>
 </tr>
 <tr>
 <td>2</td>
@@ -7922,12 +7922,16 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.-Pregunta-de-investigaci%C3%B3n,-variables-y-unidad-de-an%C3%A1lisis">1. Pregunta de investigación, variables y unidad de análisis<a class="anchor-link" href="#1.-Pregunta-de-investigaci%C3%B3n,-variables-y-unidad-de-an%C3%A1lisis">¶</a></h2><p><strong>Pregunta general.</strong> ¿Qué tan bien se puede estimar la concentración de monóxido de carbono (CO) medida por un analizador de referencia a partir de sensores económicos de óxido metálico y de variables meteorológicas?</p>
-<p><strong>Preguntas específicas</strong> y cómo se conectan con las variables (mini matriz de coherencia):</p>
+<h2 id="1.-Pregunta,-objetivos,-hip%C3%B3tesis,-variables-y-unidad-de-an%C3%A1lisis">1. Pregunta, objetivos, hipótesis, variables y unidad de análisis<a class="anchor-link" href="#1.-Pregunta,-objetivos,-hip%C3%B3tesis,-variables-y-unidad-de-an%C3%A1lisis">¶</a></h2><p><strong>Pregunta general.</strong> ¿Qué tan bien se puede estimar la concentración de monóxido de carbono (CO) medida por un analizador de referencia a partir de sensores económicos de óxido metálico y de variables meteorológicas?</p>
+<p><strong>Objetivo general.</strong> Evaluar en qué medida la concentración de CO medida por un analizador de referencia puede estimarse con sensores económicos de óxido metálico y variables meteorológicas.</p>
+<p><strong>Hipótesis general.</strong> La señal de los sensores, junto con la temperatura y la humedad, permite estimar la concentración de CO de referencia en periodos posteriores al de ajuste del modelo.</p>
+<p><strong>Matriz de coherencia.</strong> Cada pregunta específica se conecta con un objetivo, una hipótesis y la variable que permite contrastarla:</p>
 <table>
 <thead>
 <tr>
 <th>Pregunta específica</th>
+<th>Objetivo específico</th>
+<th>Hipótesis específica</th>
 <th>Variable o métrica en la base</th>
 <th>Rol</th>
 </tr>
@@ -7935,26 +7939,35 @@ a.anchor-link {
 <tbody>
 <tr>
 <td>¿Cuánto se parecen la señal del sensor y la concentración de referencia?</td>
+<td><strong>OE1.</strong> Cuantificar la relación entre la señal del sensor y la concentración de referencia</td>
+<td><strong>H1.</strong> A mayor señal del sensor, mayor concentración de CO de referencia (asociación positiva y fuerte)</td>
 <td><code>sensor_co</code> frente a <code>co_ref</code> (correlación)</td>
 <td>Independiente / dependiente</td>
 </tr>
 <tr>
 <td>¿Mejora la estimación al considerar temperatura y humedad?</td>
+<td><strong>OE2.</strong> Determinar si incorporar temperatura y humedad mejora la estimación</td>
+<td><strong>H2.</strong> Al incorporar temperatura y humedad, el error de estimación es menor que usando solo el sensor</td>
 <td><code>temperatura</code>, <code>humedad_rel</code>, <code>humedad_abs</code></td>
 <td>Independientes (control)</td>
 </tr>
 <tr>
 <td>¿Cómo varía el CO a lo largo del día y de la semana?</td>
+<td><strong>OE3.</strong> Describir la variación horaria y semanal del CO</td>
+<td><strong>H3.</strong> El CO es mayor en las horas de mayor tráfico y en días laborales que en la madrugada y en fines de semana</td>
 <td><code>hora_del_dia</code>, <code>dia_semana</code></td>
 <td>Derivadas</td>
 </tr>
 <tr>
 <td>¿Cómo se comporta el CO a escala diaria?</td>
+<td><strong>OE4.</strong> Describir la serie diaria de CO y su relación con la estación del año</td>
+<td><strong>H4.</strong> Los promedios diarios de CO son más altos en los meses fríos que en los cálidos</td>
 <td>Promedio diario de <code>co_ref</code> y número de horas válidas</td>
 <td>Agregadas</td>
 </tr>
 </tbody>
 </table>
+<p>Las hipótesis se formulan <strong>antes</strong> de ver los resultados. En este notebook solo comprobamos que la base <strong>permite contrastarlas</strong>.</p>
 <p><strong>Unidad de análisis (qué es una fila).</strong></p>
 <ul>
 <li>Base <strong>horaria</strong>: una fila = una hora de medición en el sitio de monitoreo (nivel original de los datos).</li>
@@ -9573,6 +9586,14 @@ Diccionario: (32, 10)
 <span class="s1">## Pregunta de investigación</span>
 <span class="s1">¿Qué tan bien se puede estimar la concentración de CO medida por un analizador de referencia a partir de sensores económicos de óxido metálico y de variables meteorológicas?</span>
 
+<span class="s1">## Objetivos e hipótesis</span>
+<span class="s1">- **Objetivo general:** evaluar en qué medida la concentración de CO de referencia puede estimarse con sensores económicos y variables meteorológicas.</span>
+<span class="s1">- **Hipótesis general:** la señal de los sensores, junto con la temperatura y la humedad, permite estimar el CO de referencia en periodos posteriores al de ajuste del modelo.</span>
+<span class="s1">- **OE1 / H1:** cuantificar la relación sensor-referencia / a mayor señal del sensor, mayor CO de referencia.</span>
+<span class="s1">- **OE2 / H2:** determinar si temperatura y humedad mejoran la estimación / con ellas el error es menor que con el sensor solo.</span>
+<span class="s1">- **OE3 / H3:** describir la variación horaria y semanal / el CO es mayor en horas de tráfico y días laborales.</span>
+<span class="s1">- **OE4 / H4:** describir la serie diaria y la estación del año / los promedios diarios son más altos en meses fríos.</span>
+
 <span class="s1">## Origen de los datos</span>
 <span class="s1">- **Fuente:** UCI Machine Learning Repository, dataset *Air Quality*. </span><span class="si">{</span><span class="n">URL</span><span class="si">}</span>
 <span class="s1">- **Autoría:** Vito, S. (2008). Datos generados por S. De Vito y colaboradores (ENEA, Italia).</span>
@@ -9630,12 +9651,11 @@ Ejemplo didáctico de la Unidad 4 (Seminario de Proyecto I, MCDI). Documenta el 
 ## Pregunta de investigación
 ¿Qué tan bien se puede estimar la concentración de CO medida por un analizador de referencia a partir de sensores económicos de óxido metálico y de variables meteorológicas?
 
-## Origen de los datos
-- **Fuente:** UCI Machine Learning Repository, dataset *Air Quality*. https://archive.ics.uci.edu/static/public/360/air+quality.zip
-- **Autoría:** Vito, S. (2008). Datos generados por S. De Vito y colaboradores (ENEA, Italia).
-- **Fecha de descarga:** 2026-10-13
-- **Licencia y uso:** CC BY 4.0 según UCI; la página indica además uso solo para investigación, no comercial. No se redistribuye el archivo original.
-- **Cobertura real:** 2004-03-10 a 2005-04-04,  ...
+## Objetivos e hipótesis
+- **Objetivo general:** evaluar en qué medida la concentración de CO de referencia puede estimarse con sensores económicos y variables meteorológicas.
+- **Hipótesis general:** la señal de los sensores, junto con la temperatura y la humedad, permite estimar el CO de referencia en periodos posteriores al de ajuste del modelo.
+- **OE1 / H1:** cuantificar la relación sensor-referencia / a mayor señal del sensor, mayor CO de referencia.
+- **OE2 / H2:** determ ...
 </pre>
 </div>
 </div>
@@ -9654,6 +9674,7 @@ Ejemplo didáctico de la Unidad 4 (Seminario de Proyecto I, MCDI). Documenta el 
 <li><strong>No se imputó la variable a explicar</strong>, así que usamos solo las horas con <code>co_ref</code> observado.</li>
 <li><strong>División temporal:</strong> entrenamos con el primer 80% del periodo y evaluamos con el último 20%. Si mezcláramos las horas al azar, el modelo "vería el futuro" (fuga de información, <em>data leakage</em>).</li>
 </ul>
+<p><strong>Qué hipótesis toca esta primera mirada.</strong> Solo la hipótesis general y, de forma descriptiva, la H1. Lo importante es comprobar que la base <strong>permite</strong> contrastar también la H2 (están <code>temperatura</code> y <code>humedad_rel</code>), la H3 (<code>hora_del_dia</code>, <code>dia_semana</code>) y la H4 (la base diaria conserva la fecha).</p>
 </div>
 </div>
 </div>
@@ -9726,7 +9747,7 @@ Error medio absoluto en prueba: 0.55 mg/m³
 </tr>
 <tr>
 <td>Alineación metodológica explícita</td>
-<td>Sección 1: pregunta → variable/métrica</td>
+<td>Sección 1: pregunta → objetivo → hipótesis → variable/métrica</td>
 </tr>
 <tr>
 <td>Evaluación del origen de datos</td>

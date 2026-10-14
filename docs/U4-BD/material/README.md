@@ -1,14 +1,15 @@
 # Material adicional — Unidad 4: Diseño de bases de datos y recolección de información
 
-Seminario de Proyecto I (MCDI). Material **opcional** de consulta que acompaña la presentación de la Unidad 4. No forma parte de la sesión: es para que revises, con datos reales, lo que la presentación explica.
+Seminario de Proyecto I (MCDI). Material **opcional** de consulta que acompaña la presentación de la Unidad 4. No forma parte de la sesión: es para que revises, con datos reales (y, en el notebook 04, simulados), lo que la presentación explica.
 
 | Notebook | Qué muestra | Datos | Tiempo de ejecución |
 |---|---|---|---|
 | [`01_privacidad_y_datos_sinteticos`](01_privacidad_y_datos_sinteticos.ipynb) ([HTML](01_privacidad_y_datos_sinteticos.html)) | Parte A: seudonimización y enmascaramiento (k-anonimato, generalización, supresión). Parte B: datos sintéticos con SDV, con medidas de **utilidad** y de **privacidad**. | UCI *Adult* (CC BY 4.0) | ~30 s |
 | [`02_ejemplo_calidad_aire`](02_ejemplo_calidad_aire.ipynb) ([HTML](02_ejemplo_calidad_aire.html)) | **Ejemplo de punta a punta 1.** Tabla plana con series de tiempo: valores centinela, faltantes, imputación, agregación hora → día, diccionario, README. | UCI *Air Quality* | ~10 s |
 | [`03_ejemplo_indicadores_banco_mundial`](03_ejemplo_indicadores_banco_mundial.ipynb) ([HTML](03_ejemplo_indicadores_banco_mundial.html)) | **Ejemplo de punta a punta 2.** Varias fuentes → modelo relacional en SQLite → una tabla de análisis; agregados mezclados con países, atípicos, agregación espacial ponderada. | API del Banco Mundial (WDI, CC BY 4.0) | ~15 s |
+| [`04_ejemplo_fraude_transacciones`](04_ejemplo_fraude_transacciones.ipynb) ([HTML](04_ejemplo_fraude_transacciones.html)) | **Ejemplo de punta a punta 3.** Parte de la pregunta, los objetivos y las hipótesis de la Unidad 3 (detección de fraude): operacionalización de variables, diseño de base relacional en SQLite, muestreo, limpieza con registro de exclusiones, etiquetas tardías, división temporal, fuga de información, diccionario. | **Simulados** (no requiere internet) | ~10 s |
 
-Los dos ejemplos de punta a punta terminan con lo que se considera **buena práctica** (diccionario de datos, README, estructura de carpetas, transformaciones documentadas). Son *ejemplos de razonamiento y documentación*, no plantillas para copiar.
+Los ejemplos de punta a punta (02, 03 y 04) terminan con lo que se considera **buena práctica** (diccionario de datos, README, estructura de carpetas, transformaciones documentadas). Son *ejemplos de razonamiento y documentación*, no plantillas para copiar.
 
 ## Cómo ejecutarlos
 
@@ -23,7 +24,7 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-Cada notebook crea su carpeta de trabajo (`proyecto_privacidad/`, `proyecto_calidad_aire/`, `proyecto_indicadores_wdi/`) con la estructura recomendada en la presentación, y **descarga los datos originales** la primera vez que se ejecuta (requiere internet).
+Cada notebook crea su carpeta de trabajo (`proyecto_privacidad/`, `proyecto_calidad_aire/`, `proyecto_indicadores_wdi/`, `proyecto_fraude/`) con la estructura recomendada en la presentación, y los notebooks 01 a 03 **descargan los datos originales** la primera vez que se ejecutan (requieren internet); el 04 genera datos simulados y no necesita internet.
 
 ## Sobre los datos y las licencias
 
@@ -31,6 +32,7 @@ Cada notebook crea su carpeta de trabajo (`proyecto_privacidad/`, `proyecto_cali
 - *Adult* y *Air Quality* tienen licencia CC BY 4.0 en el UCI Machine Learning Repository. La página de *Air Quality* añade que los datos son **solo para uso en investigación, no comercial**. Respeta esa indicación si los reutilizas.
 - Los indicadores del Banco Mundial (WDI) se publican con licencia CC BY 4.0. El Banco Mundial **revisa** sus cifras: los resultados que imprime el notebook 03 pueden variar ligeramente respecto a los del texto, que corresponden a la descarga del 13 de octubre de 2026.
 - SDV usa la licencia *Business Source License 1.1*: permite el uso no productivo (docencia, investigación) y prohíbe ofrecer con él un servicio comercial de datos sintéticos.
+- Los datos del notebook 04 son **simulados** con una semilla fija; no corresponden a ninguna persona ni institución real y **no permiten sacar conclusiones sobre fraude real**.
 - El notebook 01 usa **nombres ficticios** generados al azar; ninguna persona real aparece en el ejercicio.
 
 ## Versiones probadas

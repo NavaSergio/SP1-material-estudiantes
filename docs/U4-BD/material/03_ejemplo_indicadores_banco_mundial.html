@@ -7816,8 +7816,8 @@ a.anchor-link {
 <tbody>
 <tr>
 <td>1</td>
-<td>Pregunta, variables, unidad de análisis y diseño (¿una tabla o varias?)</td>
-<td>Del hilo conductor a la base; ¿Una tabla o múltiples tablas?</td>
+<td>Pregunta, objetivos, hipótesis, variables, unidad de análisis y diseño (¿una tabla o varias?)</td>
+<td>De la pregunta a la base para análisis; ¿Una tabla o múltiples tablas?</td>
 </tr>
 <tr>
 <td>2</td>
@@ -7832,7 +7832,7 @@ a.anchor-link {
 <tr>
 <td>4</td>
 <td>Modelo relacional en SQLite (llaves primarias y foráneas)</td>
-<td>Esquema y ejemplo en SQL</td>
+<td>Cuando una tabla no basta; Ejemplo en SQL (apéndice)</td>
 </tr>
 <tr>
 <td>5</td>
@@ -7927,12 +7927,16 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.-Pregunta,-variables,-unidad-de-an%C3%A1lisis-y-dise%C3%B1o">1. Pregunta, variables, unidad de análisis y diseño<a class="anchor-link" href="#1.-Pregunta,-variables,-unidad-de-an%C3%A1lisis-y-dise%C3%B1o">¶</a></h2><p><strong>Pregunta general.</strong> ¿Cómo ha evolucionado la esperanza de vida en las regiones del mundo entre 2000 y 2023, y qué relación guarda con el nivel de ingreso y el gasto en salud de los países?</p>
-<p><strong>Preguntas específicas</strong> y su conexión con las variables:</p>
+<h2 id="1.-Pregunta,-objetivos,-hip%C3%B3tesis,-variables,-unidad-de-an%C3%A1lisis-y-dise%C3%B1o">1. Pregunta, objetivos, hipótesis, variables, unidad de análisis y diseño<a class="anchor-link" href="#1.-Pregunta,-objetivos,-hip%C3%B3tesis,-variables,-unidad-de-an%C3%A1lisis-y-dise%C3%B1o">¶</a></h2><p><strong>Pregunta general.</strong> ¿Cómo ha evolucionado la esperanza de vida en las regiones del mundo entre 2000 y 2023, y qué relación guarda con el nivel de ingreso y el gasto en salud de los países?</p>
+<p><strong>Objetivo general.</strong> Describir la evolución de la esperanza de vida en las regiones del mundo entre 2000 y 2023 y analizar su asociación con el ingreso y el gasto en salud de los países.</p>
+<p><strong>Hipótesis general.</strong> La esperanza de vida aumentó en todas las regiones entre 2000 y 2023, y es mayor en los países con mayor ingreso y mayor gasto en salud.</p>
+<p><strong>Matriz de coherencia.</strong> Cada pregunta específica se conecta con un objetivo, una hipótesis y la variable que permite contrastarla:</p>
 <table>
 <thead>
 <tr>
 <th>Pregunta específica</th>
+<th>Objetivo específico</th>
+<th>Hipótesis específica</th>
 <th>Variable o métrica</th>
 <th>Rol</th>
 </tr>
@@ -7940,26 +7944,35 @@ a.anchor-link {
 <tbody>
 <tr>
 <td>¿Cómo cambió la esperanza de vida en cada región?</td>
+<td><strong>OE1.</strong> Estimar la esperanza de vida de cada región por año</td>
+<td><strong>H1.</strong> La esperanza de vida aumentó entre 2000 y 2023 en todas las regiones</td>
 <td><code>esp_vida</code> agregada por región y año (ponderada por población)</td>
 <td>Dependiente (agregada)</td>
 </tr>
 <tr>
 <td>¿Se relaciona la esperanza de vida con el ingreso de los países?</td>
+<td><strong>OE2.</strong> Analizar la asociación entre esperanza de vida e ingreso</td>
+<td><strong>H2.</strong> Los países con mayor ingreso per cápita tienen mayor esperanza de vida (asociación positiva)</td>
 <td><code>esp_vida</code> frente a <code>ln_pib_pc</code> (logaritmo del PIB per cápita)</td>
 <td>Dependiente / independiente</td>
 </tr>
 <tr>
 <td>¿Y con el gasto en salud?</td>
+<td><strong>OE3.</strong> Analizar la asociación entre esperanza de vida y gasto en salud</td>
+<td><strong>H3.</strong> A mayor gasto en salud como porcentaje del PIB, mayor esperanza de vida (asociación positiva)</td>
 <td><code>gasto_salud</code> (% del PIB)</td>
 <td>Independiente</td>
 </tr>
 <tr>
 <td>¿Cambia la relación al pasar de países a regiones?</td>
-<td>Correlación país frente a correlación regional</td>
+<td><strong>OE4.</strong> Comparar la asociación ingreso–esperanza de vida entre países y entre regiones</td>
+<td><strong>H4.</strong> La asociación es más fuerte entre regiones que entre países, porque el promedio regional elimina la variación entre países de una misma región</td>
+<td>Correlación entre países frente a correlación entre regiones</td>
 <td>Efecto del nivel de agregación</td>
 </tr>
 </tbody>
 </table>
+<p>Las hipótesis se formulan <strong>antes</strong> de ver los resultados. En este notebook solo comprobamos que la base <strong>permite contrastarlas</strong>.</p>
 <p><strong>Unidad de análisis (qué es una fila):</strong> un <strong>país en un año</strong> (país-año). Con 217 países y 24 años (2000–2023) son 5,208 filas.</p>
 <p><strong>¿Una tabla o varias?</strong> Los datos llegan de <strong>fuentes distintas, con sus propios identificadores</strong>: un catálogo de países y varios indicadores publicados por organismos diferentes (ONU, OMS, Programa de Comparación Internacional). Conviene un <strong>modelo relacional</strong> para integrarlos y validar que cada observación se refiere a un país que existe. Pero el análisis estadístico necesita <strong>una sola tabla ancha</strong> (una fila por país-año): la construiremos a partir del modelo relacional.</p>
 <pre><code>  paises (1) ────────&lt; observaciones &gt;──────── (1) indicadores
@@ -9743,6 +9756,7 @@ Sensibilidad: excluyendo 1 observación(es) atípica(s) en 2022 -&gt; correlaci�
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Sensibilidad.</strong> Excluir una sola observación atípica (la de 2022 de la República Centroafricana) <strong>cambia visiblemente</strong> la correlación entre países. Una conclusión que depende de un único dato debe reportarse con esa advertencia: por eso conservamos el valor original, lo marcamos y mostramos ambos resultados.</p>
 <p>La relación <strong>se ve más fuerte al agregar</strong>: al promediar, se cancela la variación entre países de una misma región. Esto no significa que la relación sea "más cierta" a nivel regional: significa que <strong>la conclusión depende de la unidad de análisis</strong>. Una afirmación sobre regiones no se puede trasladar a países individuales (<em>falacia ecológica</em>). Por eso la presentación insiste en elegir la granularidad que corresponde a la pregunta.</p>
+<p><strong>Qué hipótesis toca esta primera mirada.</strong> De forma descriptiva, la H2 y la H4. La base ya contiene lo necesario para la H1 (<code>regiones_anio.csv</code>) y la H3 (<code>gasto_salud</code> en <code>panel_pais_anio.csv</code>); contrastarlas es parte del análisis del proyecto.</p>
 </div>
 </div>
 </div>
@@ -10059,6 +10073,14 @@ Sensibilidad: excluyendo 1 observación(es) atípica(s) en 2022 -&gt; correlaci�
 <span class="s1">## Pregunta de investigación</span>
 <span class="s1">¿Cómo ha evolucionado la esperanza de vida en las regiones del mundo entre </span><span class="si">{</span><span class="n">ANIO_INICIO</span><span class="si">}</span><span class="s1"> y </span><span class="si">{</span><span class="n">ANIO_FIN</span><span class="si">}</span><span class="s1">, y qué relación guarda con el nivel de ingreso y el gasto en salud de los países?</span>
 
+<span class="s1">## Objetivos e hipótesis</span>
+<span class="s1">- **Objetivo general:** describir la evolución de la esperanza de vida por región y analizar su asociación con el ingreso y el gasto en salud.</span>
+<span class="s1">- **Hipótesis general:** la esperanza de vida aumentó en todas las regiones y es mayor en los países con mayor ingreso y gasto en salud.</span>
+<span class="s1">- **OE1 / H1:** estimar la esperanza de vida regional por año / aumentó entre </span><span class="si">{</span><span class="n">ANIO_INICIO</span><span class="si">}</span><span class="s1"> y </span><span class="si">{</span><span class="n">ANIO_FIN</span><span class="si">}</span><span class="s1"> en todas las regiones.</span>
+<span class="s1">- **OE2 / H2:** analizar su asociación con el ingreso / países con mayor ingreso per cápita, mayor esperanza de vida.</span>
+<span class="s1">- **OE3 / H3:** analizar su asociación con el gasto en salud / a mayor gasto (% del PIB), mayor esperanza de vida.</span>
+<span class="s1">- **OE4 / H4:** comparar países y regiones / la asociación es más fuerte entre regiones.</span>
+
 <span class="s1">## Origen de los datos</span>
 <span class="s1">- **Fuente:** Banco Mundial, *World Development Indicators* (WDI), mediante la API pública </span><span class="si">{</span><span class="n">API</span><span class="si">}</span><span class="s1">.</span>
 <span class="s1">- **Organismos originales:** ONU (World Population Prospects), Programa de Comparación Internacional, Organización Mundial de la Salud (Global Health Expenditure Database).</span>
@@ -10114,9 +10136,9 @@ Ejemplo didáctico de la Unidad 4 (Seminario de Proyecto I, MCDI). Integra varia
 ## Pregunta de investigación
 ¿Cómo ha evolucionado la esperanza de vida en las regiones del mundo entre 2000 y 2023, y qué relación guarda con el nivel de ingreso y el gasto en salud de los países?
 
-## Origen de los datos
-- **Fuente:** Banco Mundial, *World Development Indicators* (WDI), mediante la API pública https://api.worldbank.org/v2.
-- **Organismos originales:** ONU (World Population Prospects), Programa de Comparación Internacional, Organización  ...
+## Objetivos e hipótesis
+- **Objetivo general:** describir la evolución de la esperanza de vida por región y analizar su asociación con el ingreso y el gasto en salud.
+- **Hipótesis general:** la esperanza de vida aumentó en todas las regiones y es mayor en l ...
 </pre>
 </div>
 </div>
@@ -10147,7 +10169,7 @@ Ejemplo didáctico de la Unidad 4 (Seminario de Proyecto I, MCDI). Integra varia
 </tr>
 <tr>
 <td>Alineación metodológica explícita</td>
-<td>Sección 1: pregunta → variable/métrica</td>
+<td>Sección 1: pregunta → objetivo → hipótesis → variable/métrica</td>
 </tr>
 <tr>
 <td>Evaluación del origen de datos</td>
